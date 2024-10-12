@@ -1,0 +1,17 @@
+{
+    "name": "zellij.dev",
+    "id": "zellij.dev",
+    "version": "1.0.0",
+    "description": "Install \"zellij\" binary",
+    "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/zellij.dev",
+    "options": {
+        "version": {
+            "type": "string",
+            "default": "latest",
+            "proposals": [
+                "latest"
+            ],
+            "description": "Version of \"zellij\" to install."
+        }
+    }
+}
