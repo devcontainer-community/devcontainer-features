@@ -119,7 +119,6 @@ utils_check_version() {
 install() {
     utils_check_version "$VERSION"
     check_curl_envsubst_file_tar_installed
-    apt_get_checkinstall bzip2
     readonly architecture="$(debian_get_arch)"
     readonly binaryTargetPathTemplate='${binaryTargetFolder}/${binaryName}'
     if [ "$VERSION" == 'latest' ] || [ -z "$VERSION" ]; then
