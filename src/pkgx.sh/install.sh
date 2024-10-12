@@ -9,6 +9,18 @@ apt_get_cleanup() {
     apt-get clean
     rm -rf /var/lib/apt/lists/*
 }
+apt_get_update() {
+    if [ "$(find /var/lib/apt/lists/* | wc -l)" = "0" ]; then
+        echo "Running apt-get update..."
+        apt-get update -y
+    fi
+}
+apt_get_checkinstall() {
+    if ! dpkg -s "$@" >/dev/null 2>&1; then
+        apt_get_update
+        DEBIAN_FRONTEND=noninteractive apt-get -y install --no-install-recommends --no-install-suggests --option 'Debug::pkgProblemResolver=true' --option 'Debug::pkgAcquire::Worker=1' "$@"
+    fi
+}
 check_curl_installed() {
     declare -a requiredAptPackagesMissing=()
     if ! [ -r '/etc/ssl/certs/ca-certificates.crt' ]; then
@@ -29,6 +41,7 @@ echo_banner() {
 }
 install() {
     check_curl_installed
+    apt_get_update
     export DENO_INSTALL="/usr/local"
     curl -fsSL https://pkgx.sh | sh
     apt_get_cleanup
