@@ -20,6 +20,7 @@ jobs:
           - pkgx.sh
           - smallstep.com
           - starship.rs
+          - webinstall.dev
           - zellij.dev
         baseImage:
           - debian:latest
@@ -47,6 +48,7 @@ jobs:
           - pkgx.sh
           - smallstep.com
           - starship.rs
+          - webinstall.dev
           - zellij.dev
     steps:
       - uses: actions/checkout@v4

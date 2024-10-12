@@ -1,0 +1,17 @@
+{
+    "name": "webinstall.dev",
+    "id": "webinstall.dev",
+    "version": "1.0.0",
+    "description": "Install \"webi\" binary",
+    "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/webinstall.dev",
+    "options": {
+        "version": {
+            "type": "string",
+            "default": "latest",
+            "proposals": [
+                "latest"
+            ],
+            "description": "Version of \"webi\" to install."
+        }
+    }
+}
