@@ -31,7 +31,6 @@ check_curl_installed() {
     fi
     declare -i requiredAptPackagesMissingCount=${#requiredAptPackagesMissing[@]}
     if [ $requiredAptPackagesMissingCount -gt 0 ]; then
-        apt_get_update
         apt_get_checkinstall "${requiredAptPackagesMissing[@]}"
         apt_get_cleanup
     fi
