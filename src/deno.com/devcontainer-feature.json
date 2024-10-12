@@ -1,0 +1,17 @@
+{
+    "name": "deno.com",
+    "id": "deno.com",
+    "version": "1.0.0",
+    "description": "Install \"deno\" binary",
+    "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/deno.com",
+    "options": {
+        "version": {
+            "type": "string",
+            "default": "latest",
+            "proposals": [
+                "latest"
+            ],
+            "description": "Version of \"deno\" to install."
+        }
+    }
+}
