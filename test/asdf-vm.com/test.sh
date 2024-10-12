@@ -12,7 +12,7 @@ source dev-container-features-test-lib
 # The 'check' command comes from the dev-container-features-test-lib. Syntax is...
 # check <LABEL> <cmd> [args...]
 
-# check "execute command" bash -c "/home/vscode/.asdf/bin/asdf --version" # TODO: Fix this test
+check "execute command" bash -c "asdf --version" # TODO: Fix this test
 
 # Report results
 # If any of the checks above exited with a non-zero exit code, the test will fail.
