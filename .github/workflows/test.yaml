@@ -15,6 +15,7 @@ jobs:
         features:
           - atuin.sh
           - btop
+          - deno.com
           - smallstep.com
           - starship.rs
         baseImage:
@@ -38,6 +39,7 @@ jobs:
         features:
           - atuin.sh
           - btop
+          - deno.com
           - smallstep.com
           - starship.rs
     steps:
