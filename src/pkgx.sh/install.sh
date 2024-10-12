@@ -42,7 +42,6 @@ echo_banner() {
 install() {
     check_curl_installed
     apt_get_update
-    export DENO_INSTALL="/usr/local"
     curl -fsSL https://pkgx.sh | sh
     apt_get_cleanup
 }
