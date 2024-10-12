@@ -1,0 +1,9 @@
+{
+    "pkgx.sh-debian": {
+        "image": "mcr.microsoft.com/devcontainers/base:debian",
+        "features": {
+            "pkgx.sh": {
+            }
+        }
+    }
+}
