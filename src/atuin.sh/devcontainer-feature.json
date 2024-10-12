@@ -3,6 +3,7 @@
     "id": "atuin.sh",
     "version": "1.0.0",
     "description": "Install \"atuin\" binary",
+    "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/atuin.sh",
     "options": {
         "version": {
             "type": "string",

@@ -1,0 +1,17 @@
+{
+    "name": "btop",
+    "id": "btop",
+    "version": "1.0.0",
+    "description": "Install \"btop\" binary",
+    "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/btop",
+    "options": {
+        "version": {
+            "type": "string",
+            "default": "latest",
+            "proposals": [
+                "latest"
+            ],
+            "description": "Version of \"btop\" to install."
+        }
+    }
+}
