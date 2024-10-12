@@ -16,6 +16,7 @@ jobs:
           - atuin.sh
           - btop
           - deno.com
+          - pkgx.sh
           - smallstep.com
           - starship.rs
         baseImage:
@@ -40,6 +41,7 @@ jobs:
           - atuin.sh
           - btop
           - deno.com
+          - pkgx.sh
           - smallstep.com
           - starship.rs
     steps:

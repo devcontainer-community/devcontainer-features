@@ -1,0 +1,17 @@
+{
+    "name": "pkgx.sh",
+    "id": "pkgx.sh",
+    "version": "1.0.0",
+    "description": "Install \"pkgx\" binary",
+    "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/pkgx.sh",
+    "options": {
+        "version": {
+            "type": "string",
+            "default": "latest",
+            "proposals": [
+                "latest"
+            ],
+            "description": "Version of \"pkgx\" to install."
+        }
+    }
+}
