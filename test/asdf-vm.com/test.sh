@@ -11,7 +11,7 @@ source dev-container-features-test-lib
 # Feature-specific tests
 # The 'check' command comes from the dev-container-features-test-lib. Syntax is...
 # check <LABEL> <cmd> [args...]
-check "execute command" bash -c "asdf --version"
+check "execute command" bash -c "${_REMOTE_USER_HOME}/.asdf/bin/asdf --version"
 
 # Report results
 # If any of the checks above exited with a non-zero exit code, the test will fail.
