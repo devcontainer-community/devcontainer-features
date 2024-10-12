@@ -41,10 +41,10 @@ echo_banner() {
     echo -e "\e[1m\e[97m\e[41m$text\e[0m"
 }
 install() {
+    check_curl_installed
     if [ "$VERSION" == "latest" ]; then
         VERSION="$(curl -s https://dl.deno.land/release-latest.txt)"
     fi
-    check_curl_installed
     apt_get_checkinstall unzip
     export DENO_INSTALL="/usr/local"
     curl -fsSL https://deno.land/install.sh | sh -s -- -y $VERSION
