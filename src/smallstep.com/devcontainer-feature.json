@@ -1,0 +1,17 @@
+{
+    "name": "smallstep.com",
+    "id": "smallstep.com",
+    "version": "1.0.0",
+    "description": "Install \"step\" cli binary",
+    "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/smallstep.com",
+    "options": {
+        "version": {
+            "type": "string",
+            "default": "latest",
+            "proposals": [
+                "latest"
+            ],
+            "description": "Version of \"step cli\" to install."
+        }
+    }
+}

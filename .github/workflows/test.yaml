@@ -15,6 +15,7 @@ jobs:
         features:
           - atuin.sh
           - btop
+          - smallstep.com
         baseImage:
           - debian:latest
           - ubuntu:latest
@@ -36,6 +37,7 @@ jobs:
         features:
           - atuin.sh
           - btop
+          - smallstep.com
     steps:
       - uses: actions/checkout@v4
 
