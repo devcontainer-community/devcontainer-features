@@ -1,0 +1,17 @@
+{
+    "name": "starship.rs",
+    "id": "starship.rs",
+    "version": "1.0.0",
+    "description": "Install \"starship\" binary",
+    "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/starship.rs",
+    "options": {
+        "version": {
+            "type": "string",
+            "default": "latest",
+            "proposals": [
+                "latest"
+            ],
+            "description": "Version of \"starship\" to install."
+        }
+    }
+}
