@@ -1,0 +1,16 @@
+{
+    "name": "atuin.sh",
+    "id": "atuin.sh",
+    "version": "1.0.0",
+    "description": "Install \"atuin\" binary",
+    "options": {
+        "version": {
+            "type": "string",
+            "default": "latest",
+            "proposals": [
+                "latest"
+            ],
+            "description": "Version of \"atuin\" to install."
+        }
+    }
+}
