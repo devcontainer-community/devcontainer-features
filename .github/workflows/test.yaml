@@ -16,6 +16,7 @@ jobs:
           - asdf-vm.com
           - atuin.sh
           - btop
+          - bun.sh
           - deno.com
           - pkgx.sh
           - smallstep.com
@@ -44,6 +45,7 @@ jobs:
           - asdf-vm.com
           - atuin.sh
           - btop
+          - bun.sh
           - deno.com
           - pkgx.sh
           - smallstep.com
