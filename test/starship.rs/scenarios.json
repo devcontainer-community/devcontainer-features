@@ -1,9 +1,0 @@
-{
-    "starship.rs-debian": {
-        "image": "mcr.microsoft.com/devcontainers/base:debian",
-        "features": {
-            "starship.rs": {
-            }
-        }
-    }
-}

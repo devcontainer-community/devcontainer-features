@@ -1,9 +1,0 @@
-{
-    "btop-debian": {
-        "image": "mcr.microsoft.com/devcontainers/base:debian",
-        "features": {
-            "btop": {
-            }
-        }
-    }
-}

@@ -1,9 +1,0 @@
-{
-    "smallstep.com-debian": {
-        "image": "mcr.microsoft.com/devcontainers/base:debian",
-        "features": {
-            "smallstep.com": {
-            }
-        }
-    }
-}

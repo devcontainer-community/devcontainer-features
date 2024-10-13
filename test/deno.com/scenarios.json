@@ -1,9 +1,0 @@
-{
-    "deno.com-debian": {
-        "image": "mcr.microsoft.com/devcontainers/base:debian",
-        "features": {
-            "deno.com": {
-            }
-        }
-    }
-}
