@@ -1,0 +1,17 @@
+{
+    "name": "bun.sh",
+    "id": "bun.sh",
+    "version": "1.0.0",
+    "description": "Install \"bun\" binary",
+    "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/bun.sh",
+    "options": {
+        "version": {
+            "type": "string",
+            "default": "latest",
+            "proposals": [
+                "latest"
+            ],
+            "description": "Currently unused."
+        }
+    }
+}
