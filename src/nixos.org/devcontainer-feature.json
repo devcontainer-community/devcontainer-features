@@ -1,0 +1,22 @@
+{
+    "name": "nixos.org",
+    "id": "nixos.org",
+    "version": "1.0.0",
+    "description": "Install \"nix\" binary.",
+    "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/nixos.org",
+    "options": {
+        "version": {
+            "type": "string",
+            "default": "latest",
+            "proposals": [
+                "latest"
+            ],
+            "description": "Currently unused."
+        },
+        "extra_options": {
+            "type": "string",
+            "default": "--init none",
+            "description": "Extra options to pass to the installer."
+        }
+    }
+}
