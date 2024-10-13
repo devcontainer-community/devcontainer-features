@@ -19,6 +19,7 @@ jobs:
           - bun.sh
           - chezmoi.io
           - deno.com
+          - nixos.org
           - pkgx.sh
           - smallstep.com
           - starship.rs
@@ -50,6 +51,7 @@ jobs:
           - bun.sh
           - chezmoi.io
           - deno.com
+          - nixos.org
           - pkgx.sh
           - smallstep.com
           - starship.rs
