@@ -21,6 +21,7 @@ jobs:
           - pkgx.sh
           - smallstep.com
           - starship.rs
+          - tailscale.com
           - webinstall.dev
           - zellij.dev
         baseImage:
@@ -50,6 +51,7 @@ jobs:
           - pkgx.sh
           - smallstep.com
           - starship.rs
+          - tailscale.com
           - webinstall.dev
           - zellij.dev
     steps:
