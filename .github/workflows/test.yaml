@@ -17,6 +17,7 @@ jobs:
           - atuin.sh
           - btop
           - bun.sh
+          - chezmoi.io
           - deno.com
           - pkgx.sh
           - smallstep.com
@@ -47,6 +48,7 @@ jobs:
           - atuin.sh
           - btop
           - bun.sh
+          - chezmoi.io
           - deno.com
           - pkgx.sh
           - smallstep.com

@@ -1,0 +1,17 @@
+{
+    "name": "chezmoi.io",
+    "id": "chezmoi.io",
+    "version": "1.0.0",
+    "description": "Install \"chezmoi\" binary",
+    "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/chezmoi.io",
+    "options": {
+        "version": {
+            "type": "string",
+            "default": "latest",
+            "proposals": [
+                "latest"
+            ],
+            "description": "Version of \"chezmoi\" to install."
+        }
+    }
+}
