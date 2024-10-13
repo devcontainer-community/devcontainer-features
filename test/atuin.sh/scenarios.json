@@ -1,9 +1,0 @@
-{
-    "atuin.sh-debian": {
-        "image": "mcr.microsoft.com/devcontainers/base:debian",
-        "features": {
-            "atuin.sh": {
-            }
-        }
-    }
-}
