@@ -6,6 +6,9 @@ set -o nounset
 set -o allexport
 readonly name="opencode.ai"
 cd $HOME
+if [ "${VERSION:-latest}" = "latest" ] || [ -z "${VERSION:-}" ]; then
+    VERSION=""
+fi
 apt_get_update() {
     if [ "$(find /var/lib/apt/lists/* | wc -l)" = "0" ]; then
         echo "Running apt-get update..."
@@ -31,7 +34,7 @@ install() {
     su $_REMOTE_USER -c "curl -fsSL https://opencode.ai/install | bash"
     apt_get_cleanup
 }
-ln -sf $HOME/.opencode/bin/opencode /usr/local/bin/opencode
+cp $HOME/.opencode/bin/opencode /usr/local/bin/opencode
 echo_banner "devcontainer.community"
 echo "Installing $name..."
 install "$@"
