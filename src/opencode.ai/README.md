@@ -1,23 +1,13 @@
 
 # opencode.ai (opencode.ai)
 
-Install "opencode.ai" binary
+Install "opencode" binary
 
 ## Example Usage
 
 ```json
 "features": {
     "ghcr.io/devcontainer-community/devcontainer-features/opencode.ai:0": {}
-}
-```
-
-## Options
-
-| Options Id | Description | Type | Default Value |
-|-----|-----|-----|-----|
-```json
-"features": {
-    "ghcr.io/devcontainer-community/devcontainer-features/opencode.ai:0.0.1": {}
 }
 ```
 
