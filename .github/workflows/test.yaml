@@ -21,6 +21,7 @@ jobs:
           - deno.com
           - feature-installer
           - nixos.org
+          - opencode.ai
           - pkgx.sh
           - smallstep.com
           - starship.rs
@@ -54,6 +55,7 @@ jobs:
           - deno.com
           - feature-installer
           - nixos.org
+          - opencode.ai
           - pkgx.sh
           - smallstep.com
           - starship.rs
