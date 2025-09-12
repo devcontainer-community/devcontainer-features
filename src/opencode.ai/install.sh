@@ -27,7 +27,7 @@ echo_banner() {
     echo -e "\e[1m\e[97m\e[41m$text\e[0m"
 }
 install() {
-    apt_get_checkinstall curl ca-certificates
+    apt_get_checkinstall curl ca-certificates unzip
     su $_REMOTE_USER -c "curl -fsSL https://opencode.ai/install | bash"
     apt_get_cleanup
 }
