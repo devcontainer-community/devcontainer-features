@@ -79,7 +79,14 @@ curl_download_unzip() {
     rm "$temp_file"
 }
 debian_get_arch() {
-    echo "$(dpkg --print-architecture)"
+    arch=$(uname -m)
+    if [[ "$arch" == "aarch64" ]]; then
+    arch="arm64"
+    elif [[ "$arch" == "x86_64" ]]; then
+    arch="x64"
+    fi
+    echo "$arch"
+#    echo "$(dpkg --print-architecture)" --- IGNORE ---
 }
 echo_banner() {
     local text="$1"
