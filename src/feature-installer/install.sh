@@ -27,7 +27,7 @@ echo_banner() {
 }
 install() {
     apt_get_checkinstall curl ca-certificates
-    su $_REMOTE_USER -c "curl -fsSL http://raw.githubusercontent.com/devcontainer-community/feature-installer/refs/heads/main/scripts/install.sh | sh"
+    su $_REMOTE_USER -c "curl -fsSL http://raw.githubusercontent.com/devcontainer-community/feature-installer/refs/heads/main/scripts/install.sh | bash"
     apt_get_cleanup
 }
 echo_banner "devcontainer.community"

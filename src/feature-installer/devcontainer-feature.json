@@ -1,7 +1,7 @@
 {
     "name": "feature-installer",
     "id": "feature-installer",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "Install \"feature-installer\" binary",
     "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/feature-installer",
     "options": {
