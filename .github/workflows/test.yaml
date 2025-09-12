@@ -19,6 +19,7 @@ jobs:
           - bun.sh
           - chezmoi.io
           - deno.com
+          - feature-installer
           - nixos.org
           - pkgx.sh
           - smallstep.com
@@ -51,6 +52,7 @@ jobs:
           - bun.sh
           - chezmoi.io
           - deno.com
+          - feature-installer
           - nixos.org
           - pkgx.sh
           - smallstep.com
