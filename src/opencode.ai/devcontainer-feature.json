@@ -1,7 +1,7 @@
 {
     "name": "opencode.ai",
     "id": "opencode.ai",
-    "version": "0.0.8",
+    "version": "1.0.0",
     "description": "Install \"opencode\" binary",
     "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/opencode.ai",
     "options": {
