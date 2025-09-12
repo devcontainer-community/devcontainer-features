@@ -74,7 +74,7 @@ curl_download_unzip() {
     local target=$3
     local bin_path=$4
     local temp_file=$(mktemp)
-    curl_download_stdout "$url" > "$temp_file"
+    curl_download_stdout "$url" >| "$temp_file"
     unzip -j "$temp_file" "$bin_path" -d "$target"
     rm "$temp_file"
 }
