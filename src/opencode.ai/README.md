@@ -7,7 +7,7 @@ Install "opencode" binary
 
 ```json
 "features": {
-    "ghcr.io/devcontainer-community/devcontainer-features/opencode.ai:0": {}
+    "ghcr.io/devcontainer-community/devcontainer-features/opencode.ai:1": {}
 }
 ```
 
