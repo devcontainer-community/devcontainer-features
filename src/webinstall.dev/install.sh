@@ -4,7 +4,7 @@ set -o pipefail
 set -o noclobber
 set -o nounset
 set -o allexport
-readonly name="asdf"
+readonly name="webinstall.dev"
 apt_get_update() {
     if [ "$(find /var/lib/apt/lists/* | wc -l)" = "0" ]; then
         echo "Running apt-get update..."
