@@ -26,6 +26,7 @@ jobs:
           - smallstep.com
           - starship.rs
           - tailscale.com
+          - uv
           - webinstall.dev
           - zellij.dev
         baseImage:
