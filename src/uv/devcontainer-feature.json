@@ -1,0 +1,22 @@
+{
+    "name": "uv",
+    "id": "uv",
+    "version": "1.0.0",
+    "description": "Install \"uv\" and \"uvx\" binaries",
+    "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/uv",
+    "options": {
+        "version": {
+            "type": "string",
+            "default": "latest",
+            "proposals": [
+                "latest"
+            ],
+            "description": "Version of \"uv\" to install."
+        },
+        "shellautocompletion": {
+            "default": false,
+            "description": "Enable or disable uv and uvx autocompletion.",
+            "type": "boolean"
+        }
+    }
+}
