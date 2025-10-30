@@ -1,6 +1,6 @@
 {
     "name": "zyedidia/eget",
-    "id": "eget",
+    "id": "zyedidia-eget",
     "version": "1.0.0",
     "description": "Install \"eget\" binary",
     "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/zyedidia-eget",
