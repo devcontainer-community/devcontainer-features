@@ -1,7 +1,7 @@
 {
-    "name": "uv",
-    "id": "uv",
-    "version": "1.0.0",
+    "name": "astral.sh/uv",
+    "id": "astral.sh-uv",
+    "version": "1.0.1",
     "description": "Install \"uv\" and \"uvx\" binaries",
     "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/uv",
     "options": {
