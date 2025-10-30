@@ -30,6 +30,7 @@ jobs:
           - uv
           - webinstall.dev
           - zellij.dev
+          - zyedidia-eget
         baseImage:
           - debian:latest
           - ubuntu:latest
