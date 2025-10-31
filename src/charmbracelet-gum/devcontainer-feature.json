@@ -1,7 +1,7 @@
 {
     "name": "charmbracelet/gum",
     "id": "charmbracelet-gum",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Install \"gum\" binary",
     "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/charmbracelet-gum",
     "options": {

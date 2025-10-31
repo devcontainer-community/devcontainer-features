@@ -83,11 +83,11 @@ curl_download_untar() {
 }
 debian_get_arch() {
     arch=$(uname -m)
-    # if [[ "$arch" == "aarch64" ]]; then
-    # arch="arm64"
-    # elif [[ "$arch" == "x86_64" ]]; then
-    # arch="x64"
-    # fi
+    if [[ "$arch" == "arm64" ]]; then
+    arch="arm64"
+    elif [[ "$arch" == "x86_64" ]]; then
+    arch="x86_64"
+    fi
     echo "$arch"
 #    echo "$(dpkg --print-architecture)" --- IGNORE ---
 }
