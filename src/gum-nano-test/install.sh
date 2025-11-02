@@ -17,16 +17,21 @@ echo $nanolayer_location
 $nanolayer_location version
 
 
-$nanolayer_location install github \
-    "charmbracelet/gum" \
-    --asset-url-template 'https://github.com/${Repo}/releases/download/v${Version}/${AssetName}_${Version}_Linux_${Architecture}.tar.gz' \
-    --architecture-replacement "arm64 arm64" \
-    --file-destination "*/gum /tmp/bin/gum" \
-    --asset-name 'gum' \
-    --asset-version "latest"
+# $nanolayer_location install github \
+#     "charmbracelet/gum" \
+#     --asset-url-template 'https://github.com/${Repo}/releases/download/v${Version}/${AssetName}_${Version}_Linux_${Architecture}.tar.gz' \
+#     --architecture-replacement "arm64 arm64" \
+#     --file-destination "*/gum /tmp/bin/gum" \
+#     --asset-name 'gum' \
+#     --asset-version "latest"
 
-    # --asset-name 'gum' \
-    # --version
+
+$nanolayer_location install github \
+    "astral-sh/uv" \
+    --asset-url-template 'https://github.com/${Repo}/releases/download/${Version}/${AssetName}-${Architecture}-unknown-linux-musl.tar.gz' \
+    --file-destination "*/uv /tmp/bin/uv" \
+    --file-destination "*/uvx /tmp/bin/uvx" \
+    --asset-version ${VERSION:-"latest"}
 
 # $nanolayer_location system
 
