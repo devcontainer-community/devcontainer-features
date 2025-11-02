@@ -33,11 +33,11 @@ $nanolayer_location version
 #     --file-destination "*/uvx /tmp/bin/uvx" \
 #     --asset-version ${VERSION:-"latest"}
 
-# $nanolayer_location install github \
-#     "aristocratos/btop" \
-#     --asset-url-template 'https://github.com/${Repo}/releases/download/v${Version}/${AssetName}-${Architecture}-linux-musl.tbz' \
-#     --asset-version ${VERSION:-"latest"} \
-#     --file-destination "./btop/bin/btop /tmp/local/bin/btop"
+$nanolayer_location install github \
+    "aristocratos/btop" \
+    --asset-url-template 'https://github.com/${Repo}/releases/download/v${Version}/${AssetName}-${Architecture}-linux-musl.tbz' \
+    --asset-version ${VERSION:-"latest"} \
+    --file-destination "./btop/bin/btop /tmp/local/bin/btop"
 
 # $nanolayer_location system
 
