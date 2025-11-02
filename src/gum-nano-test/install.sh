@@ -1,5 +1,10 @@
 #!/bin/bash
-set -e
+set -o errexit
+set -o pipefail
+set -o noclobber
+set -o nounset
+set -o allexport
+# set -e
 
 
 . ./ensure_nanolayer

@@ -1,4 +1,4 @@
-
+#!/bin/bash
 
 echo_banner() {
     local text="$1"
@@ -108,8 +108,8 @@ ensure_nanolayer() {
     local __nanolayer_location=""
 
     # If possible - try to use an already installed nanolayer
-    if [ -z "${NANOLAYER_FORCE_CLI_INSTALLATION}" ]; then
-        if [ -z "${NANOLAYER_CLI_LOCATION}" ]; then
+    if [ -z "${NANOLAYER_FORCE_CLI_INSTALLATION:-}" ]; then
+        if [ -z "${NANOLAYER_CLI_LOCATION:-}" ]; then
             if type nanolayer >/dev/null 2>&1; then
                 echo "Found a pre-existing nanolayer in PATH"
                 __nanolayer_location=nanolayer
@@ -146,7 +146,6 @@ ensure_nanolayer() {
             }
             trap clean_up EXIT
 
-            tar_filename=nanolayer-"$(uname -m)"-unknown-linux-$clib_type.tgz
             case "$(uname -m)" in
                 x86_64) arch="amd64" ;;
                 aarch64) arch="arm64" ;;
@@ -172,3 +171,9 @@ ensure_nanolayer() {
     export ${variable_name}=$__nanolayer_location
 
 }
+
+# If called directly - exit 1
+if [[ "${BASH_SOURCE[0]}" == "${0}" ]]; then
+    echo "This script is meant to be sourced, not executed directly"
+    exit 1
+fi
