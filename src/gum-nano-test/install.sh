@@ -3,7 +3,9 @@ set -e
 
 
 . ./ensure_nanolayer
-ensure_nanolayer nanolayer_location "v0.0.4"
+ensure_nanolayer nanolayer_location "v0.0.5"
+
+echo_banner "devcontainer.community"
 
 echo $nanolayer_location
 
@@ -22,3 +24,5 @@ $nanolayer_location install github \
     # --version
 
 # $nanolayer_location system
+
+echo " (*) Done."
