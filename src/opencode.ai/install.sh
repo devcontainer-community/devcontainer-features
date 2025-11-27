@@ -7,7 +7,7 @@ set -o allexport
 readonly githubRepository='sst/opencode'
 readonly binaryName='opencode'
 readonly versionArgument='--version'
-readonly downloadUrlTemplate='https://github.com/${githubRepository}/releases/download/v${version}/${name}-linux-${architecture}.zip'
+readonly downloadUrlTemplate='https://github.com/${githubRepository}/releases/download/v${version}/${name}-linux-${architecture}.tar.gz'
 readonly binaryTargetFolder='/usr/local/bin'
 readonly name="${githubRepository##*/}"
 apt_get_update() {
@@ -40,8 +40,8 @@ check_curl_envsubst_file_unzip_installed() {
     if ! command -v file >/dev/null 2>&1; then
         requiredAptPackagesMissing+=('file')
     fi
-    if ! command -v unzip >/dev/null 2>&1; then
-        requiredAptPackagesMissing+=('unzip')
+    if ! command -v tar >/dev/null 2>&1; then
+        requiredAptPackagesMissing+=('tar')
     fi
     declare -i requiredAptPackagesMissingCount=${#requiredAptPackagesMissing[@]}
     if [ $requiredAptPackagesMissingCount -gt 0 ]; then
@@ -68,14 +68,12 @@ curl_download_stdout() {
         --connect-timeout 5 \
         "$url"
 }
-curl_download_unzip() {
+curl_download_tarball() {
     local url=$1
-    local strip=$2
-    local target=$3
-    local bin_path=$4
+    local target=$2
     local temp_file=$(mktemp)
     curl_download_stdout "$url" >| "$temp_file"
-    unzip -j "$temp_file" "$bin_path" -d "$target"
+    tar -xzf "$temp_file" -C "$target"
     rm "$temp_file"
 }
 debian_get_arch() {
@@ -127,10 +125,8 @@ install() {
     readonly version="${VERSION:?}"
     readonly downloadUrl="$(echo -n "$downloadUrlTemplate" | envsubst)"
     curl_check_url "$downloadUrl"
-    readonly binaryPathInArchive="$binaryName"
-    readonly stripComponents="$(echo -n "$binaryPathInArchive" | awk -F'/' '{print NF-1}')"
     readonly binaryTargetPath="$(echo -n "$binaryTargetPathTemplate" | envsubst)"
-    curl_download_unzip "$downloadUrl" "$stripComponents" "$binaryTargetFolder" "$binaryPathInArchive"
+    curl_download_tarball "$downloadUrl" "$binaryTargetFolder"
     chmod 755 "$binaryTargetPath"
 }
 echo_banner "devcontainer.community"
