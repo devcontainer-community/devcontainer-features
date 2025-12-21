@@ -1,0 +1,17 @@
+{
+    "name": "jj-vcs.dev",
+    "id": "jj-vcs.dev",
+    "version": "1.0.0",
+    "description": "Install \"jj\" binary",
+    "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/jj-vcs.dev",
+    "options": {
+        "version": {
+            "type": "string",
+            "default": "latest",
+            "proposals": [
+                "latest"
+            ],
+            "description": "Version of \"jj\" to install."
+        }
+    }
+}
