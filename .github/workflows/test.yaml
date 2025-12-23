@@ -16,6 +16,7 @@ jobs:
           - asdf-vm.com
           - astral.sh-uv
           - atuin.sh
+          - aws-cli
           - btop
           - bun.sh
           - charmbracelet-gum
