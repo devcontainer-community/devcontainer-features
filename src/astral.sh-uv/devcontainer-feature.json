@@ -3,7 +3,7 @@
     "id": "astral.sh-uv",
     "version": "1.0.1",
     "description": "Install \"uv\" and \"uvx\" binaries",
-    "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/uv",
+    "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/astral.sh-uv",
     "options": {
         "version": {
             "type": "string",
