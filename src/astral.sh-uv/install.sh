@@ -8,8 +8,6 @@ readonly githubRepository='astral-sh/uv'
 readonly binaryName='uv'
 readonly versionArgument='--version'
 readonly os="unknown-linux-musl"
-readonly downloadUrlTemplate='https://github.com/${githubRepository}/releases/download/${version}/${binaryName}-${architecture}-${os}.tar.gz'
-readonly downloadUrlLatestTemplate='https://github.com/${githubRepository}/releases/latest/download/${binaryName}-${architecture}-${os}.tar.gz'
 readonly binaryTargetFolder='/usr/local/bin'
 readonly name="${githubRepository##*/}"
 readonly AUTOCOMPLETION="${SHELLAUTOCOMPLETION:-"true"}"
@@ -29,16 +27,13 @@ apt_get_cleanup() {
     apt-get clean
     rm -rf /var/lib/apt/lists/*
 }
-check_curl_envsubst_file_untar_installed() {
+check_curl_file_untar_installed() {
     declare -a requiredAptPackagesMissing=()
     if ! [ -r '/etc/ssl/certs/ca-certificates.crt' ]; then
         requiredAptPackagesMissing+=('ca-certificates')
     fi
     if ! command -v curl >/dev/null 2>&1; then
         requiredAptPackagesMissing+=('curl')
-    fi
-    if ! command -v envsubst >/dev/null 2>&1; then
-        requiredAptPackagesMissing+=('gettext-base')
     fi
     if ! command -v file >/dev/null 2>&1; then
         requiredAptPackagesMissing+=('file')
@@ -130,22 +125,21 @@ enable_autocompletion() {
 }
 install() {
     utils_check_version "$VERSION"
-    check_curl_envsubst_file_untar_installed
+    check_curl_file_untar_installed
     readonly architecture="$(debian_get_arch)"
-    readonly binaryTargetPathTemplate='${binaryTargetFolder}/${binaryName}'
     if [ "$VERSION" == 'latest' ] || [ -z "$VERSION" ]; then
         # Avoid GitHub API rate limits by using the latest/download URL
-        readonly downloadUrl="$(echo -n "$downloadUrlLatestTemplate" | envsubst)"
+        readonly downloadUrl="https://github.com/${githubRepository}/releases/latest/download/${binaryName}-${architecture}-${os}.tar.gz"
     else
         readonly version="${VERSION:?}"
-        readonly downloadUrl="$(echo -n "$downloadUrlTemplate" | envsubst)"
+        readonly downloadUrl="https://github.com/${githubRepository}/releases/download/${version}/${binaryName}-${architecture}-${os}.tar.gz"
     fi
     curl_check_url "$downloadUrl"
     # The archive contains files under a directory: uv-${architecture}-${os}/
     readonly uvPathInArchive="uv-${architecture}-${os}/$binaryName"
     readonly uvxPathInArchive="uv-${architecture}-${os}/uvx"
     readonly stripComponents="$(echo -n "$uvPathInArchive" | awk -F'/' '{print NF-1}')"
-    readonly binaryTargetPath="$(echo -n "$binaryTargetPathTemplate" | envsubst)"
+    readonly binaryTargetPath="${binaryTargetFolder}/${binaryName}"
     readonly uvxTargetPath="${binaryTargetFolder}/uvx"
     # Extract uv and uvx in a single download/untar
     curl_download_untar "$downloadUrl" "$stripComponents" "$binaryTargetFolder" "$uvPathInArchive" "$uvxPathInArchive"
