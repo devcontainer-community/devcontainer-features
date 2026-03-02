@@ -68,7 +68,7 @@ version_lte() {
     [ "$1" = "$(printf '%s\n%s' "$1" "$2" | sort -V | head -n1)" ]
 }
 install_legacy() {
-    # Legacy installation via git clone for versions <= 0.15.0
+    # Legacy installation via git clone for versions <= 0.16.0
     apt_get_checkinstall git curl ca-certificates
     su $_REMOTE_USER -c "git clone https://github.com/$githubRepository.git $_REMOTE_USER_HOME/.asdf --branch v$VERSION"
     apt_get_cleanup
@@ -97,7 +97,7 @@ install() {
     if [ "$VERSION" == 'latest' ] || [ -z "$VERSION" ]; then
         VERSION=$(github_get_latest_release "$githubRepository")
     fi
-    if version_lte "$VERSION" "0.15.0"; then
+    if version_lte "$VERSION" "0.16.0"; then
         echo "Installing legacy bash version (v$VERSION)..."
         install_legacy
     else
