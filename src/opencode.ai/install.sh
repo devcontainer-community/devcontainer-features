@@ -4,7 +4,7 @@ set -o pipefail
 set -o noclobber
 set -o nounset
 set -o allexport
-readonly githubRepository='sst/opencode'
+readonly githubRepository='anomalyco/opencode'
 readonly binaryName='opencode'
 readonly versionArgument='--version'
 readonly downloadUrlTemplate='https://github.com/${githubRepository}/releases/download/v${version}/${name}-linux-${architecture}.tar.gz'
