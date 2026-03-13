@@ -7,7 +7,6 @@ set -o allexport
 readonly githubRepository='anomalyco/opencode'
 readonly binaryName='opencode'
 readonly versionArgument='--version'
-readonly downloadUrlTemplate='https://github.com/${githubRepository}/releases/download/v${version}/${name}-linux-${architecture}.tar.gz'
 readonly binaryTargetFolder='/usr/local/bin'
 readonly name="${githubRepository##*/}"
 apt_get_update() {
@@ -26,16 +25,13 @@ apt_get_cleanup() {
     apt-get clean
     rm -rf /var/lib/apt/lists/*
 }
-check_curl_envsubst_file_unzip_installed() {
+check_curl_file_unzip_installed() {
     declare -a requiredAptPackagesMissing=()
     if ! [ -r '/etc/ssl/certs/ca-certificates.crt' ]; then
         requiredAptPackagesMissing+=('ca-certificates')
     fi
     if ! command -v curl >/dev/null 2>&1; then
         requiredAptPackagesMissing+=('curl')
-    fi
-    if ! command -v envsubst >/dev/null 2>&1; then
-        requiredAptPackagesMissing+=('gettext-base')
     fi
     if ! command -v file >/dev/null 2>&1; then
         requiredAptPackagesMissing+=('file')
@@ -116,16 +112,15 @@ utils_check_version() {
 }
 install() {
     utils_check_version "$VERSION"
-    check_curl_envsubst_file_unzip_installed
+    check_curl_file_unzip_installed
     readonly architecture="$(debian_get_arch)"
-    readonly binaryTargetPathTemplate='${binaryTargetFolder}/${binaryName}'
     if [ "$VERSION" == 'latest' ] || [ -z "$VERSION" ]; then
         VERSION=$(github_get_latest_release "$githubRepository")
     fi
     readonly version="${VERSION:?}"
-    readonly downloadUrl="$(echo -n "$downloadUrlTemplate" | envsubst)"
+    readonly downloadUrl="https://github.com/${githubRepository}/releases/download/v${version}/${name}-linux-${architecture}.tar.gz"
     curl_check_url "$downloadUrl"
-    readonly binaryTargetPath="$(echo -n "$binaryTargetPathTemplate" | envsubst)"
+    readonly binaryTargetPath="${binaryTargetFolder}/${binaryName}"
     curl_download_tarball "$downloadUrl" "$binaryTargetFolder"
     chmod 755 "$binaryTargetPath"
 }
