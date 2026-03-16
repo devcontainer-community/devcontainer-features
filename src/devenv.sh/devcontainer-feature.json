@@ -2,7 +2,7 @@
     "name": "devenv.sh",
     "id": "devenv.sh",
     "version": "1.0.0",
-    "description": "Install \"devenv\" binary",
+    "description": "Install devenv via Nix",
     "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/devenv.sh",
     "options": {
         "version": {
@@ -11,7 +11,7 @@
             "proposals": [
                 "latest"
             ],
-            "description": "Version of \"devenv\" to install."
+            "description": "Version of devenv to install (e.g. \"2.0.4\"), or \"latest\"."
         }
     }
 }
