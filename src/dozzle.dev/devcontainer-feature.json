@@ -1,0 +1,17 @@
+{
+    "name": "dozzle.dev",
+    "id": "dozzle.dev",
+    "version": "1.0.0",
+    "description": "Install \"dozzle\" binary",
+    "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/dozzle.dev",
+    "options": {
+        "version": {
+            "type": "string",
+            "default": "latest",
+            "proposals": [
+                "latest"
+            ],
+            "description": "Version of \"dozzle\" to install."
+        }
+    }
+}
