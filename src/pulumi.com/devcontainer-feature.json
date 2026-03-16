@@ -1,0 +1,17 @@
+{
+    "name": "pulumi.com",
+    "id": "pulumi.com",
+    "version": "1.0.0",
+    "description": "Install \"pulumi\" binary",
+    "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/pulumi.com",
+    "options": {
+        "version": {
+            "type": "string",
+            "default": "latest",
+            "proposals": [
+                "latest"
+            ],
+            "description": "Version of \"pulumi\" to install."
+        }
+    }
+}

@@ -30,6 +30,7 @@ jobs:
           - opencode.ai
           - pi.dev
           - pkgx.sh
+          - pulumi.com
           - rclone.org
           - restic.net
           - smallstep.com
@@ -73,6 +74,7 @@ jobs:
           - opencode.ai
           - pi.dev
           - pkgx.sh
+          - pulumi.com
           - rclone.org
           - restic.net
           - smallstep.com
