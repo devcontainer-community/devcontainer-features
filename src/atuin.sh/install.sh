@@ -7,8 +7,6 @@ set -o allexport
 readonly githubRepository='atuinsh/atuin'
 readonly binaryName='atuin'
 readonly versionArgument='--version'
-readonly downloadUrlTemplate='https://github.com/${githubRepository}/releases/download/v${version}/${name}-${architecture}-unknown-linux-gnu.tar.gz'
-readonly binaryPathInArchiveTemplate='${name}-${architecture}-unknown-linux-gnu/${binaryName}'
 readonly binaryTargetFolder='/usr/local/bin'
 readonly name="${githubRepository##*/}"
 apt_get_cleanup() {
@@ -27,16 +25,13 @@ apt_get_checkinstall() {
         DEBIAN_FRONTEND=noninteractive apt-get -y install --no-install-recommends --no-install-suggests --option 'Debug::pkgProblemResolver=true' --option 'Debug::pkgAcquire::Worker=1' "$@"
     fi
 }
-check_curl_envsubst_file_tar_installed() {
+check_curl_file_tar_installed() {
     declare -a requiredAptPackagesMissing=()
     if ! [ -r '/etc/ssl/certs/ca-certificates.crt' ]; then
         requiredAptPackagesMissing+=('ca-certificates')
     fi
     if ! command -v curl >/dev/null 2>&1; then
         requiredAptPackagesMissing+=('curl')
-    fi
-    if ! command -v envsubst >/dev/null 2>&1; then
-        requiredAptPackagesMissing+=('gettext-base')
     fi
     if ! command -v file >/dev/null 2>&1; then
         requiredAptPackagesMissing+=('file')
@@ -123,18 +118,17 @@ utils_check_version() {
 }
 install() {
     utils_check_version "$VERSION"
-    check_curl_envsubst_file_tar_installed
+    check_curl_file_tar_installed
     readonly architecture="$(debian_get_target_arch)"
-    readonly binaryTargetPathTemplate='${binaryTargetFolder}/${binaryName}'
     if [ "$VERSION" == 'latest' ] || [ -z "$VERSION" ]; then
         VERSION=$(github_get_latest_release "$githubRepository")
     fi
     readonly version="${VERSION:?}"
-    readonly downloadUrl="$(echo -n "$downloadUrlTemplate" | envsubst)"
+    readonly downloadUrl="https://github.com/${githubRepository}/releases/download/v${version}/${name}-${architecture}-unknown-linux-gnu.tar.gz"
     curl_check_url "$downloadUrl"
-    readonly binaryPathInArchive="$(echo -n "$binaryPathInArchiveTemplate" | envsubst)"
+    readonly binaryPathInArchive="${name}-${architecture}-unknown-linux-gnu/${binaryName}"
     readonly stripComponents="$(echo -n "$binaryPathInArchive" | awk -F'/' '{print NF-1}')"
-    readonly binaryTargetPath="$(echo -n "$binaryTargetPathTemplate" | envsubst)"
+    readonly binaryTargetPath="${binaryTargetFolder}/${binaryName}"
     curl_download_untar "$downloadUrl" "$stripComponents" "$binaryTargetFolder" "$binaryPathInArchive"
     chmod 755 "$binaryTargetPath"
     apt_get_cleanup
