@@ -94,6 +94,9 @@ install_binary() {
 }
 install() {
     utils_check_version "$VERSION"
+    if ! command -v curl >/dev/null 2>&1; then
+        apt_get_checkinstall curl ca-certificates
+    fi
     if [ "$VERSION" == 'latest' ] || [ -z "$VERSION" ]; then
         VERSION=$(github_get_latest_release "$githubRepository")
     fi
