@@ -24,6 +24,7 @@ jobs:
           - deno.com
           - feature-installer
           - jj-vcs.dev
+          - neovim.io
           - nixos.org
           - opencode.ai
           - pkgx.sh
@@ -62,6 +63,7 @@ jobs:
           - deno.com
           - feature-installer
           - jj-vcs.dev
+          - neovim.io
           - nixos.org
           - opencode.ai
           - pkgx.sh
