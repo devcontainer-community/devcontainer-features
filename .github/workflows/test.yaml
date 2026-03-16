@@ -22,6 +22,7 @@ jobs:
           - charmbracelet-gum
           - chezmoi.io
           - deno.com
+          - devenv.sh
           - feature-installer
           - jj-vcs.dev
           - keybase.io
@@ -67,6 +68,7 @@ jobs:
           - charmbracelet-gum
           - chezmoi.io
           - deno.com
+          - devenv.sh
           - feature-installer
           - jj-vcs.dev
           - keybase.io
