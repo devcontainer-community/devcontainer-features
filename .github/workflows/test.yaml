@@ -28,6 +28,7 @@ jobs:
           - nixos.org
           - nvidia.com-cuda
           - opencode.ai
+          - pi.dev
           - pkgx.sh
           - rclone.org
           - restic.net
@@ -70,6 +71,7 @@ jobs:
           - nixos.org
           - nvidia.com-cuda
           - opencode.ai
+          - pi.dev
           - pkgx.sh
           - rclone.org
           - restic.net
