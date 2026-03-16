@@ -1,0 +1,17 @@
+{
+    "name": "restic.net",
+    "id": "restic.net",
+    "version": "1.0.0",
+    "description": "Install \"restic\" binary",
+    "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/restic.net",
+    "options": {
+        "version": {
+            "type": "string",
+            "default": "latest",
+            "proposals": [
+                "latest"
+            ],
+            "description": "Version of \"restic\" to install."
+        }
+    }
+}
