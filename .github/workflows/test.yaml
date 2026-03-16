@@ -24,6 +24,7 @@ jobs:
           - deno.com
           - feature-installer
           - jj-vcs.dev
+          - keybase.io
           - neovim.io
           - nixos.org
           - nvidia.com-cuda
@@ -68,6 +69,7 @@ jobs:
           - deno.com
           - feature-installer
           - jj-vcs.dev
+          - keybase.io
           - neovim.io
           - nixos.org
           - nvidia.com-cuda
