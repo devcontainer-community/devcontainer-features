@@ -1,0 +1,17 @@
+{
+    "name": "keybase.io",
+    "id": "keybase.io",
+    "version": "1.0.0",
+    "description": "Install \"keybase\" binary",
+    "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/keybase.io",
+    "options": {
+        "version": {
+            "type": "string",
+            "default": "latest",
+            "proposals": [
+                "latest"
+            ],
+            "description": "Currently unused."
+        }
+    }
+}
