@@ -25,6 +25,7 @@ jobs:
           - feature-installer
           - jj-vcs.dev
           - nixos.org
+          - nvidia.com-cuda
           - opencode.ai
           - pkgx.sh
           - smallstep.com
@@ -63,6 +64,7 @@ jobs:
           - feature-installer
           - jj-vcs.dev
           - nixos.org
+          - nvidia.com-cuda
           - opencode.ai
           - pkgx.sh
           - smallstep.com
