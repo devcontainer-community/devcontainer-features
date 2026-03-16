@@ -25,6 +25,7 @@ jobs:
           - feature-installer
           - jj-vcs.dev
           - mosh.org
+          - keybase.io
           - neovim.io
           - nixos.org
           - nvidia.com-cuda
@@ -70,6 +71,7 @@ jobs:
           - feature-installer
           - jj-vcs.dev
           - mosh.org
+          - keybase.io
           - neovim.io
           - nixos.org
           - nvidia.com-cuda
