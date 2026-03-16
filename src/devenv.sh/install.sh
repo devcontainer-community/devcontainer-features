@@ -41,9 +41,15 @@ install() {
         # the host kernel may not support Nix's sandboxing (seccomp restrictions)
         su "${remote_user}" -c "curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install linux --extra-conf 'sandbox = false' --no-confirm --init none"
     fi
+    # nix-daemon without --daemon runs in the foreground (no fork), so $! is the actual PID
     "${nixDaemonBin}" > /dev/null 2>&1 &
+    local daemon_pid=$!
     local attempts=0
     until [ -S "${nixDaemonSocket}" ]; do
+        if ! kill -0 "${daemon_pid}" 2>/dev/null; then
+            echo "ERROR: Nix daemon process exited unexpectedly"
+            exit 1
+        fi
         sleep 1
         attempts=$((attempts + 1))
         if [ "${attempts}" -ge 30 ]; then
