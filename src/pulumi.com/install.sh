@@ -132,7 +132,9 @@ install() {
     fi
     readonly downloadUrl="$(echo -n "$downloadUrlTemplate" | envsubst)"
     curl_check_url "$downloadUrl"
-    curl_download_stdout "$downloadUrl" | tar -xz --strip-components=1 -C "$binaryTargetFolder"
+    readonly binaryPathInArchive="pulumi/${binaryName}"
+    readonly stripComponents="$(echo -n "$binaryPathInArchive" | awk -F'/' '{print NF-1}')"
+    curl_download_untar "$downloadUrl" "$stripComponents" "$binaryTargetFolder" "$binaryPathInArchive"
     chmod 755 "${binaryTargetFolder}/${binaryName}"
     apt_get_cleanup
 }
