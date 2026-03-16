@@ -1,0 +1,7 @@
+{
+    "name": "mosh.org",
+    "id": "mosh.org",
+    "version": "1.0.0",
+    "description": "Install \"mosh\" (mobile shell) binary",
+    "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/mosh.org"
+}
