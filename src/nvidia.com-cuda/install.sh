@@ -84,6 +84,14 @@ install() {
         --option 'Debug::pkgProblemResolver=true' \
         --option 'Debug::pkgAcquire::Worker=1' \
         "${package_name}"
+    # Add /usr/local/cuda/bin to PATH for interactive shells
+    echo 'export PATH="/usr/local/cuda/bin${PATH:+:${PATH}}"' > /etc/profile.d/cuda.sh
+    chmod 644 /etc/profile.d/cuda.sh
+    # Symlink nvcc into a standard PATH location so it is available immediately
+    # (e.g. for non-interactive shells and devcontainer feature tests)
+    if [ -f /usr/local/cuda/bin/nvcc ]; then
+        ln -sf /usr/local/cuda/bin/nvcc /usr/local/bin/nvcc
+    fi
     apt_get_cleanup
 }
 echo_banner "devcontainer.community"
