@@ -27,6 +27,7 @@ jobs:
           - neovim.io
           - nixos.org
           - opencode.ai
+          - pi.dev
           - pkgx.sh
           - rclone.org
           - restic.net
@@ -68,6 +69,7 @@ jobs:
           - neovim.io
           - nixos.org
           - opencode.ai
+          - pi.dev
           - pkgx.sh
           - rclone.org
           - restic.net
