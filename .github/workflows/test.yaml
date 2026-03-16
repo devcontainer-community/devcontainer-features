@@ -25,9 +25,12 @@ jobs:
           - feature-installer
           - jj-vcs.dev
           - keybase.io
+          - neovim.io
           - nixos.org
           - opencode.ai
           - pkgx.sh
+          - rclone.org
+          - restic.net
           - smallstep.com
           - starship.rs
           - tailscale.com
@@ -64,9 +67,12 @@ jobs:
           - feature-installer
           - jj-vcs.dev
           - keybase.io
+          - neovim.io
           - nixos.org
           - opencode.ai
           - pkgx.sh
+          - rclone.org
+          - restic.net
           - smallstep.com
           - starship.rs
           - tailscale.com

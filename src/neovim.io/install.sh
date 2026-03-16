@@ -4,9 +4,11 @@ set -o pipefail
 set -o noclobber
 set -o nounset
 set -o allexport
-readonly githubRepository='anomalyco/opencode'
-readonly binaryName='opencode'
+readonly githubRepository='neovim/neovim'
+readonly binaryName='nvim'
 readonly versionArgument='--version'
+readonly downloadUrlTemplate='https://github.com/${githubRepository}/releases/download/${releaseTag}/nvim-linux-${architecture}.tar.gz'
+readonly binaryPathInArchiveTemplate='nvim-linux-${architecture}/bin/${binaryName}'
 readonly binaryTargetFolder='/usr/local/bin'
 readonly name="${githubRepository##*/}"
 apt_get_update() {
@@ -25,13 +27,16 @@ apt_get_cleanup() {
     apt-get clean
     rm -rf /var/lib/apt/lists/*
 }
-check_curl_file_unzip_installed() {
+check_curl_envsubst_file_tar_installed() {
     declare -a requiredAptPackagesMissing=()
     if ! [ -r '/etc/ssl/certs/ca-certificates.crt' ]; then
         requiredAptPackagesMissing+=('ca-certificates')
     fi
     if ! command -v curl >/dev/null 2>&1; then
         requiredAptPackagesMissing+=('curl')
+    fi
+    if ! command -v envsubst >/dev/null 2>&1; then
+        requiredAptPackagesMissing+=('gettext-base')
     fi
     if ! command -v file >/dev/null 2>&1; then
         requiredAptPackagesMissing+=('file')
@@ -64,23 +69,30 @@ curl_download_stdout() {
         --connect-timeout 5 \
         "$url"
 }
-curl_download_tarball() {
+curl_download_untar() {
     local url=$1
-    local target=$2
-    local temp_file=$(mktemp)
-    curl_download_stdout "$url" >| "$temp_file"
-    tar -xzf "$temp_file" -C "$target"
-    rm "$temp_file"
+    local strip=$2
+    local target=$3
+    local bin_path=$4
+    curl_download_stdout "$url" | tar \
+        -xz \
+        -f '-' \
+        --strip-components="$strip" \
+        -C "$target" \
+        "$bin_path"
 }
 debian_get_arch() {
-    arch=$(uname -m)
-    if [[ "$arch" == "aarch64" ]]; then
-    arch="arm64"
-    elif [[ "$arch" == "x86_64" ]]; then
-    arch="x64"
-    fi
-    echo "$arch"
-#    echo "$(dpkg --print-architecture)" --- IGNORE ---
+    echo "$(dpkg --print-architecture)"
+}
+debian_get_target_arch() {
+    case $(debian_get_arch) in
+    amd64) echo 'x86_64' ;;
+    arm64) echo 'arm64' ;;
+    *)
+        printf >&2 '=== [ERROR] Unsupported architecture: "%s"!\n' "$(debian_get_arch)"
+        exit 1
+        ;;
+    esac
 }
 echo_banner() {
     local text="$1"
@@ -124,8 +136,9 @@ utils_check_version() {
 }
 install() {
     utils_check_version "$VERSION"
-    check_curl_file_unzip_installed
-    readonly architecture="$(debian_get_arch)"
+    check_curl_envsubst_file_tar_installed
+    readonly architecture="$(debian_get_target_arch)"
+    readonly binaryTargetPathTemplate='${binaryTargetFolder}/${binaryName}'
     if [ "$VERSION" == 'latest' ] || [ -z "$VERSION" ]; then
         VERSION=$(github_get_latest_release "$githubRepository")
     fi
@@ -135,10 +148,12 @@ install() {
         printf >&2 '=== [ERROR] Could not find release tag for version "%s" in "%s"!\n' "$version" "$githubRepository"
         exit 1
     fi
-    readonly downloadUrl="https://github.com/${githubRepository}/releases/download/${releaseTag}/${name}-linux-${architecture}.tar.gz"
+    readonly downloadUrl="$(echo -n "$downloadUrlTemplate" | envsubst)"
     curl_check_url "$downloadUrl"
-    readonly binaryTargetPath="${binaryTargetFolder}/${binaryName}"
-    curl_download_tarball "$downloadUrl" "$binaryTargetFolder"
+    readonly binaryPathInArchive="$(echo -n "$binaryPathInArchiveTemplate" | envsubst)"
+    readonly stripComponents="$(echo -n "$binaryPathInArchive" | awk -F'/' '{print NF-1}')"
+    readonly binaryTargetPath="$(echo -n "$binaryTargetPathTemplate" | envsubst)"
+    curl_download_untar "$downloadUrl" "$stripComponents" "$binaryTargetFolder" "$binaryPathInArchive"
     chmod 755 "$binaryTargetPath"
 }
 echo_banner "devcontainer.community"

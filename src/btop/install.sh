@@ -7,8 +7,6 @@ set -o allexport
 readonly githubRepository='aristocratos/btop'
 readonly binaryName='btop'
 readonly versionArgument='--version'
-readonly downloadUrlTemplate='https://github.com/${githubRepository}/releases/download/${releaseTag}/${name}-${architecture}-linux-musl.tbz'
-readonly binaryPathInArchiveTemplate='./btop/bin/${binaryName}'
 readonly binaryTargetFolder='/usr/local/bin'
 readonly name="${githubRepository##*/}"
 apt_get_update() {
@@ -27,16 +25,13 @@ apt_get_cleanup() {
     apt-get clean
     rm -rf /var/lib/apt/lists/*
 }
-check_curl_envsubst_file_tar_installed() {
+check_curl_file_tar_installed() {
     declare -a requiredAptPackagesMissing=()
     if ! [ -r '/etc/ssl/certs/ca-certificates.crt' ]; then
         requiredAptPackagesMissing+=('ca-certificates')
     fi
     if ! command -v curl >/dev/null 2>&1; then
         requiredAptPackagesMissing+=('curl')
-    fi
-    if ! command -v envsubst >/dev/null 2>&1; then
-        requiredAptPackagesMissing+=('gettext-base')
     fi
     if ! command -v file >/dev/null 2>&1; then
         requiredAptPackagesMissing+=('file')
@@ -135,10 +130,9 @@ utils_check_version() {
 }
 install() {
     utils_check_version "$VERSION"
-    check_curl_envsubst_file_tar_installed
+    check_curl_file_tar_installed
     apt_get_checkinstall bzip2
     readonly architecture="$(debian_get_target_arch)"
-    readonly binaryTargetPathTemplate='${binaryTargetFolder}/${binaryName}'
     if [ "$VERSION" == 'latest' ] || [ -z "$VERSION" ]; then
         VERSION=$(github_get_latest_release "$githubRepository")
     fi
@@ -148,11 +142,11 @@ install() {
         printf >&2 '=== [ERROR] Could not find release tag for version "%s" in "%s"!\n' "$version" "$githubRepository"
         exit 1
     fi
-    readonly downloadUrl="$(echo -n "$downloadUrlTemplate" | envsubst)"
+    readonly downloadUrl="https://github.com/${githubRepository}/releases/download/${releaseTag}/${name}-${architecture}-unknown-linux-musl.tbz"
     curl_check_url "$downloadUrl"
-    readonly binaryPathInArchive="$(echo -n "$binaryPathInArchiveTemplate" | envsubst)"
+    readonly binaryPathInArchive="./btop/bin/${binaryName}"
     readonly stripComponents="$(echo -n "$binaryPathInArchive" | awk -F'/' '{print NF-1}')"
-    readonly binaryTargetPath="$(echo -n "$binaryTargetPathTemplate" | envsubst)"
+    readonly binaryTargetPath="${binaryTargetFolder}/${binaryName}"
     curl_download_untarj "$downloadUrl" "$stripComponents" "$binaryTargetFolder" "$binaryPathInArchive"
     chmod 755 "$binaryTargetPath"
     apt_get_cleanup
