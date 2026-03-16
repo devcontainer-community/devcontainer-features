@@ -26,6 +26,7 @@ jobs:
           - jj-vcs.dev
           - neovim.io
           - nixos.org
+          - nvidia.com-cuda
           - opencode.ai
           - pkgx.sh
           - rclone.org
@@ -67,6 +68,7 @@ jobs:
           - jj-vcs.dev
           - neovim.io
           - nixos.org
+          - nvidia.com-cuda
           - opencode.ai
           - pkgx.sh
           - rclone.org

@@ -1,0 +1,25 @@
+{
+    "name": "nvidia.com/cuda",
+    "id": "nvidia.com-cuda",
+    "version": "1.0.0",
+    "description": "Install NVIDIA CUDA Toolkit",
+    "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/nvidia.com-cuda",
+    "options": {
+        "version": {
+            "type": "string",
+            "default": "latest",
+            "proposals": [
+                "latest",
+                "12.6",
+                "12.5",
+                "12.4",
+                "12.3",
+                "12.2",
+                "12.1",
+                "12.0",
+                "11.8"
+            ],
+            "description": "Version of CUDA Toolkit to install (e.g. \"latest\", \"12.6\")."
+        }
+    }
+}
