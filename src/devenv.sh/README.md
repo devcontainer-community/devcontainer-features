@@ -1,7 +1,7 @@
 
 # devenv.sh (devenv.sh)
 
-Install "devenv" binary
+Install devenv via Nix
 
 ## Example Usage
 
@@ -15,7 +15,7 @@ Install "devenv" binary
 
 | Options Id | Description | Type | Default Value |
 |-----|-----|-----|-----|
-| version | Version of "devenv" to install. | string | latest |
+| version | Version of devenv to install (e.g. "2.0.4"), or "latest". | string | latest |
 
 
 
