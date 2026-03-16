@@ -1,0 +1,15 @@
+{
+    "name": "neovim.io",
+    "id": "neovim.io",
+    "version": "1.0.0",
+    "description": "Install \"nvim\" binary",
+    "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/neovim.io",
+    "options": {
+        "version": {
+            "type": "string",
+            "default": "latest",
+            "proposals": ["latest"],
+            "description": "Version of \"nvim\" to install."
+        }
+    }
+}

@@ -4,11 +4,10 @@ set -o pipefail
 set -o noclobber
 set -o nounset
 set -o allexport
-readonly githubRepository='anomalyco/opencode'
-readonly binaryName='opencode'
-readonly versionArgument='--version'
+readonly githubRepository='restic/restic'
+readonly binaryName='restic'
+readonly versionArgument='version'
 readonly binaryTargetFolder='/usr/local/bin'
-readonly name="${githubRepository##*/}"
 apt_get_update() {
     if [ "$(find /var/lib/apt/lists/* | wc -l)" = "0" ]; then
         echo "Running apt-get update..."
@@ -25,7 +24,7 @@ apt_get_cleanup() {
     apt-get clean
     rm -rf /var/lib/apt/lists/*
 }
-check_curl_file_unzip_installed() {
+check_curl_bzip2_installed() {
     declare -a requiredAptPackagesMissing=()
     if ! [ -r '/etc/ssl/certs/ca-certificates.crt' ]; then
         requiredAptPackagesMissing+=('ca-certificates')
@@ -33,11 +32,8 @@ check_curl_file_unzip_installed() {
     if ! command -v curl >/dev/null 2>&1; then
         requiredAptPackagesMissing+=('curl')
     fi
-    if ! command -v file >/dev/null 2>&1; then
-        requiredAptPackagesMissing+=('file')
-    fi
-    if ! command -v tar >/dev/null 2>&1; then
-        requiredAptPackagesMissing+=('tar')
+    if ! command -v bunzip2 >/dev/null 2>&1; then
+        requiredAptPackagesMissing+=('bzip2')
     fi
     declare -i requiredAptPackagesMissingCount=${#requiredAptPackagesMissing[@]}
     if [ $requiredAptPackagesMissingCount -gt 0 ]; then
@@ -64,23 +60,17 @@ curl_download_stdout() {
         --connect-timeout 5 \
         "$url"
 }
-curl_download_tarball() {
-    local url=$1
-    local target=$2
-    local temp_file=$(mktemp)
-    curl_download_stdout "$url" >| "$temp_file"
-    tar -xzf "$temp_file" -C "$target"
-    rm "$temp_file"
-}
 debian_get_arch() {
-    arch=$(uname -m)
-    if [[ "$arch" == "aarch64" ]]; then
-    arch="arm64"
-    elif [[ "$arch" == "x86_64" ]]; then
-    arch="x64"
-    fi
-    echo "$arch"
-#    echo "$(dpkg --print-architecture)" --- IGNORE ---
+    dpkg --print-architecture
+}
+debian_get_target_arch() {
+    case $(debian_get_arch) in
+    amd64) echo 'amd64' ;;
+    arm64) echo 'arm64' ;;
+    armhf) echo 'arm' ;;
+    i386) echo '386' ;;
+    *) echo 'unknown' ;;
+    esac
 }
 echo_banner() {
     local text="$1"
@@ -124,8 +114,8 @@ utils_check_version() {
 }
 install() {
     utils_check_version "$VERSION"
-    check_curl_file_unzip_installed
-    readonly architecture="$(debian_get_arch)"
+    check_curl_bzip2_installed
+    readonly architecture="$(debian_get_target_arch)"
     if [ "$VERSION" == 'latest' ] || [ -z "$VERSION" ]; then
         VERSION=$(github_get_latest_release "$githubRepository")
     fi
@@ -135,13 +125,14 @@ install() {
         printf >&2 '=== [ERROR] Could not find release tag for version "%s" in "%s"!\n' "$version" "$githubRepository"
         exit 1
     fi
-    readonly downloadUrl="https://github.com/${githubRepository}/releases/download/${releaseTag}/${name}-linux-${architecture}.tar.gz"
+    readonly downloadUrl="https://github.com/${githubRepository}/releases/download/${releaseTag}/${binaryName}_${version}_linux_${architecture}.bz2"
     curl_check_url "$downloadUrl"
     readonly binaryTargetPath="${binaryTargetFolder}/${binaryName}"
-    curl_download_tarball "$downloadUrl" "$binaryTargetFolder"
+    curl_download_stdout "$downloadUrl" | bunzip2 > "$binaryTargetPath"
     chmod 755 "$binaryTargetPath"
+    apt_get_cleanup
 }
 echo_banner "devcontainer.community"
-echo "Installing $name..."
+echo "Installing $binaryName..."
 install "$@"
 echo "(*) Done!"
