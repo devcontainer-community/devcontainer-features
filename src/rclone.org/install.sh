@@ -4,9 +4,11 @@ set -o pipefail
 set -o noclobber
 set -o nounset
 set -o allexport
-readonly githubRepository='anomalyco/opencode'
-readonly binaryName='opencode'
+readonly githubRepository='rclone/rclone'
+readonly binaryName='rclone'
 readonly versionArgument='--version'
+readonly downloadUrlTemplate='https://github.com/${githubRepository}/releases/download/${releaseTag}/${binaryName}-${releaseTag}-linux-${architecture}.zip'
+readonly binaryPathInArchiveTemplate='${binaryName}-${releaseTag}-linux-${architecture}/${binaryName}'
 readonly binaryTargetFolder='/usr/local/bin'
 readonly name="${githubRepository##*/}"
 apt_get_update() {
@@ -25,7 +27,7 @@ apt_get_cleanup() {
     apt-get clean
     rm -rf /var/lib/apt/lists/*
 }
-check_curl_file_unzip_installed() {
+check_curl_envsubst_unzip_installed() {
     declare -a requiredAptPackagesMissing=()
     if ! [ -r '/etc/ssl/certs/ca-certificates.crt' ]; then
         requiredAptPackagesMissing+=('ca-certificates')
@@ -33,11 +35,11 @@ check_curl_file_unzip_installed() {
     if ! command -v curl >/dev/null 2>&1; then
         requiredAptPackagesMissing+=('curl')
     fi
-    if ! command -v file >/dev/null 2>&1; then
-        requiredAptPackagesMissing+=('file')
+    if ! command -v envsubst >/dev/null 2>&1; then
+        requiredAptPackagesMissing+=('gettext-base')
     fi
-    if ! command -v tar >/dev/null 2>&1; then
-        requiredAptPackagesMissing+=('tar')
+    if ! command -v unzip >/dev/null 2>&1; then
+        requiredAptPackagesMissing+=('unzip')
     fi
     declare -i requiredAptPackagesMissingCount=${#requiredAptPackagesMissing[@]}
     if [ $requiredAptPackagesMissingCount -gt 0 ]; then
@@ -55,32 +57,32 @@ curl_check_url() {
         return 1
     fi
 }
-curl_download_stdout() {
+curl_download_unzip() {
     local url=$1
+    local target=$2
+    local bin_path=$3
+    local tmpdir
+    tmpdir=$(mktemp -d)
     curl \
         --silent \
         --location \
-        --output '-' \
         --connect-timeout 5 \
+        --output "$tmpdir/download.zip" \
         "$url"
-}
-curl_download_tarball() {
-    local url=$1
-    local target=$2
-    local temp_file=$(mktemp)
-    curl_download_stdout "$url" >| "$temp_file"
-    tar -xzf "$temp_file" -C "$target"
-    rm "$temp_file"
+    unzip -p "$tmpdir/download.zip" "$bin_path" > "$target/$binaryName"
+    rm -rf "$tmpdir"
 }
 debian_get_arch() {
-    arch=$(uname -m)
-    if [[ "$arch" == "aarch64" ]]; then
-    arch="arm64"
-    elif [[ "$arch" == "x86_64" ]]; then
-    arch="x64"
-    fi
-    echo "$arch"
-#    echo "$(dpkg --print-architecture)" --- IGNORE ---
+    echo "$(dpkg --print-architecture)"
+}
+debian_get_target_arch() {
+    case $(debian_get_arch) in
+    amd64) echo 'amd64' ;;
+    arm64) echo 'arm64' ;;
+    armhf) echo 'arm-v7' ;;
+    i386) echo '386' ;;
+    *) echo 'unknown' ;;
+    esac
 }
 echo_banner() {
     local text="$1"
@@ -124,8 +126,9 @@ utils_check_version() {
 }
 install() {
     utils_check_version "$VERSION"
-    check_curl_file_unzip_installed
-    readonly architecture="$(debian_get_arch)"
+    check_curl_envsubst_unzip_installed
+    readonly architecture="$(debian_get_target_arch)"
+    readonly binaryTargetPath="${binaryTargetFolder}/${binaryName}"
     if [ "$VERSION" == 'latest' ] || [ -z "$VERSION" ]; then
         VERSION=$(github_get_latest_release "$githubRepository")
     fi
@@ -135,11 +138,12 @@ install() {
         printf >&2 '=== [ERROR] Could not find release tag for version "%s" in "%s"!\n' "$version" "$githubRepository"
         exit 1
     fi
-    readonly downloadUrl="https://github.com/${githubRepository}/releases/download/${releaseTag}/${name}-linux-${architecture}.tar.gz"
+    readonly downloadUrl="$(echo -n "$downloadUrlTemplate" | envsubst)"
     curl_check_url "$downloadUrl"
-    readonly binaryTargetPath="${binaryTargetFolder}/${binaryName}"
-    curl_download_tarball "$downloadUrl" "$binaryTargetFolder"
+    readonly binaryPathInArchive="$(echo -n "$binaryPathInArchiveTemplate" | envsubst)"
+    curl_download_unzip "$downloadUrl" "$binaryTargetFolder" "$binaryPathInArchive"
     chmod 755 "$binaryTargetPath"
+    apt_get_cleanup
 }
 echo_banner "devcontainer.community"
 echo "Installing $name..."

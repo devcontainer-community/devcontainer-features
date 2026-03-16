@@ -27,6 +27,7 @@ jobs:
           - nixos.org
           - opencode.ai
           - pkgx.sh
+          - rclone.org
           - restic.net
           - smallstep.com
           - starship.rs
@@ -66,6 +67,7 @@ jobs:
           - nixos.org
           - opencode.ai
           - pkgx.sh
+          - rclone.org
           - smallstep.com
           - starship.rs
           - tailscale.com
