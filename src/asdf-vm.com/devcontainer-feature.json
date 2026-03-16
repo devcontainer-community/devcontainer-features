@@ -1,7 +1,7 @@
 {
     "name": "asdf-vm.com",
     "id": "asdf-vm.com",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Install \"asdf\" binary to the HOME folder of the REMOTE user",
     "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/asdf-vm.com",
     "options": {
@@ -9,7 +9,9 @@
             "type": "string",
             "default": "latest",
             "proposals": [
-                "latest"
+                "latest",
+                "0.18.1",
+                "0.18.0"
             ],
             "description": "Version of \"asdf\" to install."
         }
