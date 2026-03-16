@@ -1,0 +1,17 @@
+{
+    "name": "cloudflare.com-warp-cli",
+    "id": "cloudflare.com-warp-cli",
+    "version": "1.0.0",
+    "description": "Install \"warp-cli\" binary",
+    "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/cloudflare.com-warp-cli",
+    "options": {
+        "version": {
+            "type": "string",
+            "default": "latest",
+            "proposals": [
+                "latest"
+            ],
+            "description": "Currently unused."
+        }
+    }
+}

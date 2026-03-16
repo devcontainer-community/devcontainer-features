@@ -21,6 +21,7 @@ jobs:
           - bun.sh
           - charmbracelet-gum
           - chezmoi.io
+          - cloudflare.com-warp-cli
           - deno.com
           - dozzle.dev
           - devenv.sh
@@ -69,6 +70,7 @@ jobs:
           - bun.sh
           - charmbracelet-gum
           - chezmoi.io
+          - cloudflare.com-warp-cli
           - deno.com
           - dozzle.dev
           - devenv.sh
