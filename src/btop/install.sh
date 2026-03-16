@@ -7,7 +7,7 @@ set -o allexport
 readonly githubRepository='aristocratos/btop'
 readonly binaryName='btop'
 readonly versionArgument='--version'
-readonly downloadUrlTemplate='https://github.com/${githubRepository}/releases/download/v${version}/${name}-${architecture}-linux-musl.tbz'
+readonly downloadUrlTemplate='https://github.com/${githubRepository}/releases/download/${releaseTag}/${name}-${architecture}-linux-musl.tbz'
 readonly binaryPathInArchiveTemplate='./btop/bin/${binaryName}'
 readonly binaryTargetFolder='/usr/local/bin'
 readonly name="${githubRepository##*/}"
@@ -113,6 +113,18 @@ github_get_latest_release() {
     fi
     github_list_releases "$1" | head -n 1
 }
+github_get_tag_for_version() {
+    if [ -z "$1" ] || [ -z "$2" ]; then
+        echo "Usage: github_get_tag_for_version <owner/repo> <version>"
+        return 1
+    fi
+    local repo="$1"
+    local version="$2"
+    local url="https://api.github.com/repos/$repo/releases"
+    local escaped_version
+    escaped_version="$(printf '%s' "$version" | sed 's/\./\\./g')"
+    curl -s "$url" | grep -Po '"tag_name": "\K.*?(?=")' | grep -E "^v?${escaped_version}$" | head -n 1
+}
 utils_check_version() {
     local version=$1
     if ! [[ "${version:-}" =~ ^(latest|[0-9]+\.[0-9]+\.[0-9]+)$ ]]; then
@@ -131,6 +143,11 @@ install() {
         VERSION=$(github_get_latest_release "$githubRepository")
     fi
     readonly version="${VERSION:?}"
+    readonly releaseTag="$(github_get_tag_for_version "$githubRepository" "$version")"
+    if [ -z "$releaseTag" ]; then
+        printf >&2 '=== [ERROR] Could not find release tag for version "%s" in "%s"!\n' "$version" "$githubRepository"
+        exit 1
+    fi
     readonly downloadUrl="$(echo -n "$downloadUrlTemplate" | envsubst)"
     curl_check_url "$downloadUrl"
     readonly binaryPathInArchive="$(echo -n "$binaryPathInArchiveTemplate" | envsubst)"
