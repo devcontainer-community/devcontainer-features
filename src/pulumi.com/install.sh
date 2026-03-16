@@ -67,6 +67,18 @@ curl_download_stdout() {
         --connect-timeout 5 \
         "$url"
 }
+curl_download_untar() {
+    local url=$1
+    local strip=$2
+    local target=$3
+    local bin_path=$4
+    curl_download_stdout "$url" | tar \
+        -xz \
+        -f '-' \
+        --strip-components="$strip" \
+        -C "$target" \
+        "$bin_path"
+}
 debian_get_arch() {
     echo "$(dpkg --print-architecture)"
 }
