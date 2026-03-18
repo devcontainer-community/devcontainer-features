@@ -1,0 +1,17 @@
+{
+    "name": "fzf",
+    "id": "fzf",
+    "version": "1.0.0",
+    "description": "Install \"fzf\" binary",
+    "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/fzf",
+    "options": {
+        "version": {
+            "type": "string",
+            "default": "latest",
+            "proposals": [
+                "latest"
+            ],
+            "description": "Version of \"fzf\" to install."
+        }
+    }
+}
