@@ -83,7 +83,7 @@ github_list_releases() {
     fi
     local repo="$1"
     local url="https://api.github.com/repos/$repo/releases"
-    curl -s "$url" | grep -Po '"tag_name": "\K.*?(?=")' | grep -E '^cli/v[0-9]+\.[0-9]+\.[0-9]+$' | sed 's/^cli\/v//'
+    curl -s "$url" | grep -Po '"tag_name": "\K.*?(?=")' | grep -E '^(cli/v|@biomejs/biome@)[0-9]+\.[0-9]+\.[0-9]+$' | sed -E 's/^(cli\/v|@biomejs\/biome@)//'
 }
 github_get_latest_release() {
     if [ -z "$1" ]; then
@@ -102,7 +102,7 @@ github_get_tag_for_version() {
     local url="https://api.github.com/repos/$repo/releases"
     local escaped_version
     escaped_version="$(printf '%s' "$version" | sed 's/\./\\./g')"
-    curl -s "$url" | grep -Po '"tag_name": "\K.*?(?=")' | grep -E "^cli/v${escaped_version}$" | head -n 1
+    curl -s "$url" | grep -Po '"tag_name": "\K.*?(?=")' | grep -E "^(cli/v|@biomejs/biome@)${escaped_version}$" | head -n 1
 }
 utils_check_version() {
     local version=$1
