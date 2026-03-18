@@ -26,6 +26,7 @@ jobs:
           - dozzle.dev
           - devenv.sh
           - feature-installer
+          - helix-editor.com
           - jj-vcs.dev
           - mosh.org
           - keybase.io
@@ -75,6 +76,7 @@ jobs:
           - dozzle.dev
           - devenv.sh
           - feature-installer
+          - helix-editor.com
           - jj-vcs.dev
           - mosh.org
           - keybase.io
