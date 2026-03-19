@@ -28,6 +28,7 @@ jobs:
           - dozzle.dev
           - devenv.sh
           - feature-installer
+          - github.com-cli
           - helix-editor.com
           - jj-vcs.dev
           - k9scli.io
@@ -82,6 +83,7 @@ jobs:
           - dozzle.dev
           - devenv.sh
           - feature-installer
+          - github.com-cli
           - helix-editor.com
           - jj-vcs.dev
           - k9scli.io
