@@ -43,8 +43,18 @@ install() {
     esac
     local deb_file="keybase_${arch_suffix}.deb"
     curl -fsSL "https://prerelease.keybase.io/${deb_file}" -o "/tmp/${deb_file}"
-    DEBIAN_FRONTEND=noninteractive apt-get install -y "/tmp/${deb_file}"
-    rm "/tmp/${deb_file}"
+    # Extract binaries directly to avoid unresolvable GUI dependencies (e.g. fuse,
+    # libasound2, libgtk-3-0) that are renamed or unavailable in Ubuntu 24.04+.
+    local extract_dir
+    extract_dir="$(mktemp -d)"
+    dpkg-deb -x "/tmp/${deb_file}" "${extract_dir}"
+    if [ ! -f "${extract_dir}/usr/bin/keybase" ]; then
+        echo "ERROR: keybase binary not found in extracted package at ${extract_dir}/usr/bin/keybase"
+        rm -rf "${extract_dir}" "/tmp/${deb_file}"
+        exit 1
+    fi
+    install -m 0755 "${extract_dir}/usr/bin/keybase" /usr/local/bin/keybase
+    rm -rf "${extract_dir}" "/tmp/${deb_file}"
     apt_get_cleanup
 }
 
