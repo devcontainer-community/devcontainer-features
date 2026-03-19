@@ -46,6 +46,7 @@ jobs:
           - pulumi.com
           - rclone.org
           - restic.net
+          - ripgrep
           - smallstep.com
           - starship.rs
           - swc.rs
@@ -105,6 +106,7 @@ jobs:
           - pulumi.com
           - rclone.org
           - restic.net
+          - ripgrep
           - smallstep.com
           - starship.rs
           - swc.rs
