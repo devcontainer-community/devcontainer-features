@@ -28,6 +28,7 @@ jobs:
           - deno.com
           - dozzle.dev
           - devenv.sh
+          - fd
           - feature-installer
           - github.com-cli
           - helix-editor.com
@@ -86,6 +87,7 @@ jobs:
           - deno.com
           - dozzle.dev
           - devenv.sh
+          - fd
           - feature-installer
           - github.com-cli
           - helix-editor.com
