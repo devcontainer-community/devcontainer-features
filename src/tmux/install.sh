@@ -103,7 +103,7 @@ utils_check_version() {
 install() {
     utils_check_version "$VERSION"
     check_curl_tar_installed
-    apt_get_checkinstall build-essential pkg-config libevent-dev libncurses-dev
+    apt_get_checkinstall build-essential pkg-config libevent-dev libncurses-dev bison
     if [ "$VERSION" == 'latest' ] || [ -z "$VERSION" ]; then
         VERSION=$(github_get_latest_release "$githubRepository")
     fi
