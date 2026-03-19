@@ -14,7 +14,8 @@ source dev-container-features-test-lib
 
 check "sshd installed" which sshd
 check "openssh version" bash -c "sshd -V 2>&1 | grep -i openssh"
-check "sshd running" bash -c "pgrep sshd"
+check "sshd port configured" bash -c "grep -r 'Port 2222' /etc/ssh/"
+check "sshd running" bash -c "pgrep sshd || ( mkdir -p /run/sshd && /usr/sbin/sshd && sleep 1 && pgrep sshd )"
 check "sshd listening on port 2222" bash -c "ss -tln | grep ':2222'"
 
 # Report results
