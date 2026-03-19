@@ -1,0 +1,17 @@
+{
+    "name": "yq",
+    "id": "yq",
+    "version": "1.0.0",
+    "description": "Install \"yq\" binary",
+    "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/yq",
+    "options": {
+        "version": {
+            "type": "string",
+            "default": "latest",
+            "proposals": [
+                "latest"
+            ],
+            "description": "Version of \"yq\" to install."
+        }
+    }
+}

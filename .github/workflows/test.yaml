@@ -45,6 +45,7 @@ jobs:
           - swc.rs
           - tailscale.com
           - webinstall.dev
+          - yq
           - zellij.dev
           - zyedidia-eget
         baseImage:
@@ -97,6 +98,7 @@ jobs:
           - swc.rs
           - tailscale.com
           - webinstall.dev
+          - yq
           - zellij.dev
           - zyedidia-eget
     steps:
