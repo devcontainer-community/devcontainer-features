@@ -27,6 +27,7 @@ jobs:
           - dozzle.dev
           - devenv.sh
           - feature-installer
+          - github.com-cli
           - helix-editor.com
           - jj-vcs.dev
           - mosh.org
@@ -79,6 +80,7 @@ jobs:
           - dozzle.dev
           - devenv.sh
           - feature-installer
+          - github.com-cli
           - helix-editor.com
           - jj-vcs.dev
           - mosh.org
