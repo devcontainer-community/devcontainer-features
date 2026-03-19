@@ -30,7 +30,11 @@ jobs:
           - devenv.sh
           - fd
           - feature-installer
+<<<<<<< copilot/add-fzf-feature
+          - fzf
+=======
           - github.com-cli
+>>>>>>> main
           - helix-editor.com
           - jj-vcs.dev
           - jq
@@ -90,7 +94,11 @@ jobs:
           - devenv.sh
           - fd
           - feature-installer
+<<<<<<< copilot/add-fzf-feature
+          - fzf
+=======
           - github.com-cli
+>>>>>>> main
           - helix-editor.com
           - jj-vcs.dev
           - jq
