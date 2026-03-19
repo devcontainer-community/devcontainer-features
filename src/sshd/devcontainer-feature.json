@@ -1,0 +1,19 @@
+{
+    "name": "sshd",
+    "id": "sshd",
+    "version": "1.0.0",
+    "description": "Install OpenSSH server (sshd) and ensure it starts when the container starts",
+    "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/sshd",
+    "options": {
+        "port": {
+            "type": "string",
+            "default": "2222",
+            "proposals": [
+                "2222",
+                "22"
+            ],
+            "description": "Port for sshd to listen on."
+        }
+    },
+    "entrypoint": "/usr/local/share/sshd/entrypoint.sh"
+}

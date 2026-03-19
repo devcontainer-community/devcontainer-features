@@ -52,6 +52,7 @@ jobs:
           - smallstep.com
           - starship.rs
           - swc.rs
+          - sshd
           - tailscale.com
           - webinstall.dev
           - yq
@@ -114,6 +115,7 @@ jobs:
           - smallstep.com
           - starship.rs
           - swc.rs
+          - sshd
           - tailscale.com
           - webinstall.dev
           - yq
