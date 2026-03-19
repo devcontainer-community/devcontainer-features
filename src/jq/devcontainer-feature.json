@@ -1,0 +1,17 @@
+{
+    "name": "jq",
+    "id": "jq",
+    "version": "1.0.0",
+    "description": "Install \"jq\" binary",
+    "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/jq",
+    "options": {
+        "version": {
+            "type": "string",
+            "default": "latest",
+            "proposals": [
+                "latest"
+            ],
+            "description": "Currently unused. jq is installed via the system package manager."
+        }
+    }
+}

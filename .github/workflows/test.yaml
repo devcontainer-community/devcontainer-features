@@ -31,6 +31,7 @@ jobs:
           - github.com-cli
           - helix-editor.com
           - jj-vcs.dev
+          - jq
           - k9scli.io
           - mosh.org
           - keybase.io
@@ -86,6 +87,7 @@ jobs:
           - github.com-cli
           - helix-editor.com
           - jj-vcs.dev
+          - jq
           - k9scli.io
           - mosh.org
           - keybase.io
