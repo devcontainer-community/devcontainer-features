@@ -30,6 +30,7 @@ jobs:
           - feature-installer
           - helix-editor.com
           - jj-vcs.dev
+          - k9scli.io
           - mosh.org
           - keybase.io
           - neovim.io
@@ -83,6 +84,7 @@ jobs:
           - feature-installer
           - helix-editor.com
           - jj-vcs.dev
+          - k9scli.io
           - mosh.org
           - keybase.io
           - neovim.io
