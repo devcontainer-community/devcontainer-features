@@ -19,7 +19,6 @@ Install "jq" binary
 
 
 
-
 ---
 
 _Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/devcontainer-community/devcontainer-features/blob/main/src/jq/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
