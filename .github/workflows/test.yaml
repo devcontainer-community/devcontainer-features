@@ -29,6 +29,7 @@ jobs:
           - feature-installer
           - helix-editor.com
           - jj-vcs.dev
+          - lazygit
           - mosh.org
           - keybase.io
           - neovim.io
@@ -81,6 +82,7 @@ jobs:
           - feature-installer
           - helix-editor.com
           - jj-vcs.dev
+          - lazygit
           - mosh.org
           - keybase.io
           - neovim.io
