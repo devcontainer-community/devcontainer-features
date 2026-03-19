@@ -43,7 +43,13 @@ install() {
     esac
     local deb_file="keybase_${arch_suffix}.deb"
     curl -fsSL "https://prerelease.keybase.io/${deb_file}" -o "/tmp/${deb_file}"
-    DEBIAN_FRONTEND=noninteractive apt-get install -y "/tmp/${deb_file}"
+    # Stream only the keybase CLI binary out of the deb's embedded tar, discarding
+    # the large Electron GUI app (/opt/keybase/Keybase) so the container does not
+    # run out of disk space. This also bypasses the unresolvable GUI package
+    # dependencies (fuse, libasound2, libgtk-3-0, …) on Ubuntu 24.04+.
+    dpkg-deb --fsys-tarfile "/tmp/${deb_file}" \
+        | tar -xO ./usr/bin/keybase \
+        | install -m 0755 /dev/stdin /usr/local/bin/keybase
     rm "/tmp/${deb_file}"
     apt_get_cleanup
 }
