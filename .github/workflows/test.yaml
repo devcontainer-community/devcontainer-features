@@ -42,6 +42,7 @@ jobs:
           - restic.net
           - smallstep.com
           - starship.rs
+          - swc.rs
           - tailscale.com
           - webinstall.dev
           - zellij.dev
@@ -93,6 +94,7 @@ jobs:
           - restic.net
           - smallstep.com
           - starship.rs
+          - swc.rs
           - tailscale.com
           - webinstall.dev
           - zellij.dev
