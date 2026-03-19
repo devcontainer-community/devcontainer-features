@@ -103,7 +103,7 @@ utils_check_version() {
 install() {
     utils_check_version "$VERSION"
     check_curl_tar_installed
-    apt_get_checkinstall build-essential autoconf automake pkg-config libevent-dev libncurses-dev bison
+    apt_get_checkinstall build-essential pkg-config libevent-dev libncurses-dev
     if [ "$VERSION" == 'latest' ] || [ -z "$VERSION" ]; then
         VERSION=$(github_get_latest_release "$githubRepository")
     fi
@@ -119,7 +119,6 @@ install() {
     tmpDir=$(mktemp -d)
     curl_download_stdout "$downloadUrl" | tar -xz -f '-' -C "$tmpDir" --strip-components=1
     cd "$tmpDir"
-    bash autogen.sh
     ./configure --prefix=/usr/local
     make install
     cd /
