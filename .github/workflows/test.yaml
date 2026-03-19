@@ -23,13 +23,16 @@ jobs:
           - charmbracelet-gum
           - chezmoi.io
           - cloudflare.com-warp-cli
+          - delta
           - deno.com
           - dozzle.dev
           - devenv.sh
           - feature-installer
+          - github.com-cli
           - helix-editor.com
           - jj-vcs.dev
           - jq
+          - k9scli.io
           - mosh.org
           - keybase.io
           - neovim.io
@@ -76,13 +79,16 @@ jobs:
           - charmbracelet-gum
           - chezmoi.io
           - cloudflare.com-warp-cli
+          - delta
           - deno.com
           - dozzle.dev
           - devenv.sh
           - feature-installer
+          - github.com-cli
           - helix-editor.com
           - jj-vcs.dev
           - jq
+          - k9scli.io
           - mosh.org
           - keybase.io
           - neovim.io

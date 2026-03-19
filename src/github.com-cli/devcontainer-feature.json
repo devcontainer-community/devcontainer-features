@@ -1,0 +1,17 @@
+{
+    "name": "github.com-cli",
+    "id": "github.com-cli",
+    "version": "1.0.0",
+    "description": "Install \"gh\" (GitHub CLI) binary",
+    "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/github.com-cli",
+    "options": {
+        "version": {
+            "type": "string",
+            "default": "latest",
+            "proposals": [
+                "latest"
+            ],
+            "description": "Currently unused. gh is installed via the official GitHub CLI apt repository."
+        }
+    }
+}
