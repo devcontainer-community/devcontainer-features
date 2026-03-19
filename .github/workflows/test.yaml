@@ -26,6 +26,7 @@ jobs:
           - deno.com
           - dozzle.dev
           - devenv.sh
+          - fd
           - feature-installer
           - helix-editor.com
           - jj-vcs.dev
@@ -78,6 +79,7 @@ jobs:
           - deno.com
           - dozzle.dev
           - devenv.sh
+          - fd
           - feature-installer
           - helix-editor.com
           - jj-vcs.dev
