@@ -43,18 +43,14 @@ install() {
     esac
     local deb_file="keybase_${arch_suffix}.deb"
     curl -fsSL "https://prerelease.keybase.io/${deb_file}" -o "/tmp/${deb_file}"
-    # Extract binaries directly to avoid unresolvable GUI dependencies (e.g. fuse,
-    # libasound2, libgtk-3-0) that are renamed or unavailable in Ubuntu 24.04+.
-    local extract_dir
-    extract_dir="$(mktemp -d)"
-    dpkg-deb -x "/tmp/${deb_file}" "${extract_dir}"
-    if [ ! -f "${extract_dir}/usr/bin/keybase" ]; then
-        echo "ERROR: keybase binary not found in extracted package at ${extract_dir}/usr/bin/keybase"
-        rm -rf "${extract_dir}" "/tmp/${deb_file}"
-        exit 1
-    fi
-    install -m 0755 "${extract_dir}/usr/bin/keybase" /usr/local/bin/keybase
-    rm -rf "${extract_dir}" "/tmp/${deb_file}"
+    # Stream only the keybase CLI binary out of the deb's embedded tar, discarding
+    # the large Electron GUI app (/opt/keybase/Keybase) so the container does not
+    # run out of disk space. This also bypasses the unresolvable GUI package
+    # dependencies (fuse, libasound2, libgtk-3-0, …) on Ubuntu 24.04+.
+    dpkg-deb --fsys-tarfile "/tmp/${deb_file}" \
+        | tar -xO ./usr/bin/keybase \
+        | install -m 0755 /dev/stdin /usr/local/bin/keybase
+    rm "/tmp/${deb_file}"
     apt_get_cleanup
 }
 
