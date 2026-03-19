@@ -37,6 +37,7 @@ jobs:
 >>>>>>> main
           - helix-editor.com
           - jj-vcs.dev
+          - lazygit
           - jq
           - k9scli.io
           - mosh.org
@@ -101,6 +102,7 @@ jobs:
 >>>>>>> main
           - helix-editor.com
           - jj-vcs.dev
+          - lazygit
           - jq
           - k9scli.io
           - mosh.org
