@@ -1,0 +1,17 @@
+{
+    "name": "tmux",
+    "id": "tmux",
+    "version": "1.0.0",
+    "description": "Install \"tmux\" terminal multiplexer",
+    "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/tmux",
+    "options": {
+        "version": {
+            "type": "string",
+            "default": "latest",
+            "proposals": [
+                "latest"
+            ],
+            "description": "Version of \"tmux\" to install (e.g. \"latest\", \"3.5a\", \"3.4\")."
+        }
+    }
+}

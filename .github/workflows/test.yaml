@@ -44,6 +44,7 @@ jobs:
           - starship.rs
           - swc.rs
           - tailscale.com
+          - tmux
           - webinstall.dev
           - zellij.dev
           - zyedidia-eget
@@ -96,6 +97,7 @@ jobs:
           - starship.rs
           - swc.rs
           - tailscale.com
+          - tmux
           - webinstall.dev
           - zellij.dev
           - zyedidia-eget
