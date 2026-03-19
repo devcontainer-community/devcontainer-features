@@ -1,0 +1,17 @@
+{
+    "name": "bat",
+    "id": "bat",
+    "version": "1.0.0",
+    "description": "Install \"bat\" binary",
+    "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/bat",
+    "options": {
+        "version": {
+            "type": "string",
+            "default": "latest",
+            "proposals": [
+                "latest"
+            ],
+            "description": "Version of \"bat\" to install."
+        }
+    }
+}

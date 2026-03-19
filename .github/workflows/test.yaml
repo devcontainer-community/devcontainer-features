@@ -17,6 +17,7 @@ jobs:
           - astral.sh-uv
           - atuin.sh
           - aws-cli
+          - bat
           - biomejs.dev
           - btop
           - bun.sh
@@ -74,6 +75,7 @@ jobs:
           - asdf-vm.com
           - astral.sh-uv
           - atuin.sh
+          - bat
           - biomejs.dev
           - btop
           - bun.sh
