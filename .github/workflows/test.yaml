@@ -17,19 +17,28 @@ jobs:
           - astral.sh-uv
           - atuin.sh
           - aws-cli
+          - bat
           - biomejs.dev
           - btop
           - bun.sh
           - charmbracelet-gum
           - chezmoi.io
           - cloudflare.com-warp-cli
+          - delta
           - deno.com
           - dozzle.dev
           - devenv.sh
+          - fd
           - feature-installer
+<<<<<<< copilot/add-fzf-feature
           - fzf
+=======
+          - github.com-cli
+>>>>>>> main
           - helix-editor.com
           - jj-vcs.dev
+          - jq
+          - k9scli.io
           - mosh.org
           - keybase.io
           - neovim.io
@@ -41,11 +50,13 @@ jobs:
           - pulumi.com
           - rclone.org
           - restic.net
+          - ripgrep
           - smallstep.com
           - starship.rs
           - swc.rs
           - tailscale.com
           - webinstall.dev
+          - yq
           - zellij.dev
           - zyedidia-eget
         baseImage:
@@ -70,19 +81,28 @@ jobs:
           - asdf-vm.com
           - astral.sh-uv
           - atuin.sh
+          - bat
           - biomejs.dev
           - btop
           - bun.sh
           - charmbracelet-gum
           - chezmoi.io
           - cloudflare.com-warp-cli
+          - delta
           - deno.com
           - dozzle.dev
           - devenv.sh
+          - fd
           - feature-installer
+<<<<<<< copilot/add-fzf-feature
           - fzf
+=======
+          - github.com-cli
+>>>>>>> main
           - helix-editor.com
           - jj-vcs.dev
+          - jq
+          - k9scli.io
           - mosh.org
           - keybase.io
           - neovim.io
@@ -94,11 +114,13 @@ jobs:
           - pulumi.com
           - rclone.org
           - restic.net
+          - ripgrep
           - smallstep.com
           - starship.rs
           - swc.rs
           - tailscale.com
           - webinstall.dev
+          - yq
           - zellij.dev
           - zyedidia-eget
     steps:

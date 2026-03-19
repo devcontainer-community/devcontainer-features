@@ -1,0 +1,17 @@
+{
+    "name": "k9scli.io",
+    "id": "k9scli.io",
+    "version": "1.0.0",
+    "description": "Install \"k9s\" binary",
+    "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/k9scli.io",
+    "options": {
+        "version": {
+            "type": "string",
+            "default": "latest",
+            "proposals": [
+                "latest"
+            ],
+            "description": "Version of \"k9s\" to install."
+        }
+    }
+}
