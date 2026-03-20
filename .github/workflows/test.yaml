@@ -13,6 +13,7 @@ jobs:
     strategy:
       matrix:
         features:
+          - alexpasmantier-television
           - asdf-vm.com
           - astral.sh-uv
           - atuin.sh
@@ -77,6 +78,7 @@ jobs:
     strategy:
       matrix:
         features:
+          - alexpasmantier-television
           - asdf-vm.com
           - astral.sh-uv
           - atuin.sh
