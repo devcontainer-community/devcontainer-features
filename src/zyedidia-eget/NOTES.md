@@ -1,0 +1,17 @@
+# eget
+
+## Project
+
+- [eget](https://github.com/zyedidia/eget)
+
+## Description
+
+A tool for easily installing pre-built binaries from GitHub releases. `eget` automates the process of finding the right release asset for your OS and architecture, downloading it, and placing the binary in the correct location.
+
+## Installation Method
+
+Downloaded as a pre-compiled binary from the [GitHub releases page](https://github.com/zyedidia/eget/releases) and placed in `/usr/local/bin`.
+
+## Other Notes
+
+_No additional notes._
