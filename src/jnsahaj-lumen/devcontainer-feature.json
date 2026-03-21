@@ -1,0 +1,17 @@
+{
+    "name": "jnsahaj/lumen",
+    "id": "jnsahaj-lumen",
+    "version": "1.0.0",
+    "description": "Install \"lumen\" binary - AI-powered git diff viewer and commit message generator",
+    "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/jnsahaj-lumen",
+    "options": {
+        "version": {
+            "type": "string",
+            "default": "latest",
+            "proposals": [
+                "latest"
+            ],
+            "description": "Version of \"lumen\" to install."
+        }
+    }
+}
