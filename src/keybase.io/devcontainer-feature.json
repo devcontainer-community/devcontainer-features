@@ -1,7 +1,7 @@
 {
     "name": "keybase.io",
     "id": "keybase.io",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "description": "Install \"keybase\" binary",
     "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/keybase.io",
     "options": {
