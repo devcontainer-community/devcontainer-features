@@ -117,10 +117,10 @@ github_get_tag_for_version() {
         return 1
     fi
     local repo="$1"
-    local version="$2"
+    local _version="$2"
     local url="https://api.github.com/repos/$repo/releases"
     local escaped_version
-    escaped_version="$(printf '%s' "$version" | sed 's/\./\\./g')"
+    escaped_version="$(printf '%s' "$_version" | sed 's/\./\\./g')"
     curl -s "$url" | grep -Po '"tag_name": "\K.*?(?=")' | grep -E "^v?${escaped_version}$" | head -n 1
 }
 utils_check_version() {
@@ -147,7 +147,8 @@ install() {
     fi
     readonly downloadUrl="$(echo -n "$downloadUrlTemplate" | envsubst)"
     curl_check_url "$downloadUrl"
-    readonly binaryPathInArchive="$binaryName"
+    readonly binaryPathInArchiveTemplate='tv-${version}-${architecture}-unknown-linux-gnu/${binaryName}'
+    readonly binaryPathInArchive="$(echo -n "$binaryPathInArchiveTemplate" | envsubst)"
     readonly stripComponents="$(echo -n "$binaryPathInArchive" | awk -F'/' '{print NF-1}')"
     readonly binaryTargetPath="$(echo -n "$binaryTargetPathTemplate" | envsubst)"
     curl_download_untar "$downloadUrl" "$stripComponents" "$binaryTargetFolder" "$binaryPathInArchive"
