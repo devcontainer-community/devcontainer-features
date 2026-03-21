@@ -35,6 +35,7 @@ jobs:
           - github.com-cli
           - helix-editor.com
           - jj-vcs.dev
+          - jnsahaj-lumen
           - lazygit
           - jq
           - k9scli.io
@@ -99,6 +100,7 @@ jobs:
           - github.com-cli
           - helix-editor.com
           - jj-vcs.dev
+          - jnsahaj-lumen
           - lazygit
           - jq
           - k9scli.io
