@@ -57,6 +57,7 @@ jobs:
           - sshd
           - tailscale.com
           - webinstall.dev
+          - yakitrak-notesmd-cli
           - yq
           - zellij.dev
           - zyedidia-eget
@@ -122,6 +123,7 @@ jobs:
           - sshd
           - tailscale.com
           - webinstall.dev
+          - yakitrak-notesmd-cli
           - yq
           - zellij.dev
           - zyedidia-eget
