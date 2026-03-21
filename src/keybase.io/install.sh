@@ -49,7 +49,7 @@ install() {
     # dependencies (fuse, libasound2, libgtk-3-0, …) on Ubuntu 24.04+.
     dpkg-deb --fsys-tarfile "/tmp/${deb_file}" \
         | tar -xO ./usr/bin/keybase \
-        | install -m 0755 /dev/stdin /usr/local/bin/keybase
+        | command install -m 0755 /dev/stdin /usr/local/bin/keybase
     rm "/tmp/${deb_file}"
     apt_get_cleanup
 }
