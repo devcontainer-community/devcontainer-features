@@ -1,0 +1,17 @@
+{
+    "name": "critique.work",
+    "id": "critique.work",
+    "version": "1.0.0",
+    "description": "Install \"critique\" binary",
+    "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/critique.work",
+    "options": {
+        "version": {
+            "type": "string",
+            "default": "latest",
+            "proposals": [
+                "latest"
+            ],
+            "description": "Version of \"critique\" to install."
+        }
+    }
+}
