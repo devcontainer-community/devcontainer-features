@@ -36,6 +36,7 @@ jobs:
           - helix-editor.com
           - jj-vcs.dev
           - jnsahaj-lumen
+          - joelhooks-agent-secrets
           - lazygit
           - jq
           - k9scli.io
@@ -101,6 +102,7 @@ jobs:
           - helix-editor.com
           - jj-vcs.dev
           - jnsahaj-lumen
+          - joelhooks-agent-secrets
           - lazygit
           - jq
           - k9scli.io
