@@ -38,16 +38,18 @@ bun_ensure_installed() {
     if ! command -v bun >/dev/null 2>&1; then
         echo "Bun is not installed. Installing bun to /usr/local..."
         apt_get_checkinstall unzip curl ca-certificates
-        BUN_INSTALL=/usr/local curl -fsSL https://bun.sh/install | bash
+        export BUN_INSTALL=/usr/local
+        curl -fsSL https://bun.sh/install | bash
     fi
 }
 install() {
     utils_check_version "$VERSION"
+    export BUN_INSTALL=/usr/local
     bun_ensure_installed
     if [ "$VERSION" == 'latest' ] || [ -z "$VERSION" ]; then
-        BUN_INSTALL=/usr/local bun install -g critique
+        bun install -g critique
     else
-        BUN_INSTALL=/usr/local bun install -g "critique@${VERSION}"
+        bun install -g "critique@${VERSION}"
     fi
     apt_get_cleanup
 }
