@@ -39,6 +39,7 @@ jobs:
           - lazygit
           - jq
           - k9scli.io
+          - memvid.com
           - mosh.org
           - keybase.io
           - neovim.io
@@ -104,6 +105,7 @@ jobs:
           - lazygit
           - jq
           - k9scli.io
+          - memvid.com
           - mosh.org
           - keybase.io
           - neovim.io
