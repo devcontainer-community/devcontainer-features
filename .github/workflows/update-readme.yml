@@ -1,0 +1,35 @@
+name: "Update README features table"
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "src/**/devcontainer-feature.json"
+      - "src/**/install.sh"
+      - "scripts/update-readme.py"
+  workflow_dispatch:
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: "Update features table in README.md"
+        run: python3 scripts/update-readme.py
+
+      - name: "Commit and push if changed"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.name "github-actions[bot]"
+          git diff --quiet README.md || (
+            git add README.md &&
+            git commit -m "chore: update features table in README [skip ci]" &&
+            git push
+          )
