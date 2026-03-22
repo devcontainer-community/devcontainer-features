@@ -103,7 +103,7 @@ utils_check_version() {
 install() {
     utils_check_version "$VERSION"
     check_curl_tar_installed
-    apt_get_checkinstall gcc make imagemagick ttyrec x11-apps
+    apt_get_checkinstall build-essential imagemagick ttyrec x11-apps
     if [ "$VERSION" == 'latest' ] || [ -z "$VERSION" ]; then
         VERSION=$(github_get_latest_release "$githubRepository")
     fi
