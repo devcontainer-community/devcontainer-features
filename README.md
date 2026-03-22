@@ -27,6 +27,7 @@
 | [delta](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/delta) | `delta` — syntax-highlighting pager for git diffs | gh release | 1.0.0 |
 | [deno.com](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/deno.com) | `deno` — secure TypeScript/JavaScript runtime | curl | 1.0.0 |
 | [devenv.sh](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/devenv.sh) | `devenv` — reproducible developer environments via Nix | nix | 1.0.0 |
+| [diffity.com](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/diffity.com) | `diffity` — agent-agnostic GitHub-style diff viewer and code review tool | npm | 1.0.0 |
 | [dozzle.dev](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/dozzle.dev) | `dozzle` — real-time Docker container log viewer | curl | 1.0.0 |
 | [fd](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/fd) | `fd` — fast and user-friendly file finder | gh release | 1.0.0 |
 | [feature-installer](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/feature-installer) | `feature-installer` — install devcontainer features at runtime | curl | 0.0.4 |
