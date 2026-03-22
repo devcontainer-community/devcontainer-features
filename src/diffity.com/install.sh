@@ -35,7 +35,7 @@ utils_check_version() {
 }
 install() {
     utils_check_version "$VERSION"
-    apt_get_checkinstall nodejs npm ca-certificates
+    apt_get_checkinstall nodejs npm ca-certificates build-essential python3
     if [ "$VERSION" = 'latest' ]; then
         npm install -g diffity
     else
