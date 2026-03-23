@@ -1,0 +1,17 @@
+{
+    "name": "obsidian-cli",
+    "id": "obsidian-cli",
+    "version": "1.0.0",
+    "description": "Install \"obsidian-cli\" binary",
+    "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/obsidian-cli",
+    "options": {
+        "version": {
+            "type": "string",
+            "default": "latest",
+            "proposals": [
+                "latest"
+            ],
+            "description": "Version of \"obsidian-cli\" to install."
+        }
+    }
+}
