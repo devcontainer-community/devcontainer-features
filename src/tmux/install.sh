@@ -25,7 +25,7 @@ apt_get_cleanup() {
     apt-get clean
     rm -rf /var/lib/apt/lists/*
 }
-check_curl_tar_installed() {
+check_curl_file_tar_installed() {
     declare -a requiredAptPackagesMissing=()
     if ! [ -r '/etc/ssl/certs/ca-certificates.crt' ]; then
         requiredAptPackagesMissing+=('ca-certificates')
@@ -33,11 +33,15 @@ check_curl_tar_installed() {
     if ! command -v curl >/dev/null 2>&1; then
         requiredAptPackagesMissing+=('curl')
     fi
+    if ! command -v file >/dev/null 2>&1; then
+        requiredAptPackagesMissing+=('file')
+    fi
     if ! command -v tar >/dev/null 2>&1; then
         requiredAptPackagesMissing+=('tar')
     fi
     declare -i requiredAptPackagesMissingCount=${#requiredAptPackagesMissing[@]}
     if [ $requiredAptPackagesMissingCount -gt 0 ]; then
+        apt_get_update
         apt_get_checkinstall "${requiredAptPackagesMissing[@]}"
         apt_get_cleanup
     fi
@@ -102,7 +106,7 @@ utils_check_version() {
 }
 install() {
     utils_check_version "$VERSION"
-    check_curl_tar_installed
+    check_curl_file_tar_installed
     apt_get_checkinstall build-essential pkg-config libevent-dev libncurses-dev bison
     if [ "$VERSION" == 'latest' ] || [ -z "$VERSION" ]; then
         VERSION=$(github_get_latest_release "$githubRepository")
