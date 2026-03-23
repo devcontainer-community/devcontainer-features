@@ -147,7 +147,7 @@ install() {
     readonly downloadUrlTemplate='https://github.com/${githubRepository}/releases/download/${releaseTag}/dnote_${version}_linux_${architecture}.tar.gz'
     readonly downloadUrl="$(echo -n "$downloadUrlTemplate" | envsubst)"
     curl_check_url "$downloadUrl"
-    readonly binaryPathInArchive="$binaryName"
+    readonly binaryPathInArchive="./$binaryName"
     readonly stripComponents="$(echo -n "$binaryPathInArchive" | awk -F'/' '{print NF-1}')"
     readonly binaryTargetPath="$(echo -n "$binaryTargetPathTemplate" | envsubst)"
     curl_download_untar "$downloadUrl" "$stripComponents" "$binaryTargetFolder" "$binaryPathInArchive"
