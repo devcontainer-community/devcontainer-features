@@ -1,0 +1,17 @@
+{
+    "name": "taskwarrior.org",
+    "id": "taskwarrior.org",
+    "version": "1.0.0",
+    "description": "Install \"task\" binary",
+    "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/taskwarrior.org",
+    "options": {
+        "version": {
+            "type": "string",
+            "default": "latest",
+            "proposals": [
+                "latest"
+            ],
+            "description": "Currently unused. taskwarrior is installed via the system package manager."
+        }
+    }
+}

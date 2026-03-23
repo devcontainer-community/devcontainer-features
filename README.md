@@ -60,6 +60,7 @@
 | [starship.rs](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/starship.rs) | `starship` — minimal, fast cross-shell prompt | gh release | 1.0.1 |
 | [swc.rs](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/swc.rs) | `swc` — ultra-fast JS/TS compiler | gh release | 1.0.0 |
 | [tailscale.com](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/tailscale.com) | `tailscale` — zero-config mesh VPN | curl | 1.0.0 |
+| [taskwarrior.org](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/taskwarrior.org) | `task` — command-line task manager | apt | 1.0.0 |
 | [webinstall.dev](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/webinstall.dev) | `webi` — install packages without sudo | curl | 1.0.1 |
 | [yakitrak/notesmd-cli](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/yakitrak-notesmd-cli) | `notesmd-cli` — manage Obsidian vaults from the terminal | gh release | 1.0.0 |
 | [yq](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/yq) | `yq` — command-line YAML/JSON/XML processor | gh release | 1.0.0 |
