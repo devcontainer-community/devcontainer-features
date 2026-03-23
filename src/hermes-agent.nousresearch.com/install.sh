@@ -26,7 +26,7 @@ echo_banner() {
     echo -e "\e[1m\e[97m\e[41m$text\e[0m"
 }
 install() {
-    apt_get_checkinstall curl ca-certificates git
+    apt_get_checkinstall curl ca-certificates git xz-utils
     su "${_REMOTE_USER}" -c "curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.sh | bash -s -- --skip-setup"
     apt_get_cleanup
 }
