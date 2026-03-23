@@ -34,6 +34,7 @@
 | [fzf](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/fzf) | `fzf` — general-purpose command-line fuzzy finder | gh release | 1.0.0 |
 | [github.com-cli](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/github.com-cli) | `gh` — GitHub CLI | curl | 1.0.0 |
 | [helix-editor.com](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/helix-editor.com) | `hx` — modal text editor with built-in LSP | gh release | 1.0.0 |
+| [hermes-agent.nousresearch.com](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/hermes-agent.nousresearch.com) | `hermes` — self-improving AI agent by Nous Research | curl | 1.0.0 |
 | [icholy/ttygif](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/icholy-ttygif) | `ttygif` — convert ttyrec recordings to animated GIFs | gh release | 1.0.0 |
 | [jj-vcs.dev](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/jj-vcs.dev) | `jj` — Git-compatible distributed VCS | gh release | 1.0.1 |
 | [jnsahaj/lumen](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/jnsahaj-lumen) | `lumen` — AI-powered commit message generator | cargo | 1.0.0 |

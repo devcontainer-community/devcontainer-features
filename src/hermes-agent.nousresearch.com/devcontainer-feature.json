@@ -1,0 +1,17 @@
+{
+    "name": "hermes-agent.nousresearch.com",
+    "id": "hermes-agent.nousresearch.com",
+    "version": "1.0.0",
+    "description": "Install \"hermes\" binary",
+    "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/hermes-agent.nousresearch.com",
+    "options": {
+        "version": {
+            "type": "string",
+            "default": "latest",
+            "proposals": [
+                "latest"
+            ],
+            "description": "Currently unused."
+        }
+    }
+}
