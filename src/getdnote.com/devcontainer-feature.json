@@ -1,0 +1,17 @@
+{
+    "name": "getdnote.com",
+    "id": "getdnote.com",
+    "version": "1.0.0",
+    "description": "Install \"dnote\" binary",
+    "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/getdnote.com",
+    "options": {
+        "version": {
+            "type": "string",
+            "default": "latest",
+            "proposals": [
+                "latest"
+            ],
+            "description": "Version of \"dnote\" to install."
+        }
+    }
+}
