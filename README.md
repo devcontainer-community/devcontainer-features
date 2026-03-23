@@ -60,6 +60,7 @@
 | [smallstep.com](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/smallstep.com) | `step` — zero-trust security toolkit and CA | gh release | 1.0.1 |
 | [sshd](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/sshd) | `sshd` — OpenSSH server running inside the container | apt | 1.0.0 |
 | [starship.rs](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/starship.rs) | `starship` — minimal, fast cross-shell prompt | gh release | 1.0.1 |
+| [steveyegge/beads](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/steveyegge-beads) | `bd` — distributed graph issue tracker for AI agents | gh release | 1.0.0 |
 | [swc.rs](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/swc.rs) | `swc` — ultra-fast JS/TS compiler | gh release | 1.0.0 |
 | [tailscale.com](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/tailscale.com) | `tailscale` — zero-config mesh VPN | curl | 1.0.0 |
 | [taskwarrior.org](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/taskwarrior.org) | `task` — command-line task manager | apt | 1.0.0 |
