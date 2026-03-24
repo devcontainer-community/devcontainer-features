@@ -6,7 +6,7 @@ set -o nounset
 set -o allexport
 readonly githubRepository='onecli/onecli-cli'
 readonly binaryName='onecli'
-readonly versionArgument='--version'
+readonly versionArgument='version'
 readonly binaryTargetFolder='/usr/local/bin'
 readonly name="${githubRepository##*/}"
 apt_get_update() {
