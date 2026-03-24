@@ -1,0 +1,17 @@
+{
+    "name": "lnav.org",
+    "id": "lnav.org",
+    "version": "1.0.0",
+    "description": "Install \"lnav\" binary",
+    "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/lnav.org",
+    "options": {
+        "version": {
+            "type": "string",
+            "default": "latest",
+            "proposals": [
+                "latest"
+            ],
+            "description": "Version of \"lnav\" to install."
+        }
+    }
+}
