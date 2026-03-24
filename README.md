@@ -52,6 +52,7 @@
 | [neovim.io](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/neovim.io) | `nvim` — hyperextensible Vim-based text editor | gh release | 1.0.0 |
 | [nixos.org](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/nixos.org) | `nix` — the Nix package manager | curl | 1.0.0 |
 | [nvidia.com/cuda](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/nvidia.com-cuda) | NVIDIA CUDA Toolkit for GPU computing | curl | 1.0.0 |
+| [onecli.sh-cli](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/onecli.sh-cli) | `onecli` — manage agents, secrets, rules, and configuration from the terminal | gh release | 1.0.0 |
 | [opencode.ai](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/opencode.ai) | `opencode` — AI coding agent in the terminal | gh release | 1.0.3 |
 | [pi.dev](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/pi.dev) | `pi` — package manager for devcontainer features | gh release | 1.0.0 |
 | [pkgx.sh](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/pkgx.sh) | `pkgx` — run any package without installing | curl | 1.0.0 |
