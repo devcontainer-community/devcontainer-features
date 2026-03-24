@@ -1,0 +1,17 @@
+{
+    "name": "dolthub.com",
+    "id": "dolthub.com",
+    "version": "1.0.0",
+    "description": "Install \"dolt\" binary",
+    "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/dolthub.com",
+    "options": {
+        "version": {
+            "type": "string",
+            "default": "latest",
+            "proposals": [
+                "latest"
+            ],
+            "description": "Version of \"dolt\" to install."
+        }
+    }
+}
