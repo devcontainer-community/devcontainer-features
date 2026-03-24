@@ -28,6 +28,7 @@
 | [deno.com](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/deno.com) | `deno` — secure TypeScript/JavaScript runtime | curl | 1.0.0 |
 | [devenv.sh](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/devenv.sh) | `devenv` — reproducible developer environments via Nix | nix | 1.0.0 |
 | [diffity.com](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/diffity.com) | `diffity` — agent-agnostic GitHub-style diff viewer and code review tool | npm | 1.0.0 |
+| [dolthub.com](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/dolthub.com) | `dolt` — SQL database with Git-style versioning | gh release | 1.0.0 |
 | [dolthub.com/doltgres](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/dolthub.com-doltgres) | `doltgres` — version-controlled PostgreSQL-compatible database | gh release | 1.0.0 |
 | [dozzle.dev](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/dozzle.dev) | `dozzle` — real-time Docker container log viewer | curl | 1.0.0 |
 | [fd](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/fd) | `fd` — fast and user-friendly file finder | gh release | 1.0.0 |
@@ -65,6 +66,7 @@
 | [swc.rs](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/swc.rs) | `swc` — ultra-fast JS/TS compiler | gh release | 1.0.0 |
 | [tailscale.com](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/tailscale.com) | `tailscale` — zero-config mesh VPN | curl | 1.0.0 |
 | [taskwarrior.org](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/taskwarrior.org) | `task` — command-line task manager | apt | 1.0.0 |
+| [turso.tech](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/turso.tech) | `tursodb` — in-process SQL database compatible with SQLite | gh release | 1.0.0 |
 | [webinstall.dev](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/webinstall.dev) | `webi` — install packages without sudo | curl | 1.0.1 |
 | [yakitrak/notesmd-cli](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/yakitrak-notesmd-cli) | `notesmd-cli` — manage Obsidian vaults from the terminal | gh release | 1.0.0 |
 | [yq](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/yq) | `yq` — command-line YAML/JSON/XML processor | gh release | 1.0.0 |
