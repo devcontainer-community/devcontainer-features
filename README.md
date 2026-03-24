@@ -62,6 +62,7 @@
 | [ripgrep](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/ripgrep) | `rg` — fast grep alternative (ripgrep) | gh release | 1.0.0 |
 | [schpet-linear-cli](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/schpet-linear-cli) | `linear` — CLI to access linear.com issue tracker | gh release | 1.0.0 |
 | [smallstep.com](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/smallstep.com) | `step` — zero-trust security toolkit and CA | gh release | 1.0.1 |
+| [socket.dev/sfw-free](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/socket.dev-sfw-free) | `sfw` — network security proxy that blocks malicious dependencies | gh release | 1.0.0 |
 | [sshd](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/sshd) | `sshd` — OpenSSH server running inside the container | apt | 1.0.0 |
 | [starship.rs](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/starship.rs) | `starship` — minimal, fast cross-shell prompt | gh release | 1.0.1 |
 | [steveyegge/beads](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/steveyegge-beads) | `bd` — distributed graph issue tracker for AI agents | gh release | 1.0.0 |
