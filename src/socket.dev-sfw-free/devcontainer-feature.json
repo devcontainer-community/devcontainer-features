@@ -1,0 +1,17 @@
+{
+    "name": "socket.dev/sfw-free",
+    "id": "socket.dev-sfw-free",
+    "version": "1.0.0",
+    "description": "Install \"sfw\" binary",
+    "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/socket.dev-sfw-free",
+    "options": {
+        "version": {
+            "type": "string",
+            "default": "latest",
+            "proposals": [
+                "latest"
+            ],
+            "description": "Version of \"sfw\" to install."
+        }
+    }
+}
