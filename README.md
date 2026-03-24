@@ -46,6 +46,7 @@
 | [k9scli.io](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/k9scli.io) | `k9s` — terminal UI for Kubernetes clusters | gh release | 1.0.0 |
 | [keybase.io](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/keybase.io) | `keybase` — cryptographic identity and encrypted file sharing | curl | 1.2.0 |
 | [lazygit](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/lazygit) | `lazygit` — terminal UI for git | gh release | 1.0.0 |
+| [lnav.org](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/lnav.org) | `lnav` — advanced log file viewer for the terminal | gh release | 1.0.0 |
 | [memvid.com](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/memvid.com) | `memvid` — video-based memory for AI applications | npm | 1.0.0 |
 | [mosh.org](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/mosh.org) | `mosh` — SSH replacement with roaming support | apt | 1.0.0 |
 | [neovim.io](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/neovim.io) | `nvim` — hyperextensible Vim-based text editor | gh release | 1.0.0 |
