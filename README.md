@@ -31,6 +31,7 @@
 | [dolthub.com](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/dolthub.com) | `dolt` — SQL database with Git-style versioning | gh release | 1.0.0 |
 | [dolthub.com/doltgres](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/dolthub.com-doltgres) | `doltgres` — version-controlled PostgreSQL-compatible database | gh release | 1.0.0 |
 | [dozzle.dev](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/dozzle.dev) | `dozzle` — real-time Docker container log viewer | curl | 1.0.0 |
+| [fathyb/carbonyl](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/fathyb-carbonyl) | `carbonyl` — Chromium-based browser that runs in a terminal | gh release | 1.0.0 |
 | [fd](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/fd) | `fd` — fast and user-friendly file finder | gh release | 1.0.0 |
 | [feature-installer](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/feature-installer) | `feature-installer` — install devcontainer features at runtime | curl | 0.0.4 |
 | [fzf](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/fzf) | `fzf` — general-purpose command-line fuzzy finder | gh release | 1.0.0 |
