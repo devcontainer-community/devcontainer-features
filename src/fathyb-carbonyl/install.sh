@@ -133,7 +133,12 @@ utils_check_version() {
     fi
 }
 install_chromium_runtime_deps() {
-    apt_get_checkinstall libdbus-1-3 libdrm2 libgbm1 libnss3 libnspr4 libxkbcommon0
+    # Deps from upstream Dockerfile: libasound2 libexpat1 libfontconfig1 libnss3
+    apt_get_checkinstall libexpat1 libfontconfig1 libnss3
+    # libasound2 was renamed to libasound2t64 in newer Debian/Ubuntu releases
+    apt_get_update
+    DEBIAN_FRONTEND=noninteractive apt-get -y install --no-install-recommends libasound2t64 2>/dev/null \
+        || DEBIAN_FRONTEND=noninteractive apt-get -y install --no-install-recommends libasound2
 }
 install() {
     utils_check_version "$VERSION"
