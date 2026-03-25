@@ -132,9 +132,13 @@ utils_check_version() {
         exit 1
     fi
 }
+install_chromium_runtime_deps() {
+    apt_get_checkinstall libdbus-1-3 libdrm2 libgbm1 libnss3 libnspr4 libxkbcommon0
+}
 install() {
     utils_check_version "$VERSION"
     check_curl_envsubst_file_unzip_installed
+    install_chromium_runtime_deps
     readonly architecture="$(debian_get_target_arch)"
     if [ "$VERSION" == 'latest' ] || [ -z "$VERSION" ]; then
         VERSION=$(github_get_latest_release "$githubRepository")
