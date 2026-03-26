@@ -2,7 +2,7 @@
     "name": "pi.dev",
     "id": "pi.dev",
     "version": "1.0.1",
-    "description": "Install \"pi\" binary",
+    "description": "minimal terminal coding harness",
     "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/pi.dev",
     "options": {
         "version": {

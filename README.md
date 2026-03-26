@@ -23,7 +23,7 @@
 | [charmbracelet/gum](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/charmbracelet-gum) | `gum` — building blocks for shell scripts | gh release | 1.0.4 |
 | [chezmoi.io](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/chezmoi.io) | `chezmoi` — dotfiles manager across machines | gh release | 1.0.2 |
 | [cloudflare.com-warp-cli](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/cloudflare.com-warp-cli) | `warp-cli` — Cloudflare WARP VPN client | curl | 1.0.0 |
-| [critique.work](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/critique.work) | `critique` — AI-powered code review | bun | 1.0.0 |
+| [critique.work](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/critique.work) | `critique` — TUI for reviewing git changes | bun | 1.0.0 |
 | [delta](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/delta) | `delta` — syntax-highlighting pager for git diffs | gh release | 1.0.1 |
 | [deno.com](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/deno.com) | `deno` — secure TypeScript/JavaScript runtime | curl | 1.0.0 |
 | [devenv.sh](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/devenv.sh) | `devenv` — reproducible developer environments via Nix | nix | 1.0.0 |
@@ -57,7 +57,7 @@
 | [nvidia.com/cuda](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/nvidia.com-cuda) | NVIDIA CUDA Toolkit for GPU computing | curl | 1.0.0 |
 | [onecli.sh-cli](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/onecli.sh-cli) | `onecli` — manage agents, secrets, rules, and configuration from the terminal | gh release | 1.0.0 |
 | [opencode.ai](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/opencode.ai) | `opencode` — AI coding agent in the terminal | gh release | 1.0.4 |
-| [pi.dev](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/pi.dev) | `pi` — package manager for devcontainer features | gh release | 1.0.1 |
+| [pi.dev](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/pi.dev) | `pi` — minimal terminal coding harness | gh release | 1.0.1 |
 | [pkgx.sh](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/pkgx.sh) | `pkgx` — run any package without installing | curl | 1.0.0 |
 | [pulumi.com](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/pulumi.com) | `pulumi` — infrastructure as code in any language | gh release | 1.0.1 |
 | [rclone](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/rclone.org) | `rclone` — sync files to/from cloud storage | gh release | 1.0.1 |
