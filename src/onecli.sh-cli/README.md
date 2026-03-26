@@ -1,5 +1,5 @@
 
-# onecli.sh-cli (onecli.sh-cli)
+# onecli.sh/cli (onecli.sh-cli)
 
 Install "onecli" binary
 
