@@ -87,7 +87,8 @@ utils_check_version() {
 install() {
     utils_check_version "$VERSION"
     check_curl_file_tar_installed
-    apt_get_checkinstall python3
+    apt_get_checkinstall python3 locales
+    locale-gen en_US.UTF-8
     if [ "$VERSION" == 'latest' ] || [ -z "$VERSION" ]; then
         VERSION=$(bitbake_get_latest_version)
     fi
