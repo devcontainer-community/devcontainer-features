@@ -1,0 +1,17 @@
+{
+    "name": "sxyazi/yazi",
+    "id": "sxyazi-yazi",
+    "version": "1.0.0",
+    "description": "Install \"yazi\" binary",
+    "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/sxyazi-yazi",
+    "options": {
+        "version": {
+            "type": "string",
+            "default": "latest",
+            "proposals": [
+                "latest"
+            ],
+            "description": "Version of \"yazi\" to install."
+        }
+    }
+}

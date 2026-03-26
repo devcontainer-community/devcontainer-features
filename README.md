@@ -68,6 +68,7 @@
 | [starship.rs](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/starship.rs) | `starship` — minimal, fast cross-shell prompt | gh release | 1.0.1 |
 | [steveyegge/beads](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/steveyegge-beads) | `bd` — distributed graph issue tracker for AI agents | gh release | 1.0.0 |
 | [swc.rs](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/swc.rs) | `swc` — ultra-fast JS/TS compiler | gh release | 1.0.0 |
+| [sxyazi/yazi](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/sxyazi-yazi) | `yazi` — blazing fast terminal file manager | gh release | 1.0.0 |
 | [tailscale.com](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/tailscale.com) | `tailscale` — zero-config mesh VPN | curl | 1.0.0 |
 | [taskwarrior.org](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/taskwarrior.org) | `task` — command-line task manager | apt | 1.0.0 |
 | [turso.tech](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/turso.tech) | `tursodb` — in-process SQL database compatible with SQLite | gh release | 1.0.0 |
