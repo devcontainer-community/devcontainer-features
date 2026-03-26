@@ -1,7 +1,7 @@
 {
-    "name": "alexpasmantier-television",
+    "name": "alexpasmantier/television",
     "id": "alexpasmantier-television",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Install \"tv\" (television) binary",
     "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/alexpasmantier-television",
     "options": {
