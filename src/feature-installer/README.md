@@ -7,7 +7,7 @@ Install "feature-installer" binary
 
 ```json
 "features": {
-    "ghcr.io/devcontainer-community/devcontainer-features/feature-installer:0": {}
+    "ghcr.io/devcontainer-community/devcontainer-features/feature-installer:1": {}
 }
 ```
 
