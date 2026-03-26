@@ -81,7 +81,9 @@ github_get_latest_bitbake_version() {
 install() {
     utils_check_version "$VERSION"
     check_curl_tar_installed
-    apt_get_checkinstall python3
+    apt_get_checkinstall python3 locales
+    echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
+    locale-gen
     if [ "$VERSION" == 'latest' ] || [ -z "$VERSION" ]; then
         VERSION="$(github_get_latest_bitbake_version)"
     fi
