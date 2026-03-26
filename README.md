@@ -30,6 +30,7 @@
 | [diffity.com](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/diffity.com) | `diffity` — agent-agnostic GitHub-style diff viewer and code review tool | npm | 1.0.0 |
 | [dolthub.com](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/dolthub.com) | `dolt` — SQL database with Git-style versioning | gh release | 1.0.0 |
 | [dolthub.com/doltgres](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/dolthub.com-doltgres) | `doltgres` — version-controlled PostgreSQL-compatible database | gh release | 1.0.0 |
+| [dotenv.org](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/dotenv.org) | `dotenvx` — better dotenv with multi-environment and encrypted secrets support | bun | 1.0.0 |
 | [dozzle.dev](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/dozzle.dev) | `dozzle` — real-time Docker container log viewer | curl | 1.0.0 |
 | [fathyb/carbonyl](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/fathyb-carbonyl) | `carbonyl` — Chromium-based browser that runs in a terminal | gh release | 1.0.0 |
 | [fd](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/fd) | `fd` — fast and user-friendly file finder | gh release | 1.0.0 |
