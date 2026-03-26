@@ -1,7 +1,0 @@
-{
-    "name": "gdb",
-    "id": "gdb",
-    "version": "1.0.0",
-    "description": "Install \"gdb\" binary",
-    "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/gdb"
-}

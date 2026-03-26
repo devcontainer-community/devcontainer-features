@@ -1,0 +1,7 @@
+{
+    "name": "sourceware.org/gdb",
+    "id": "sourceware.org-gdb",
+    "version": "1.0.0",
+    "description": "Install \"gdb\" binary",
+    "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/sourceware.org-gdb"
+}

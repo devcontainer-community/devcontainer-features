@@ -6,7 +6,7 @@
 
 ## Description
 
-A meta-feature that installs a curated set of popular C/C++ development tools in one go. Installing this feature brings in: `cmake`, `ninja`, `gdb`, `valgrind`, `ccache`, `cppcheck`, `clang-format`, and `clang-tidy`.
+A meta-feature that installs a curated set of popular C/C++ development tools in one go. Installing this feature brings in: `cmake`, `ninja`, `gdb`, `valgrind`, `ccache`, `cppcheck`, `clang-format`, `clang-tidy`, `distcc`, `vcpkg`, and `build-essential`.
 
 ## Installation Method
 

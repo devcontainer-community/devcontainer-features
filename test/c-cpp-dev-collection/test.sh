@@ -12,5 +12,8 @@ check "ccache installed" bash -c "ccache --version | grep 'ccache'"
 check "cppcheck installed" bash -c "cppcheck --version | grep 'Cppcheck'"
 check "clang-format installed" bash -c "clang-format --version | grep 'clang-format'"
 check "clang-tidy installed" bash -c "clang-tidy --version | grep 'LLVM'"
+check "distcc installed" bash -c "distcc --version | grep 'distcc'"
+check "vcpkg installed" bash -c "vcpkg version | grep 'vcpkg'"
+check "gcc installed" bash -c "gcc --version | grep 'gcc'"
 
 reportResults
