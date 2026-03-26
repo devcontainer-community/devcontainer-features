@@ -90,6 +90,7 @@
 | [webinstall.dev](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/webinstall.dev) | `webi` — install packages without sudo | curl | 1.0.1 |
 | [yakitrak/notesmd-cli](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/yakitrak-notesmd-cli) | `notesmd-cli` — manage Obsidian vaults from the terminal | gh release | 1.0.0 |
 | [yoctoproject.org](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/yoctoproject.org) | `bitbake` — build tool for the Yocto Project and OpenEmbedded | curl | 1.0.0 |
+| [yoctoproject.org/bitbake](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/yoctoproject.org-bitbake) | `bitbake` — build tool for the Yocto Project | curl | 1.0.0 |
 | [yq](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/yq) | `yq` — command-line YAML/JSON/XML processor | gh release | 1.0.1 |
 | [zellij.dev](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/zellij.dev) | `zellij` — terminal workspace with multiplexer and layouts | gh release | 1.0.2 |
 | [zyedidia/eget](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/zyedidia-eget) | `eget` — easily install prebuilt binaries from GitHub releases | gh release | 1.0.2 |
