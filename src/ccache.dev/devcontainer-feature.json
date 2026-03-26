@@ -1,0 +1,7 @@
+{
+    "name": "ccache.dev",
+    "id": "ccache.dev",
+    "version": "1.0.0",
+    "description": "Install \"ccache\" binary",
+    "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/ccache.dev"
+}

@@ -1,0 +1,20 @@
+{
+    "name": "collection-c-cpp",
+    "id": "collection-c-cpp",
+    "version": "1.0.0",
+    "description": "C/C++ dev collection — cmake, ninja, gdb, valgrind, ccache, cppcheck, clang-format, clang-tidy, distcc, vcpkg, build-essential",
+    "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/collection-c-cpp",
+    "dependsOn": {
+        "ghcr.io/devcontainer-community/features/cmake.org:1": {},
+        "ghcr.io/devcontainer-community/features/ninja-build.org:1": {},
+        "ghcr.io/devcontainer-community/features/sourceware.org-gdb:1": {},
+        "ghcr.io/devcontainer-community/features/valgrind.org:1": {},
+        "ghcr.io/devcontainer-community/features/ccache.dev:1": {},
+        "ghcr.io/devcontainer-community/features/danmar-cppcheck:1": {},
+        "ghcr.io/devcontainer-community/features/clang-format:1": {},
+        "ghcr.io/devcontainer-community/features/clang-tidy:1": {},
+        "ghcr.io/devcontainer-community/features/distcc.org:1": {},
+        "ghcr.io/devcontainer-community/features/vcpkg.io:1": {},
+        "ghcr.io/devcontainer-community/features/apt-build-essential:1": {}
+    }
+}

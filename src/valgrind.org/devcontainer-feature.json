@@ -1,0 +1,7 @@
+{
+    "name": "valgrind.org",
+    "id": "valgrind.org",
+    "version": "1.0.0",
+    "description": "Install \"valgrind\" binary",
+    "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/valgrind.org"
+}

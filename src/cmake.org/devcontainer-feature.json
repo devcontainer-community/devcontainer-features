@@ -1,0 +1,7 @@
+{
+    "name": "cmake.org",
+    "id": "cmake.org",
+    "version": "1.0.0",
+    "description": "Install \"cmake\" binary",
+    "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/cmake.org"
+}
