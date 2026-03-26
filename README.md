@@ -73,6 +73,7 @@
 | [sxyazi/yazi](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/sxyazi-yazi) | `yazi` — blazing fast terminal file manager | gh release | 1.0.0 |
 | [tailscale.com](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/tailscale.com) | `tailscale` — zero-config mesh VPN | curl | 1.0.0 |
 | [taskwarrior.org](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/taskwarrior.org) | `task` — command-line task manager | apt | 1.0.0 |
+| [tree-sitter](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/tree-sitter) | `tree-sitter` — incremental parsing toolkit for building syntax trees | gh release | 1.0.0 |
 | [turso.tech](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/turso.tech) | `tursodb` — in-process SQL database compatible with SQLite | gh release | 1.0.0 |
 | [webinstall.dev](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/webinstall.dev) | `webi` — install packages without sudo | curl | 1.0.1 |
 | [yakitrak/notesmd-cli](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/yakitrak-notesmd-cli) | `notesmd-cli` — manage Obsidian vaults from the terminal | gh release | 1.0.0 |

@@ -1,0 +1,15 @@
+{
+    "name": "tree-sitter",
+    "id": "tree-sitter",
+    "version": "1.0.0",
+    "description": "Install \"tree-sitter\" binary",
+    "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/tree-sitter",
+    "options": {
+        "version": {
+            "type": "string",
+            "default": "latest",
+            "proposals": ["latest"],
+            "description": "Version of \"tree-sitter\" to install."
+        }
+    }
+}
