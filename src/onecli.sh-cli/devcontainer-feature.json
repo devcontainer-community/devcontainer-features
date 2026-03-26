@@ -1,7 +1,7 @@
 {
-    "name": "onecli.sh-cli",
+    "name": "onecli.sh/cli",
     "id": "onecli.sh-cli",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Install \"onecli\" binary",
     "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/onecli.sh-cli",
     "options": {

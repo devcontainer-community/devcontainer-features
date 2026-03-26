@@ -1,7 +1,7 @@
 {
-    "name": "github.com-cli",
+    "name": "github.com/cli",
     "id": "github.com-cli",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Install \"gh\" (GitHub CLI) binary",
     "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/github.com-cli",
     "options": {
