@@ -21,7 +21,6 @@
 | [biomejs.dev](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/biomejs.dev) | `biome` — fast JS/TS formatter and linter | gh release | 1.0.1 |
 | [btop](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/btop) | `btop` — resource monitor (CPU, memory, network, processes) | gh release | 1.0.3 |
 | [bun.sh](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/bun.sh) | `bun` — fast JS runtime and package manager | curl | 1.0.0 |
-| [c-cpp-dev-collection](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/c-cpp-dev-collection) | C/C++ dev collection — cmake, ninja, gdb, valgrind, ccache, cppcheck, clang-format, clang-tidy, distcc, vcpkg, build-essential | meta | 1.0.0 |
 | [ccache.dev](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/ccache.dev) | `ccache` — compiler cache for faster C/C++ recompilation | apt | 1.0.0 |
 | [charmbracelet/gum](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/charmbracelet-gum) | `gum` — building blocks for shell scripts | gh release | 1.0.4 |
 | [chezmoi.io](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/chezmoi.io) | `chezmoi` — dotfiles manager across machines | gh release | 1.0.2 |
@@ -29,6 +28,7 @@
 | [clang-tidy](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/clang-tidy) | `clang-tidy` — C++ linter and static analyzer from LLVM | apt | 1.0.0 |
 | [cloudflare.com/warp-cli](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/cloudflare.com-warp-cli) | `warp-cli` — Cloudflare WARP VPN client | curl | 1.0.1 |
 | [cmake.org](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/cmake.org) | `cmake` — cross-platform build system generator | apt | 1.0.0 |
+| [collection-c-cpp](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/collection-c-cpp) | C/C++ dev collection — cmake, ninja, gdb, valgrind, ccache, cppcheck, clang-format, clang-tidy, distcc, vcpkg, build-essential | meta | 1.0.0 |
 | [critique.work](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/critique.work) | `critique` — TUI for reviewing git changes | bun | 1.0.0 |
 | [danmar/cppcheck](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/danmar-cppcheck) | `cppcheck` — static analysis tool for C/C++ code | apt | 1.0.0 |
 | [delta](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/delta) | `delta` — syntax-highlighting pager for git diffs | gh release | 1.0.1 |

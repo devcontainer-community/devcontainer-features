@@ -1,4 +1,4 @@
-# c-cpp-dev-collection
+# collection-c-cpp
 
 ## Project
 
