@@ -143,7 +143,7 @@ install() {
     fi
     readonly downloadUrl="https://github.com/${githubRepository}/releases/download/${releaseTag}/jira_${version}_linux_${architecture}.tar.gz"
     curl_check_url "$downloadUrl"
-    readonly binaryPathInArchive="$binaryName"
+    readonly binaryPathInArchive="jira_${version}_linux_${architecture}/bin/${binaryName}"
     readonly stripComponents="$(echo -n "$binaryPathInArchive" | awk -F'/' '{print NF-1}')"
     readonly binaryTargetPath="${binaryTargetFolder}/${binaryName}"
     curl_download_untar "$downloadUrl" "$stripComponents" "$binaryTargetFolder" "$binaryPathInArchive"
