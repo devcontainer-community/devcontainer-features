@@ -97,12 +97,9 @@ install() {
     local bin_name
     for bin_file in "${installDir}/bin"/*; do
         bin_name="$(basename "$bin_file")"
-        ln -sf "$bin_file" "${binaryTargetFolder}/${bin_name}"
+        printf '#!/bin/sh\nexec "%s" "$@"\n' "$bin_file" > "${binaryTargetFolder}/${bin_name}"
         chmod 755 "${binaryTargetFolder}/${bin_name}"
     done
-    if ! command -v python >/dev/null 2>&1; then
-        ln -sf "$(command -v python3)" /usr/local/bin/python
-    fi
     apt_get_cleanup
 }
 echo_banner "devcontainer.community"
