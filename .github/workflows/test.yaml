@@ -5,6 +5,7 @@ on:
 
 permissions:
   contents: read
+  packages: read
 
 jobs:
   get-changed-features:
@@ -49,6 +50,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: "Login to GHCR"
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
       - name: "Install latest devcontainer CLI"
         run: npm install -g @devcontainers/cli
 
@@ -67,6 +75,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: "Login to GHCR"
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
       - name: "Install latest devcontainer CLI"
         run: npm install -g @devcontainers/cli
 
@@ -79,6 +94,13 @@ jobs:
     continue-on-error: true
     steps:
       - uses: actions/checkout@v4
+
+      - name: "Login to GHCR"
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: "Install latest devcontainer CLI"
         run: npm install -g @devcontainers/cli
