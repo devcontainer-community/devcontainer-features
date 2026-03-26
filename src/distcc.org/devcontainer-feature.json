@@ -1,0 +1,7 @@
+{
+    "name": "distcc.org",
+    "id": "distcc.org",
+    "version": "1.0.0",
+    "description": "Install \"distcc\" binary",
+    "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/distcc.org"
+}
