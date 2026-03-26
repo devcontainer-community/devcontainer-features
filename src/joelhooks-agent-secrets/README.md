@@ -1,5 +1,5 @@
 
-# joelhooks-agent-secrets (joelhooks-agent-secrets)
+# joelhooks/agent-secrets (joelhooks-agent-secrets)
 
 Install "secrets" (agent-secrets) binary
 
