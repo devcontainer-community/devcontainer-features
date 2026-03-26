@@ -15,6 +15,7 @@
 | [asdf-vm.com](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/asdf-vm.com) | `asdf` — multi-runtime version manager | gh release | 1.0.2 |
 | [astral.sh/uv](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/astral.sh-uv) | `uv`/`uvx` — fast Python package and project manager | gh release | 1.0.4 |
 | [atuin.sh](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/atuin.sh) | `atuin` — shell history sync and search | gh release | 1.0.3 |
+| [avivsinai/bitbucket-cli](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/avivsinai-bitbucket-cli) | `bkt` — CLI for Bitbucket | gh release | 1.0.0 |
 | [AWS CLI](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/aws-cli) | `aws` — official AWS command-line interface | curl | 1.1.2 |
 | [basecamp/fizzy-cli](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/basecamp-fizzy-cli) | `fizzy` — CLI for Basecamp | gh release | 1.0.1 |
 | [bat](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/bat) | `bat` — cat with syntax highlighting and git integration | gh release | 1.0.1 |
