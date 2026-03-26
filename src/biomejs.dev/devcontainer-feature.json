@@ -1,7 +1,7 @@
 {
     "name": "biomejs.dev",
     "id": "biomejs.dev",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Install \"biome\" binary",
     "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/biomejs.dev",
     "options": {
