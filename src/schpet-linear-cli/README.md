@@ -1,5 +1,5 @@
 
-# schpet-linear-cli (schpet-linear-cli)
+# schpet/linear-cli (schpet-linear-cli)
 
 Install "linear" binary
 

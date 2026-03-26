@@ -1,5 +1,5 @@
 
-# basecamp-fizzy-cli (basecamp-fizzy-cli)
+# basecamp/fizzy-cli (basecamp-fizzy-cli)
 
 Install "fizzy" CLI binary
 
