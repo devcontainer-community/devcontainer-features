@@ -5,9 +5,9 @@ set -o noclobber
 set -o nounset
 set -o allexport
 readonly name="bitbake"
+readonly githubRepository='openembedded/bitbake'
 readonly installDir='/opt/bitbake'
 readonly binaryTargetFolder='/usr/local/bin'
-readonly downloadsBaseUrl='https://downloads.yoctoproject.org/releases/bitbake'
 apt_get_update() {
     if [ "$(find /var/lib/apt/lists/* | wc -l)" = "0" ]; then
         echo "Running apt-get update..."
@@ -66,15 +66,15 @@ echo_banner() {
 }
 utils_check_version() {
     local version=$1
-    if ! [[ "${version:-}" =~ ^(latest|[0-9]+\.[0-9]+\.[0-9]+)$ ]]; then
-        printf >&2 '=== [ERROR] Option "version" (value: "%s") is not "latest" or valid semantic version format "X.Y.Z" !\n' \
+    if ! [[ "${version:-}" =~ ^(latest|[0-9]+\.[0-9]+(\.[0-9]+)?)$ ]]; then
+        printf >&2 '=== [ERROR] Option "version" (value: "%s") is not "latest" or valid version format "X.Y" or "X.Y.Z" !\n' \
             "$version"
         exit 1
     fi
 }
-yocto_get_latest_bitbake_version() {
-    curl -s "${downloadsBaseUrl}/" \
-        | grep -oP 'bitbake-\K[0-9]+\.[0-9]+\.[0-9]+(?=\.tar\.gz)' \
+github_get_latest_bitbake_version() {
+    curl -s "https://api.github.com/repos/${githubRepository}/tags?per_page=100" \
+        | grep -oP '"name":\s*"yocto-\K[0-9]+\.[0-9]+\.[0-9]+(?=")' \
         | sort -V \
         | tail -1
 }
@@ -83,10 +83,10 @@ install() {
     check_curl_tar_installed
     apt_get_checkinstall python3
     if [ "$VERSION" == 'latest' ] || [ -z "$VERSION" ]; then
-        VERSION="$(yocto_get_latest_bitbake_version)"
+        VERSION="$(github_get_latest_bitbake_version)"
     fi
     readonly version="${VERSION:?}"
-    readonly downloadUrl="${downloadsBaseUrl}/bitbake-${version}.tar.gz"
+    readonly downloadUrl="https://github.com/${githubRepository}/archive/refs/tags/yocto-${version}.tar.gz"
     curl_check_url "$downloadUrl"
     mkdir -p "$installDir"
     curl_download_stdout "$downloadUrl" | tar \

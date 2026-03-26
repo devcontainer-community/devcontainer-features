@@ -2,7 +2,7 @@
 
 ## Project
 
-- [BitBake](https://downloads.yoctoproject.org/releases/bitbake/)
+- [BitBake](https://github.com/openembedded/bitbake)
 
 ## Description
 
@@ -10,7 +10,7 @@ BitBake is a generic task execution engine for the Yocto Project and OpenEmbedde
 
 ## Installation Method
 
-Downloaded as a source tarball from [downloads.yoctoproject.org](https://downloads.yoctoproject.org/releases/bitbake/) and extracted to `/opt/bitbake`, with symlinks placed in `/usr/local/bin`.
+Downloaded as a source tarball from [github.com/openembedded/bitbake](https://github.com/openembedded/bitbake) (tags in the form `yocto-X.Y.Z`) and extracted to `/opt/bitbake`, with wrapper scripts placed in `/usr/local/bin`.
 
 ## Other Notes
 
