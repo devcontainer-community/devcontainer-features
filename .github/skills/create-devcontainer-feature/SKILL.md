@@ -90,8 +90,8 @@ Create these files:
 ```
 
 Notes:
-- `id` MUST match the directory name exactly (uses hyphens, e.g., `"schpet-linear-cli"`)
-- `name` uses the owner/project format with a slash (e.g., `"schpet/linear-cli"`, `"github.com/cli"`, `"cloudflare.com/warp-cli"`). For plain-name features (e.g., `bat`, `jq`), `name` matches `id`.
+- `name` uses the owner/project format with a slash (e.g., `"schpet/linear-cli"`, `"github.com/cli"`, `"cloudflare.com/warp-cli"`). For plain-name features (e.g., `bat`, `jq`), `name` is just the tool name.
+- `id` is derived from `name` by replacing `/` with `-` (e.g., `"schpet/linear-cli"` → `"schpet-linear-cli"`). It MUST match the directory name exactly.
 - `version` starts at `"1.0.0"` for new features
 - Add `"installsAfter"` only if there is a real dependency on another feature
 
