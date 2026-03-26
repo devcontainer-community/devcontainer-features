@@ -35,7 +35,7 @@
 | [dozzle.dev](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/dozzle.dev) | `dozzle` — real-time Docker container log viewer | curl | 1.0.0 |
 | [fathyb/carbonyl](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/fathyb-carbonyl) | `carbonyl` — Chromium-based browser that runs in a terminal | gh release | 1.0.0 |
 | [fd](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/fd) | `fd` — fast and user-friendly file finder | gh release | 1.0.1 |
-| [feature-installer](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/feature-installer) | `feature-installer` — install devcontainer features at runtime | curl | 0.0.4 |
+| [feature-installer](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/feature-installer) | `feature-installer` — install devcontainer features at runtime | curl | 1.0.0 |
 | [fzf](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/fzf) | `fzf` — general-purpose command-line fuzzy finder | gh release | 1.0.0 |
 | [getdnote.com](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/getdnote.com) | `dnote` — simple command-line notebook for developers | gh release | 1.0.0 |
 | [github.com-cli](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/github.com-cli) | `gh` — GitHub CLI | curl | 1.0.1 |
