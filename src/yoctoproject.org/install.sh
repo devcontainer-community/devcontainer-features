@@ -88,7 +88,8 @@ install() {
     utils_check_version "$VERSION"
     check_curl_file_tar_installed
     apt_get_checkinstall python3 locales
-    locale-gen en_US.UTF-8
+    echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
+    locale-gen
     if [ "$VERSION" == 'latest' ] || [ -z "$VERSION" ]; then
         VERSION=$(bitbake_get_latest_version)
     fi
