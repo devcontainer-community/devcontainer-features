@@ -1,7 +1,7 @@
 {
     "name": "fd",
     "id": "fd",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Install \"fd\" binary",
     "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/fd",
     "options": {

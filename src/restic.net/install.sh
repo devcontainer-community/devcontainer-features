@@ -98,10 +98,10 @@ github_get_tag_for_version() {
         return 1
     fi
     local repo="$1"
-    local version="$2"
+    local _version="$2"
     local url="https://api.github.com/repos/$repo/releases"
     local escaped_version
-    escaped_version="$(printf '%s' "$version" | sed 's/\./\\./g')"
+    escaped_version="$(printf '%s' "$_version" | sed 's/\./\\./g')"
     curl -s "$url" | grep -Po '"tag_name": "\K.*?(?=")' | grep -E "^v?${escaped_version}$" | head -n 1
 }
 utils_check_version() {
