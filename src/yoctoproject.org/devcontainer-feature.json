@@ -1,0 +1,17 @@
+{
+    "name": "yoctoproject.org",
+    "id": "yoctoproject.org",
+    "version": "1.0.0",
+    "description": "Install \"bitbake\" binary",
+    "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/yoctoproject.org",
+    "options": {
+        "version": {
+            "type": "string",
+            "default": "latest",
+            "proposals": [
+                "latest"
+            ],
+            "description": "Version of \"bitbake\" to install."
+        }
+    }
+}
