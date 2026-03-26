@@ -27,6 +27,7 @@
 | [delta](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/delta) | `delta` — syntax-highlighting pager for git diffs | gh release | 1.0.0 |
 | [deno.com](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/deno.com) | `deno` — secure TypeScript/JavaScript runtime | curl | 1.0.0 |
 | [devenv.sh](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/devenv.sh) | `devenv` — reproducible developer environments via Nix | nix | 1.0.0 |
+| [direnv.net](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/direnv.net) | `direnv` — environment switcher that loads and unloads variables based on the current directory | apt | 1.0.0 |
 | [diffity.com](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/diffity.com) | `diffity` — agent-agnostic GitHub-style diff viewer and code review tool | npm | 1.0.0 |
 | [dolthub.com](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/dolthub.com) | `dolt` — SQL database with Git-style versioning | gh release | 1.0.0 |
 | [dolthub.com/doltgres](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/dolthub.com-doltgres) | `doltgres` — version-controlled PostgreSQL-compatible database | gh release | 1.0.0 |
