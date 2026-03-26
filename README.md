@@ -20,9 +20,15 @@
 | [biomejs.dev](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/biomejs.dev) | `biome` — fast JS/TS formatter and linter | gh release | 1.0.1 |
 | [btop](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/btop) | `btop` — resource monitor (CPU, memory, network, processes) | gh release | 1.0.3 |
 | [bun.sh](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/bun.sh) | `bun` — fast JS runtime and package manager | curl | 1.0.0 |
+| [c-cpp-dev-collection](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/c-cpp-dev-collection) | C/C++ dev collection — cmake, ninja, gdb, valgrind, ccache, cppcheck, clang-format, clang-tidy | meta | 1.0.0 |
+| [ccache](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/ccache) | `ccache` — compiler cache for faster C/C++ recompilation | apt | 1.0.0 |
 | [charmbracelet/gum](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/charmbracelet-gum) | `gum` — building blocks for shell scripts | gh release | 1.0.4 |
 | [chezmoi.io](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/chezmoi.io) | `chezmoi` — dotfiles manager across machines | gh release | 1.0.2 |
+| [clang-format](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/clang-format) | `clang-format` — C/C++ code formatter from the LLVM project | apt | 1.0.0 |
+| [clang-tidy](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/clang-tidy) | `clang-tidy` — C++ linter and static analyzer from LLVM | apt | 1.0.0 |
 | [cloudflare.com/warp-cli](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/cloudflare.com-warp-cli) | `warp-cli` — Cloudflare WARP VPN client | curl | 1.0.1 |
+| [cmake](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/cmake) | `cmake` — cross-platform build system generator | apt | 1.0.0 |
+| [cppcheck](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/cppcheck) | `cppcheck` — static analysis tool for C/C++ code | apt | 1.0.0 |
 | [critique.work](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/critique.work) | `critique` — TUI for reviewing git changes | bun | 1.0.0 |
 | [delta](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/delta) | `delta` — syntax-highlighting pager for git diffs | gh release | 1.0.1 |
 | [deno.com](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/deno.com) | `deno` — secure TypeScript/JavaScript runtime | curl | 1.0.0 |
@@ -37,6 +43,7 @@
 | [fd](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/fd) | `fd` — fast and user-friendly file finder | gh release | 1.0.1 |
 | [feature-installer](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/feature-installer) | `feature-installer` — install devcontainer features at runtime | curl | 1.0.0 |
 | [fzf](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/fzf) | `fzf` — general-purpose command-line fuzzy finder | gh release | 1.0.0 |
+| [gdb](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/gdb) | `gdb` — GNU debugger for C/C++ and other languages | apt | 1.0.0 |
 | [getdnote.com](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/getdnote.com) | `dnote` — simple command-line notebook for developers | gh release | 1.0.0 |
 | [github.com/cli](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/github.com-cli) | `gh` — GitHub CLI | curl | 1.0.1 |
 | [helix-editor.com](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/helix-editor.com) | `hx` — modal text editor with built-in LSP | gh release | 1.0.0 |
@@ -53,6 +60,7 @@
 | [memvid.com](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/memvid.com) | `memvid` — video-based memory for AI applications | npm | 1.0.0 |
 | [mosh.org](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/mosh.org) | `mosh` — SSH replacement with roaming support | apt | 1.0.0 |
 | [neovim.io](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/neovim.io) | `nvim` — hyperextensible Vim-based text editor | gh release | 1.0.1 |
+| [ninja](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/ninja) | `ninja` — small build system with a focus on speed | apt | 1.0.0 |
 | [nixos.org](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/nixos.org) | `nix` — the Nix package manager | curl | 1.0.0 |
 | [nvidia.com/cuda](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/nvidia.com-cuda) | NVIDIA CUDA Toolkit for GPU computing | curl | 1.0.0 |
 | [onecli.sh/cli](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/onecli.sh-cli) | `onecli` — manage agents, secrets, rules, and configuration from the terminal | gh release | 1.0.1 |
@@ -74,6 +82,7 @@
 | [tailscale.com](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/tailscale.com) | `tailscale` — zero-config mesh VPN | curl | 1.0.0 |
 | [taskwarrior.org](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/taskwarrior.org) | `task` — command-line task manager | apt | 1.0.0 |
 | [turso.tech](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/turso.tech) | `tursodb` — in-process SQL database compatible with SQLite | gh release | 1.0.0 |
+| [valgrind](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/valgrind) | `valgrind` — memory error detector and profiler for C/C++ | apt | 1.0.0 |
 | [webinstall.dev](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/webinstall.dev) | `webi` — install packages without sudo | curl | 1.0.1 |
 | [yakitrak/notesmd-cli](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/yakitrak-notesmd-cli) | `notesmd-cli` — manage Obsidian vaults from the terminal | gh release | 1.0.0 |
 | [yq](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/yq) | `yq` — command-line YAML/JSON/XML processor | gh release | 1.0.1 |

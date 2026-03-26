@@ -1,0 +1,17 @@
+{
+    "name": "c-cpp-dev-collection",
+    "id": "c-cpp-dev-collection",
+    "version": "1.0.0",
+    "description": "C/C++ dev collection — cmake, ninja, gdb, valgrind, ccache, cppcheck, clang-format, clang-tidy",
+    "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/c-cpp-dev-collection",
+    "dependsOn": {
+        "ghcr.io/devcontainer-community/features/cmake:1": {},
+        "ghcr.io/devcontainer-community/features/ninja:1": {},
+        "ghcr.io/devcontainer-community/features/gdb:1": {},
+        "ghcr.io/devcontainer-community/features/valgrind:1": {},
+        "ghcr.io/devcontainer-community/features/ccache:1": {},
+        "ghcr.io/devcontainer-community/features/cppcheck:1": {},
+        "ghcr.io/devcontainer-community/features/clang-format:1": {},
+        "ghcr.io/devcontainer-community/features/clang-tidy:1": {}
+    }
+}

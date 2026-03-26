@@ -1,0 +1,7 @@
+{
+    "name": "cppcheck",
+    "id": "cppcheck",
+    "version": "1.0.0",
+    "description": "Install \"cppcheck\" binary",
+    "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/cppcheck"
+}
