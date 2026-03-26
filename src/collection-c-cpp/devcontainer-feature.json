@@ -1,7 +1,7 @@
 {
     "name": "collection-c-cpp",
     "id": "collection-c-cpp",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "C/C++ dev collection — cmake, ninja, gdb, valgrind, ccache, cppcheck, clang-format, clang-tidy, distcc, vcpkg, build-essential",
     "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/collection-c-cpp",
     "dependsOn": {
