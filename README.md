@@ -11,6 +11,7 @@
 | Feature | Description | Install method | Version |
 | ------- | ----------- | -------------- | ------- |
 | [alexpasmantier/television](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/alexpasmantier-television) | `tv` — fuzzy finder for files, text, and more | gh release | 1.0.1 |
+| [ankitpokhrel/jira-cli](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/ankitpokhrel-jira-cli) | `jira` — feature-rich interactive Jira command line client | gh release | 1.0.0 |
 | [apt-build-essential](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/apt-build-essential) | `gcc`/`g++`/`make` — C/C++ compiler toolchain via the build-essential package | apt | 1.0.0 |
 | [asdf-vm.com](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/asdf-vm.com) | `asdf` — multi-runtime version manager | gh release | 1.0.2 |
 | [astral.sh/uv](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/astral.sh-uv) | `uv`/`uvx` — fast Python package and project manager | gh release | 1.0.4 |
