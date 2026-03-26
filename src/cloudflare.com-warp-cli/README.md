@@ -1,5 +1,5 @@
 
-# cloudflare.com-warp-cli (cloudflare.com-warp-cli)
+# cloudflare.com/warp-cli (cloudflare.com-warp-cli)
 
 Install "warp-cli" binary
 

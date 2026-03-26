@@ -1,5 +1,5 @@
 
-# alexpasmantier-television (alexpasmantier-television)
+# alexpasmantier/television (alexpasmantier-television)
 
 Install "tv" (television) binary
 

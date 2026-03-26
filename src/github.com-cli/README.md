@@ -1,5 +1,5 @@
 
-# github.com-cli (github.com-cli)
+# github.com/cli (github.com-cli)
 
 Install "gh" (GitHub CLI) binary
 
