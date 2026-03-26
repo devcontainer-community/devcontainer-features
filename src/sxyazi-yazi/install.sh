@@ -8,7 +8,7 @@ readonly githubRepository='sxyazi/yazi'
 readonly binaryName='yazi'
 readonly versionArgument='--version'
 readonly downloadUrlTemplate='https://github.com/${githubRepository}/releases/download/${releaseTag}/${binaryName}-${architecture}-unknown-linux-musl.zip'
-readonly binaryPathInArchive='yazi'
+readonly binaryPathInArchiveTemplate='yazi-${architecture}-unknown-linux-musl/yazi'
 readonly binaryTargetFolder='/usr/local/bin'
 readonly name="${githubRepository##*/}"
 apt_get_update() {
@@ -109,10 +109,10 @@ github_get_tag_for_version() {
         return 1
     fi
     local repo="$1"
-    local version="$2"
+    local _version="$2"
     local url="https://api.github.com/repos/$repo/releases"
     local escaped_version
-    escaped_version="$(printf '%s' "$version" | sed 's/\./\\./g')"
+    escaped_version="$(printf '%s' "$_version" | sed 's/\./\\./g')"
     curl -s "$url" | grep -Po '"tag_name": "\K.*?(?=")' | grep -E "^v?${escaped_version}$" | head -n 1
 }
 utils_check_version() {
@@ -139,6 +139,7 @@ install() {
     fi
     readonly downloadUrl="$(echo -n "$downloadUrlTemplate" | envsubst)"
     curl_check_url "$downloadUrl"
+    readonly binaryPathInArchive="$(echo -n "$binaryPathInArchiveTemplate" | envsubst)"
     curl_download_unzip "$downloadUrl" "$binaryTargetFolder" "$binaryPathInArchive"
     chmod 755 "$binaryTargetPath"
     apt_get_cleanup
