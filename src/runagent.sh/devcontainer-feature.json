@@ -1,0 +1,17 @@
+{
+    "name": "runagent.sh",
+    "id": "runagent.sh",
+    "version": "1.0.0",
+    "description": "Install \"runagent\" binary",
+    "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/runagent.sh",
+    "options": {
+        "version": {
+            "type": "string",
+            "default": "latest",
+            "proposals": [
+                "latest"
+            ],
+            "description": "Version of \"runagent\" to install."
+        }
+    }
+}
