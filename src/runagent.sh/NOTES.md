@@ -6,7 +6,7 @@
 
 ## Description
 
-A CLI for running and orchestrating AI agents. `runagent` lets you build, test, deploy, and manage AI agents from the terminal, supporting popular frameworks like LangGraph and CrewAI with multi-language SDK integration.
+A TypeScript SDK for the RunAgent platform. `runagent` enables developers to build, integrate, and deploy AI agents from JavaScript/TypeScript applications, with support for popular frameworks like LangGraph and CrewAI.
 
 ## Installation Method
 

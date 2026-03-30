@@ -2,7 +2,7 @@
     "name": "runagent.sh",
     "id": "runagent.sh",
     "version": "1.0.0",
-    "description": "Install \"runagent\" binary",
+    "description": "Install \"runagent\" TypeScript SDK",
     "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/runagent.sh",
     "options": {
         "version": {
