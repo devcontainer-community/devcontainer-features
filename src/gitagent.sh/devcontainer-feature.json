@@ -1,0 +1,17 @@
+{
+    "name": "gitagent.sh",
+    "id": "gitagent.sh",
+    "version": "1.0.0",
+    "description": "Install \"gitagent\" binary",
+    "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/gitagent.sh",
+    "options": {
+        "version": {
+            "type": "string",
+            "default": "latest",
+            "proposals": [
+                "latest"
+            ],
+            "description": "Version of \"gitagent\" to install."
+        }
+    }
+}

@@ -1,0 +1,17 @@
+# gitagent
+
+## Project
+
+- [gitagent](https://gitagent.sh)
+
+## Description
+
+A framework-agnostic, git-native standard for defining AI agents. `gitagent` lets you clone a repo and get an agent — version control, branching, and collaboration built in.
+
+## Installation Method
+
+Installed as a global package via [Bun](https://bun.sh) (`bun install -g @shreyaskapale/gitagent`). Bun is automatically installed if not already present.
+
+## Other Notes
+
+_No additional notes._
