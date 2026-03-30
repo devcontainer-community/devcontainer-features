@@ -56,6 +56,7 @@
 | [jj-vcs.dev](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/jj-vcs.dev) | `jj` — Git-compatible distributed VCS | gh release | 1.0.2 |
 | [jnsahaj/lumen](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/jnsahaj-lumen) | `lumen` — AI-powered commit message generator | cargo | 1.0.0 |
 | [joelhooks/agent-secrets](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/joelhooks-agent-secrets) | `secrets` — manage secrets for AI agents | gh release | 1.0.1 |
+| [jonas/tig](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/jonas-tig) | `tig` — text-mode interface for Git | apt | 1.0.0 |
 | [jq](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/jq) | `jq` — command-line JSON processor | apt | 1.0.0 |
 | [k9scli.io](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/k9scli.io) | `k9s` — terminal UI for Kubernetes clusters | gh release | 1.0.1 |
 | [keybase.io](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/keybase.io) | `keybase` — cryptographic identity and encrypted file sharing | curl | 1.2.0 |
