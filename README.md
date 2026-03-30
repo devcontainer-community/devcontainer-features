@@ -48,7 +48,7 @@
 | [feature-installer](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/feature-installer) | `feature-installer` — install devcontainer features at runtime | curl | 1.0.0 |
 | [fzf](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/fzf) | `fzf` — general-purpose command-line fuzzy finder | gh release | 1.0.0 |
 | [getdnote.com](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/getdnote.com) | `dnote` — simple command-line notebook for developers | gh release | 1.0.0 |
-| [gitagent.sh](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/gitagent.sh) | `gitagent` — framework-agnostic, git-native standard for defining AI agents | bun | 1.0.0 |
+| [gitagent.sh](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/gitagent.sh) | `gitagent` — framework-agnostic, git-native standard for defining AI agents | bun | 1.0.1 |
 | [github.com/cli](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/github.com-cli) | `gh` — GitHub CLI | curl | 1.0.1 |
 | [helix-editor.com](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/helix-editor.com) | `hx` — modal text editor with built-in LSP | gh release | 1.0.0 |
 | [hermes-agent.nousresearch.com](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/hermes-agent.nousresearch.com) | `hermes` — self-improving AI agent by Nous Research | curl | 1.0.0 |
