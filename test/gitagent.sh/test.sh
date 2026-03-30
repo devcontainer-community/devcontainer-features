@@ -13,6 +13,7 @@ source dev-container-features-test-lib
 # check <LABEL> <cmd> [args...]
 
 check "check existence" bash -c "ls -lah /usr/local/bin/gitagent"
+check "execute command" bash -c "gitagent --version"
 
 # Report results
 # If any of the checks above exited with a non-zero exit code, the test will fail.

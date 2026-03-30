@@ -51,6 +51,13 @@ install() {
     else
         bun install -g "@shreyaskapale/gitagent@${VERSION}"
     fi
+    # bun creates a symlink pointing to a .js file with a node shebang.
+    # Replace it with a shell wrapper that uses bun so node is not required.
+    local gitagentJs
+    gitagentJs=$(readlink -f "${binaryTargetFolder}/${binaryName}")
+    rm "${binaryTargetFolder}/${binaryName}"
+    printf '#!/bin/sh\nexec bun run "%s" "$@"\n' "${gitagentJs}" > "${binaryTargetFolder}/${binaryName}"
+    chmod +x "${binaryTargetFolder}/${binaryName}"
     apt_get_cleanup
 }
 echo_banner "devcontainer.community"
