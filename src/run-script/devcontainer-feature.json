@@ -1,0 +1,19 @@
+{
+    "name": "run-script",
+    "id": "run-script",
+    "version": "1.0.0",
+    "description": "Run a script from a URL or inline text during devcontainer build",
+    "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/run-script",
+    "options": {
+        "url": {
+            "type": "string",
+            "default": "",
+            "description": "URL of a script to download and execute."
+        },
+        "script": {
+            "type": "string",
+            "default": "",
+            "description": "Inline script text to execute."
+        }
+    }
+}
