@@ -1,0 +1,10 @@
+{
+    "test-backtick": {
+        "image": "debian:latest",
+        "features": {
+            "run-script": {
+                "script": "echo backtick_test=`hostname` > /tmp/devcontainer-run-script-test.txt"
+            }
+        }
+    }
+}
