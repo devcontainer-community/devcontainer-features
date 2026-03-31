@@ -1,7 +1,7 @@
 {
     "name": "nvidia.com/cuda",
     "id": "nvidia.com-cuda",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Install NVIDIA CUDA Toolkit",
     "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/nvidia.com-cuda",
     "options": {
@@ -23,6 +23,6 @@
         }
     },
     "installsAfter": [
-        "ghcr.io/devcontainer-community/features/ca-certificates:latest"
+        "ghcr.io/devcontainer-community/devcontainer-features/ca-certificates:latest"
     ]
 }

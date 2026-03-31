@@ -1,7 +1,7 @@
 {
     "name": "opencode.ai",
     "id": "opencode.ai",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "description": "Install \"opencode\" binary",
     "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/opencode.ai",
     "options": {
@@ -15,6 +15,6 @@
         }
     },
     "installsAfter": [
-        "ghcr.io/devcontainer-community/features/ca-certificates:latest"
+        "ghcr.io/devcontainer-community/devcontainer-features/ca-certificates:latest"
     ]
 }

@@ -87,7 +87,7 @@ Create these files:
         }
     },
     "installsAfter": [
-        "ghcr.io/devcontainer-community/features/ca-certificates:latest"
+        "ghcr.io/devcontainer-community/devcontainer-features/ca-certificates:latest"
     ]
 }
 ```
@@ -96,7 +96,7 @@ Notes:
 - `name` uses the owner/project format with a slash (e.g., `"schpet/linear-cli"`, `"github.com/cli"`, `"cloudflare.com/warp-cli"`). For plain-name features (e.g., `bat`, `jq`), `name` is just the tool name.
 - `id` is derived from `name` by replacing `/` with `-` (e.g., `"schpet/linear-cli"` → `"schpet-linear-cli"`). It MUST match the directory name exactly.
 - `version` starts at `"1.0.0"` for new features
-- Always include `"installsAfter": ["ghcr.io/devcontainer-community/features/ca-certificates:latest"]` so CA certificates are available before the feature runs
+- Always include `"installsAfter": ["ghcr.io/devcontainer-community/devcontainer-features/ca-certificates:latest"]` so CA certificates are available before the feature runs
 
 ### 4b. `src/<FEATURE_ID>/install.sh`
 

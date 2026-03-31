@@ -1,7 +1,7 @@
 {
     "name": "taskwarrior.org",
     "id": "taskwarrior.org",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Install \"task\" binary",
     "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/taskwarrior.org",
     "options": {
@@ -15,6 +15,6 @@
         }
     },
     "installsAfter": [
-        "ghcr.io/devcontainer-community/features/ca-certificates:latest"
+        "ghcr.io/devcontainer-community/devcontainer-features/ca-certificates:latest"
     ]
 }

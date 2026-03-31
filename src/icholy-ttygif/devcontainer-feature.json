@@ -1,7 +1,7 @@
 {
     "name": "icholy/ttygif",
     "id": "icholy-ttygif",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "Install \"ttygif\" binary",
     "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/icholy-ttygif",
     "options": {
@@ -15,6 +15,6 @@
         }
     },
     "installsAfter": [
-        "ghcr.io/devcontainer-community/features/ca-certificates:latest"
+        "ghcr.io/devcontainer-community/devcontainer-features/ca-certificates:latest"
     ]
 }

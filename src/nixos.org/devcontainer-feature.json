@@ -1,7 +1,7 @@
 {
     "name": "nixos.org",
     "id": "nixos.org",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Install \"nix\" binary.",
     "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/nixos.org",
     "options": {
@@ -20,6 +20,6 @@
         }
     },
     "installsAfter": [
-        "ghcr.io/devcontainer-community/features/ca-certificates:latest"
+        "ghcr.io/devcontainer-community/devcontainer-features/ca-certificates:latest"
     ]
 }
