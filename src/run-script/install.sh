@@ -49,7 +49,6 @@ install() {
         return 0
     fi
 
-    local tmpScript
     tmpScript="$(mktemp)"
     trap 'rm -f "${tmpScript}"' EXIT
 
