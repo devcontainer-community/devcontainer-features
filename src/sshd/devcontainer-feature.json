@@ -17,6 +17,6 @@
     },
     "entrypoint": "/usr/local/share/sshd/entrypoint.sh",
     "installsAfter": [
-        "ghcr.io/devcontainer-community/features/ca-certificates:1"
+        "ghcr.io/devcontainer-community/features/ca-certificates:latest"
     ]
 }

@@ -5,6 +5,6 @@
     "description": "Install \"cmake\" binary",
     "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/cmake.org",
     "installsAfter": [
-        "ghcr.io/devcontainer-community/features/ca-certificates:1"
+        "ghcr.io/devcontainer-community/features/ca-certificates:latest"
     ]
 }

@@ -18,6 +18,6 @@
         "ghcr.io/devcontainer-community/devcontainer-features/apt-build-essential:latest": {}
     },
     "installsAfter": [
-        "ghcr.io/devcontainer-community/features/ca-certificates:1"
+        "ghcr.io/devcontainer-community/features/ca-certificates:latest"
     ]
 }
