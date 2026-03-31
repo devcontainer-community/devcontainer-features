@@ -1,0 +1,14 @@
+{
+    "name": "ca-certificates",
+    "id": "ca-certificates",
+    "version": "1.0.0",
+    "description": "Install \"ca-certificates\" and optionally add custom CA certificates from URLs",
+    "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/ca-certificates",
+    "options": {
+        "urls": {
+            "type": "string",
+            "default": "",
+            "description": "Newline-separated list of URLs to download as additional CA certificates into /usr/local/share/ca-certificates."
+        }
+    }
+}
