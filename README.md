@@ -10,6 +10,7 @@
 
 | Feature | Description | Install method | Version |
 | ------- | ----------- | -------------- | ------- |
+| [add-script](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/add-script) | Add a script from a URL or inline text to /usr/local/bin during devcontainer build | custom | 1.0.0 |
 | [alexpasmantier/television](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/alexpasmantier-television) | `tv` — fuzzy finder for files, text, and more | gh release | 1.0.1 |
 | [ankitpokhrel/jira-cli](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/ankitpokhrel-jira-cli) | `jira` — feature-rich interactive Jira command line client | gh release | 1.0.0 |
 | [apt-build-essential](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/apt-build-essential) | `gcc`/`g++`/`make` — C/C++ compiler toolchain via the build-essential package | apt | 1.0.0 |
