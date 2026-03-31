@@ -1,0 +1,24 @@
+{
+    "name": "add-script",
+    "id": "add-script",
+    "version": "1.0.0",
+    "description": "Add a script from a URL or inline text to /usr/local/bin during devcontainer build",
+    "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/add-script",
+    "options": {
+        "name": {
+            "type": "string",
+            "default": "",
+            "description": "Name for the script placed in /usr/local/bin."
+        },
+        "url": {
+            "type": "string",
+            "default": "",
+            "description": "URL of a script to download."
+        },
+        "script": {
+            "type": "string",
+            "default": "",
+            "description": "Inline script text to add."
+        }
+    }
+}
