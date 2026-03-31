@@ -1,7 +1,7 @@
 {
     "name": "fd",
     "id": "fd",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Install \"fd\" binary",
     "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/fd",
     "options": {
@@ -13,5 +13,8 @@
             ],
             "description": "Version of \"fd\" to install."
         }
-    }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainer-community/features/ca-certificates:latest"
+    ]
 }

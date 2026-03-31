@@ -1,7 +1,7 @@
 {
     "name": "steveyegge/beads",
     "id": "steveyegge-beads",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Install \"bd\" binary",
     "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/steveyegge-beads",
     "options": {
@@ -13,5 +13,8 @@
             ],
             "description": "Version of \"beads\" to install."
         }
-    }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainer-community/features/ca-certificates:latest"
+    ]
 }

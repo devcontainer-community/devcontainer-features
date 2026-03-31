@@ -1,7 +1,10 @@
 {
     "name": "vcpkg.io",
     "id": "vcpkg.io",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Install vcpkg C/C++ package manager",
-    "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/vcpkg.io"
+    "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/vcpkg.io",
+    "installsAfter": [
+        "ghcr.io/devcontainer-community/features/ca-certificates:latest"
+    ]
 }

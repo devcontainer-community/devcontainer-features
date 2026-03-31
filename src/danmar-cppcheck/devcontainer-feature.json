@@ -1,7 +1,10 @@
 {
     "name": "danmar/cppcheck",
     "id": "danmar-cppcheck",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Install \"cppcheck\" binary",
-    "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/danmar-cppcheck"
+    "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/danmar-cppcheck",
+    "installsAfter": [
+        "ghcr.io/devcontainer-community/features/ca-certificates:latest"
+    ]
 }

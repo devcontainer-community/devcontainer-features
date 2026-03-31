@@ -1,7 +1,7 @@
 {
     "name": "direnv.net",
     "id": "direnv.net",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Install \"direnv\" binary",
     "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/direnv.net",
     "options": {
@@ -13,5 +13,8 @@
             ],
             "description": "Currently unused. direnv is installed via the system package manager."
         }
-    }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainer-community/features/ca-certificates:latest"
+    ]
 }

@@ -1,7 +1,7 @@
 {
     "name": "getdnote.com",
     "id": "getdnote.com",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Install \"dnote\" binary",
     "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/getdnote.com",
     "options": {
@@ -13,5 +13,8 @@
             ],
             "description": "Version of \"dnote\" to install."
         }
-    }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainer-community/features/ca-certificates:latest"
+    ]
 }

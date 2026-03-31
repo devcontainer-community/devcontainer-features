@@ -1,7 +1,7 @@
 {
     "name": "astral.sh/uv",
     "id": "astral.sh-uv",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "description": "Install \"uv\" and \"uvx\" binaries",
     "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/astral.sh-uv",
     "options": {
@@ -18,5 +18,8 @@
             "description": "Enable or disable uv and uvx autocompletion.",
             "type": "boolean"
         }
-    }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainer-community/features/ca-certificates:latest"
+    ]
 }

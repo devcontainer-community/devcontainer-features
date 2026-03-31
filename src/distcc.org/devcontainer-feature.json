@@ -1,7 +1,10 @@
 {
     "name": "distcc.org",
     "id": "distcc.org",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Install \"distcc\" binary",
-    "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/distcc.org"
+    "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/distcc.org",
+    "installsAfter": [
+        "ghcr.io/devcontainer-community/features/ca-certificates:latest"
+    ]
 }

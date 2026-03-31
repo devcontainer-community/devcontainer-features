@@ -37,6 +37,8 @@ Apply the changes described in the issue. Common change types:
 - **Update tests** — fix or improve `test.sh` assertions
 - **Update helper functions** — copy latest versions from https://github.com/devcontainer-community/shell-snippets
 
+When editing `devcontainer-feature.json`, ensure `"installsAfter"` includes `"ghcr.io/devcontainer-community/features/ca-certificates:latest"` as the first entry. Add it if missing.
+
 When modifying `install.sh`:
 - Keep helper functions verbatim from the shell-snippets repo
 - Only customize the feature-specific parts (repository, binary name, URL template, architecture mappings)

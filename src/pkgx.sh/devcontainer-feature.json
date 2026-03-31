@@ -1,7 +1,7 @@
 {
     "name": "pkgx.sh",
     "id": "pkgx.sh",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Install \"pkgx\" binary",
     "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/pkgx.sh",
     "options": {
@@ -13,5 +13,8 @@
             ],
             "description": "Version of \"pkgx\" to install."
         }
-    }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainer-community/features/ca-certificates:latest"
+    ]
 }

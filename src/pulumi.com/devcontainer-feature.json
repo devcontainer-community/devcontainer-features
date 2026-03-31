@@ -1,7 +1,7 @@
 {
     "name": "pulumi.com",
     "id": "pulumi.com",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Install \"pulumi\" binary",
     "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/pulumi.com",
     "options": {
@@ -13,5 +13,8 @@
             ],
             "description": "Version of \"pulumi\" to install."
         }
-    }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainer-community/features/ca-certificates:latest"
+    ]
 }

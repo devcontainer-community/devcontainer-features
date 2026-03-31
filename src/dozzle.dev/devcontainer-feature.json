@@ -1,7 +1,7 @@
 {
     "name": "dozzle.dev",
     "id": "dozzle.dev",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Install \"dozzle\" binary",
     "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/dozzle.dev",
     "options": {
@@ -13,5 +13,8 @@
             ],
             "description": "Version of \"dozzle\" to install."
         }
-    }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainer-community/features/ca-certificates:latest"
+    ]
 }

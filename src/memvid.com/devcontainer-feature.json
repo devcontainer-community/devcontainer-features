@@ -1,15 +1,20 @@
 {
     "name": "memvid.com",
     "id": "memvid.com",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Install \"memvid\" CLI",
     "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/memvid.com",
     "options": {
         "version": {
             "type": "string",
             "default": "latest",
-            "proposals": ["latest"],
+            "proposals": [
+                "latest"
+            ],
             "description": "Version of \"memvid\" to install."
         }
-    }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainer-community/features/ca-certificates:latest"
+    ]
 }

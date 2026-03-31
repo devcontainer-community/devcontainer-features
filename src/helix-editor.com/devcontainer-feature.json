@@ -1,7 +1,7 @@
 {
     "name": "helix-editor.com",
     "id": "helix-editor.com",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Install \"hx\" binary",
     "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/helix-editor.com",
     "options": {
@@ -13,5 +13,8 @@
             ],
             "description": "Version of \"hx\" to install."
         }
-    }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainer-community/features/ca-certificates:latest"
+    ]
 }

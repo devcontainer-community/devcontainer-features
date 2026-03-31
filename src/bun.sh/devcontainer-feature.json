@@ -1,7 +1,7 @@
 {
     "name": "bun.sh",
     "id": "bun.sh",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Install \"bun\" binary",
     "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/bun.sh",
     "options": {
@@ -13,5 +13,8 @@
             ],
             "description": "Currently unused."
         }
-    }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainer-community/features/ca-certificates:latest"
+    ]
 }

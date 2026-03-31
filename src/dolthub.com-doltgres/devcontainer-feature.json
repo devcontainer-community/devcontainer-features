@@ -1,7 +1,7 @@
 {
     "name": "dolthub.com/doltgres",
     "id": "dolthub.com-doltgres",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Install \"doltgres\" binary",
     "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/dolthub.com-doltgres",
     "options": {
@@ -13,5 +13,8 @@
             ],
             "description": "Version of \"doltgres\" to install."
         }
-    }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainer-community/features/ca-certificates:latest"
+    ]
 }

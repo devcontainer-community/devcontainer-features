@@ -1,7 +1,10 @@
 {
     "name": "clang-tidy",
     "id": "clang-tidy",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Install \"clang-tidy\" binary",
-    "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/clang-tidy"
+    "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/clang-tidy",
+    "installsAfter": [
+        "ghcr.io/devcontainer-community/features/ca-certificates:latest"
+    ]
 }

@@ -1,7 +1,7 @@
 {
     "name": "webinstall.dev",
     "id": "webinstall.dev",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Install \"webi\" binary",
     "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/webinstall.dev",
     "options": {
@@ -13,5 +13,8 @@
             ],
             "description": "Version of \"webi\" to install."
         }
-    }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainer-community/features/ca-certificates:latest"
+    ]
 }

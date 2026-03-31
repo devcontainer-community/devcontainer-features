@@ -1,7 +1,7 @@
 {
     "name": "turso.tech",
     "id": "turso.tech",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Install \"tursodb\" binary",
     "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/turso.tech",
     "options": {
@@ -13,5 +13,8 @@
             ],
             "description": "Version of \"tursodb\" to install."
         }
-    }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainer-community/features/ca-certificates:latest"
+    ]
 }

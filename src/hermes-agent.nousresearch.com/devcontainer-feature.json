@@ -1,7 +1,7 @@
 {
     "name": "hermes-agent.nousresearch.com",
     "id": "hermes-agent.nousresearch.com",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Install \"hermes\" binary",
     "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/hermes-agent.nousresearch.com",
     "options": {
@@ -13,5 +13,8 @@
             ],
             "description": "Currently unused."
         }
-    }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainer-community/features/ca-certificates:latest"
+    ]
 }

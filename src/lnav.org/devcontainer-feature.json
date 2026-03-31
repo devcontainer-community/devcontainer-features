@@ -1,7 +1,7 @@
 {
     "name": "lnav.org",
     "id": "lnav.org",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Install \"lnav\" binary",
     "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/lnav.org",
     "options": {
@@ -13,5 +13,8 @@
             ],
             "description": "Version of \"lnav\" to install."
         }
-    }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainer-community/features/ca-certificates:latest"
+    ]
 }

@@ -1,7 +1,7 @@
 {
     "name": "feature-installer",
     "id": "feature-installer",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Install \"feature-installer\" binary",
     "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/feature-installer",
     "options": {
@@ -13,5 +13,8 @@
             ],
             "description": "Version of \"feature-installer\" to install."
         }
-    }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainer-community/features/ca-certificates:latest"
+    ]
 }
