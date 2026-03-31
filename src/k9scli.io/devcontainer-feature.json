@@ -1,7 +1,7 @@
 {
     "name": "k9scli.io",
     "id": "k9scli.io",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Install \"k9s\" binary",
     "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/k9scli.io",
     "options": {
@@ -13,5 +13,8 @@
             ],
             "description": "Version of \"k9s\" to install."
         }
-    }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainer-community/features/ca-certificates:1"
+    ]
 }

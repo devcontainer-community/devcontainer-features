@@ -1,7 +1,7 @@
 {
     "name": "gitagent.sh",
     "id": "gitagent.sh",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Install \"gitagent\" binary",
     "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/gitagent.sh",
     "options": {
@@ -13,5 +13,8 @@
             ],
             "description": "Version of \"gitagent\" to install."
         }
-    }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainer-community/features/ca-certificates:1"
+    ]
 }

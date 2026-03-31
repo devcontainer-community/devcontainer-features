@@ -1,7 +1,7 @@
 {
     "name": "zyedidia/eget",
     "id": "zyedidia-eget",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "Install \"eget\" binary",
     "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/zyedidia-eget",
     "options": {
@@ -13,5 +13,8 @@
             ],
             "description": "Version of \"eget\" to install."
         }
-    }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainer-community/features/ca-certificates:1"
+    ]
 }

@@ -1,7 +1,10 @@
 {
     "name": "apt-build-essential",
     "id": "apt-build-essential",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Install \"build-essential\" apt package (gcc, g++, make)",
-    "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/apt-build-essential"
+    "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/apt-build-essential",
+    "installsAfter": [
+        "ghcr.io/devcontainer-community/features/ca-certificates:1"
+    ]
 }

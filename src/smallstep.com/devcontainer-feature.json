@@ -1,7 +1,7 @@
 {
     "name": "smallstep.com",
     "id": "smallstep.com",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "Install \"step\" cli binary",
     "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/smallstep.com",
     "options": {
@@ -13,5 +13,8 @@
             ],
             "description": "Version of \"step cli\" to install."
         }
-    }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainer-community/features/ca-certificates:1"
+    ]
 }

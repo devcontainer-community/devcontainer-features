@@ -1,7 +1,7 @@
 {
     "name": "btop",
     "id": "btop",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "Install \"btop\" binary",
     "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/btop",
     "options": {
@@ -13,5 +13,8 @@
             ],
             "description": "Version of \"btop\" to install."
         }
-    }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainer-community/features/ca-certificates:1"
+    ]
 }

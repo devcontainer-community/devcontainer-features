@@ -1,7 +1,7 @@
 {
     "name": "dolthub.com",
     "id": "dolthub.com",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Install \"dolt\" binary",
     "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/dolthub.com",
     "options": {
@@ -13,5 +13,8 @@
             ],
             "description": "Version of \"dolt\" to install."
         }
-    }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainer-community/features/ca-certificates:1"
+    ]
 }

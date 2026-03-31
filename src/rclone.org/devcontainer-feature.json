@@ -1,7 +1,7 @@
 {
     "name": "rclone",
     "id": "rclone.org",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Install \"rclone\" binary",
     "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/rclone.org",
     "options": {
@@ -13,5 +13,8 @@
             ],
             "description": "Version of \"rclone\" to install."
         }
-    }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainer-community/features/ca-certificates:1"
+    ]
 }

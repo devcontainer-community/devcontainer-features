@@ -1,7 +1,7 @@
 {
     "name": "joelhooks/agent-secrets",
     "id": "joelhooks-agent-secrets",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Install \"secrets\" (agent-secrets) binary",
     "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/joelhooks-agent-secrets",
     "options": {
@@ -13,5 +13,8 @@
             ],
             "description": "Version of \"secrets\" to install."
         }
-    }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainer-community/features/ca-certificates:1"
+    ]
 }

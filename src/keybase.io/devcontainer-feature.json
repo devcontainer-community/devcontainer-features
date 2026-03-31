@@ -1,7 +1,7 @@
 {
     "name": "keybase.io",
     "id": "keybase.io",
-    "version": "1.2.0",
+    "version": "1.2.1",
     "description": "Install \"keybase\" binary",
     "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/keybase.io",
     "options": {
@@ -13,5 +13,8 @@
             ],
             "description": "Currently unused."
         }
-    }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainer-community/features/ca-certificates:1"
+    ]
 }

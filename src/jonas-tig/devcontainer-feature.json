@@ -1,7 +1,7 @@
 {
     "name": "jonas/tig",
     "id": "jonas-tig",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Install \"tig\" binary",
     "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/jonas-tig",
     "options": {
@@ -13,5 +13,8 @@
             ],
             "description": "Currently unused. tig is installed via the system package manager."
         }
-    }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainer-community/features/ca-certificates:1"
+    ]
 }

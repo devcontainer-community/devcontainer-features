@@ -1,7 +1,7 @@
 {
     "name": "taskwarrior.org",
     "id": "taskwarrior.org",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Install \"task\" binary",
     "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/taskwarrior.org",
     "options": {
@@ -13,5 +13,8 @@
             ],
             "description": "Currently unused. taskwarrior is installed via the system package manager."
         }
-    }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainer-community/features/ca-certificates:1"
+    ]
 }

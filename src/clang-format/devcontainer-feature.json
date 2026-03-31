@@ -1,7 +1,10 @@
 {
     "name": "clang-format",
     "id": "clang-format",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Install \"clang-format\" binary",
-    "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/clang-format"
+    "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/clang-format",
+    "installsAfter": [
+        "ghcr.io/devcontainer-community/features/ca-certificates:1"
+    ]
 }

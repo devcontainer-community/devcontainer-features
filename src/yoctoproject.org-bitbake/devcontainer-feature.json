@@ -1,7 +1,7 @@
 {
     "name": "yoctoproject.org/bitbake",
     "id": "yoctoproject.org-bitbake",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Install \"bitbake\" build tool for the Yocto Project",
     "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/yoctoproject.org-bitbake",
     "options": {
@@ -13,5 +13,8 @@
             ],
             "description": "Version of \"bitbake\" to install."
         }
-    }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainer-community/features/ca-certificates:1"
+    ]
 }

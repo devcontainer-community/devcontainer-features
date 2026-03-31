@@ -1,8 +1,8 @@
 {
     "name": "avivsinai/bitbucket-cli",
     "id": "avivsinai-bitbucket-cli",
-    "version": "1.0.0",
-    "description": "bkt — CLI for Bitbucket",
+    "version": "1.0.1",
+    "description": "bkt \u2014 CLI for Bitbucket",
     "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/avivsinai-bitbucket-cli",
     "options": {
         "version": {
@@ -13,5 +13,8 @@
             ],
             "description": "Version of \"bkt\" to install."
         }
-    }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainer-community/features/ca-certificates:1"
+    ]
 }

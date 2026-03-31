@@ -1,15 +1,20 @@
 {
     "name": "diffity.com",
     "id": "diffity.com",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Install \"diffity\" CLI",
     "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/diffity.com",
     "options": {
         "version": {
             "type": "string",
             "default": "latest",
-            "proposals": ["latest"],
+            "proposals": [
+                "latest"
+            ],
             "description": "Version of \"diffity\" to install."
         }
-    }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainer-community/features/ca-certificates:1"
+    ]
 }

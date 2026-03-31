@@ -1,7 +1,7 @@
 {
     "name": "jj-vcs.dev",
     "id": "jj-vcs.dev",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "Install \"jj\" binary",
     "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/jj-vcs.dev",
     "options": {
@@ -13,5 +13,8 @@
             ],
             "description": "Version of \"jj\" to install."
         }
-    }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainer-community/features/ca-certificates:1"
+    ]
 }

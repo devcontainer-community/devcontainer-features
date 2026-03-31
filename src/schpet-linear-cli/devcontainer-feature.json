@@ -1,15 +1,20 @@
 {
     "name": "schpet/linear-cli",
     "id": "schpet-linear-cli",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "Install \"linear\" binary",
     "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/schpet-linear-cli",
     "options": {
         "version": {
             "type": "string",
             "default": "latest",
-            "proposals": ["latest"],
+            "proposals": [
+                "latest"
+            ],
             "description": "Version of \"linear\" to install."
         }
-    }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainer-community/features/ca-certificates:1"
+    ]
 }

@@ -1,7 +1,7 @@
 {
     "name": "yakitrak/notesmd-cli",
     "id": "yakitrak-notesmd-cli",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Install \"notesmd-cli\" binary - Interact with Obsidian vaults from the terminal",
     "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/yakitrak-notesmd-cli",
     "options": {
@@ -13,5 +13,8 @@
             ],
             "description": "Version of \"notesmd-cli\" to install."
         }
-    }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainer-community/features/ca-certificates:1"
+    ]
 }
