@@ -23,6 +23,7 @@
 | [biomejs.dev](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/biomejs.dev) | `biome` — fast JS/TS formatter and linter | gh release | 1.0.1 |
 | [btop](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/btop) | `btop` — resource monitor (CPU, memory, network, processes) | gh release | 1.0.3 |
 | [bun.sh](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/bun.sh) | `bun` — fast JS runtime and package manager | curl | 1.0.0 |
+| [ca-certificates](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/ca-certificates) | `ca-certificates` — install CA certificates and optionally add custom ones from URLs | apt | 1.0.0 |
 | [ccache.dev](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/ccache.dev) | `ccache` — compiler cache for faster C/C++ recompilation | apt | 1.0.0 |
 | [charmbracelet/gum](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/charmbracelet-gum) | `gum` — building blocks for shell scripts | gh release | 1.0.4 |
 | [chezmoi.io](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/chezmoi.io) | `chezmoi` — dotfiles manager across machines | gh release | 1.0.2 |
