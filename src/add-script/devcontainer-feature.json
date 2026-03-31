@@ -1,7 +1,7 @@
 {
     "name": "add-script",
     "id": "add-script",
-    "version": "1.1.1",
+    "version": "1.1.2",
     "description": "Add a script from a URL or inline text to /usr/local/bin during devcontainer build",
     "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/add-script",
     "options": {
@@ -22,6 +22,6 @@
         }
     },
     "installsAfter": [
-        "ghcr.io/devcontainer-community/features/ca-certificates:latest"
+        "ghcr.io/devcontainer-community/devcontainer-features/ca-certificates:latest"
     ]
 }

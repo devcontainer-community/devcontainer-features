@@ -1,7 +1,7 @@
 {
     "name": "collection-c-cpp",
     "id": "collection-c-cpp",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "C/C++ dev collection \u2014 cmake, ninja, gdb, valgrind, ccache, cppcheck, clang-format, clang-tidy, distcc, vcpkg, build-essential",
     "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/collection-c-cpp",
     "dependsOn": {
@@ -18,6 +18,6 @@
         "ghcr.io/devcontainer-community/devcontainer-features/apt-build-essential:latest": {}
     },
     "installsAfter": [
-        "ghcr.io/devcontainer-community/features/ca-certificates:latest"
+        "ghcr.io/devcontainer-community/devcontainer-features/ca-certificates:latest"
     ]
 }

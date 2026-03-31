@@ -1,10 +1,10 @@
 {
     "name": "valgrind.org",
     "id": "valgrind.org",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Install \"valgrind\" binary",
     "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/valgrind.org",
     "installsAfter": [
-        "ghcr.io/devcontainer-community/features/ca-certificates:latest"
+        "ghcr.io/devcontainer-community/devcontainer-features/ca-certificates:latest"
     ]
 }

@@ -1,10 +1,10 @@
 {
     "name": "mosh.org",
     "id": "mosh.org",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Install \"mosh\" (mobile shell) binary",
     "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/mosh.org",
     "installsAfter": [
-        "ghcr.io/devcontainer-community/features/ca-certificates:latest"
+        "ghcr.io/devcontainer-community/devcontainer-features/ca-certificates:latest"
     ]
 }

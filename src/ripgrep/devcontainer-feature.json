@@ -1,7 +1,7 @@
 {
     "name": "ripgrep",
     "id": "ripgrep",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "Install \"rg\" (ripgrep) binary",
     "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/ripgrep",
     "options": {
@@ -15,6 +15,6 @@
         }
     },
     "installsAfter": [
-        "ghcr.io/devcontainer-community/features/ca-certificates:latest"
+        "ghcr.io/devcontainer-community/devcontainer-features/ca-certificates:latest"
     ]
 }

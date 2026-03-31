@@ -1,7 +1,7 @@
 {
     "name": "basecamp/fizzy-cli",
     "id": "basecamp-fizzy-cli",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "Install \"fizzy\" CLI binary",
     "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/basecamp-fizzy-cli",
     "options": {
@@ -15,6 +15,6 @@
         }
     },
     "installsAfter": [
-        "ghcr.io/devcontainer-community/features/ca-certificates:latest"
+        "ghcr.io/devcontainer-community/devcontainer-features/ca-certificates:latest"
     ]
 }

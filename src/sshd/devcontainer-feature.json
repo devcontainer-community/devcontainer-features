@@ -1,7 +1,7 @@
 {
     "name": "sshd",
     "id": "sshd",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Install OpenSSH server (sshd) and ensure it starts when the container starts",
     "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/sshd",
     "options": {
@@ -17,6 +17,6 @@
     },
     "entrypoint": "/usr/local/share/sshd/entrypoint.sh",
     "installsAfter": [
-        "ghcr.io/devcontainer-community/features/ca-certificates:latest"
+        "ghcr.io/devcontainer-community/devcontainer-features/ca-certificates:latest"
     ]
 }
