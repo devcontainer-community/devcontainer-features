@@ -1,0 +1,11 @@
+{
+    "test-backtick": {
+        "image": "debian:latest",
+        "features": {
+            "add-script": {
+                "name": "test-backtick",
+                "script": "#!/bin/bash\necho `hostname`"
+            }
+        }
+    }
+}

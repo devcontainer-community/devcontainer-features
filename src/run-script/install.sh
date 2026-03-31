@@ -31,6 +31,14 @@ echo_banner() {
 }
 
 install() {
+    # Re-read SCRIPT from the env file verbatim to prevent shell evaluation of
+    # backticks: the devcontainer CLI wraps option values in double quotes in the
+    # env file and then sources it, which causes bash to evaluate backticks.
+    # Reading the file directly with awk avoids this evaluation.
+    if [ -f ./devcontainer-features.env ]; then
+        SCRIPT=$(awk '/^SCRIPT="/{sub(/^SCRIPT="/,"");v=$0;f=1;next}f{v=v"\n"$0}END{if(f){sub(/"$/,"",v);printf"%s",v}}' ./devcontainer-features.env)
+    fi
+
     if [ -n "${URL}" ] && [ -n "${SCRIPT}" ]; then
         printf >&2 '=== [ERROR] Both "url" and "script" options are provided. Please provide only one.\n'
         exit 1
