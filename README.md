@@ -78,7 +78,7 @@
 | [rclone](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/rclone.org) | `rclone` — sync files to/from cloud storage | gh release | 1.0.3 |
 | [restic.net](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/restic.net) | `restic` — fast, encrypted, deduplicated backups | gh release | 1.0.3 |
 | [ripgrep](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/ripgrep) | `rg` — fast grep alternative (ripgrep) | gh release | 1.0.3 |
-| [run-script](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/run-script) | Run a script from a URL or inline text during devcontainer build | custom | 1.1.2 |
+| [run-script](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/run-script) | Run a script from a URL or inline text during devcontainer build | custom | 1.2.0 |
 | [schpet/linear-cli](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/schpet-linear-cli) | `linear` — CLI to access linear.com issue tracker | gh release | 1.0.4 |
 | [smallstep.com](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/smallstep.com) | `step` — zero-trust security toolkit and CA | gh release | 1.0.4 |
 | [socket.dev/sfw-free](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/socket.dev-sfw-free) | `sfw` — network security proxy that blocks malicious dependencies | gh release | 1.0.2 |

@@ -1,7 +1,7 @@
 {
     "name": "run-script",
     "id": "run-script",
-    "version": "1.1.2",
+    "version": "1.2.0",
     "description": "Run a script from a URL or inline text during devcontainer build",
     "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/run-script",
     "options": {
@@ -17,6 +17,7 @@
         }
     },
     "installsAfter": [
-        "ghcr.io/devcontainer-community/devcontainer-features/ca-certificates:latest"
+        "ghcr.io/devcontainer-community/devcontainer-features/ca-certificates:latest",
+        "ghcr.io/devcontainer-community/devcontainer-features/add-script:latest"
     ]
 }
