@@ -32,6 +32,7 @@
 | [clang-tidy](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/clang-tidy) | `clang-tidy` — C++ linter and static analyzer from LLVM | apt | 1.0.2 |
 | [cloudflare.com/warp-cli](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/cloudflare.com-warp-cli) | `warp-cli` — Cloudflare WARP VPN client | curl | 1.0.3 |
 | [cmake.org](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/cmake.org) | `cmake` — cross-platform build system generator | apt | 1.0.2 |
+| [coleam00/Archon](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/coleam00-Archon) | `archon` — workflow engine for AI coding agents | gh release | 1.0.0 |
 | [collection-c-cpp](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/collection-c-cpp) | C/C++ dev collection — cmake, ninja, gdb, valgrind, ccache, cppcheck, clang-format, clang-tidy, distcc, vcpkg, build-essential | meta | 1.0.3 |
 | [critique.work](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/critique.work) | `critique` — TUI for reviewing git changes | bun | 1.0.2 |
 | [danmar/cppcheck](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/danmar-cppcheck) | `cppcheck` — static analysis tool for C/C++ code | apt | 1.0.2 |

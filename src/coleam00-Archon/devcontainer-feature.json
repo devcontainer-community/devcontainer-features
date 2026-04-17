@@ -1,0 +1,20 @@
+{
+    "name": "coleam00/Archon",
+    "id": "coleam00-Archon",
+    "version": "1.0.0",
+    "description": "Install \"archon\" binary",
+    "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/coleam00-Archon",
+    "options": {
+        "version": {
+            "type": "string",
+            "default": "latest",
+            "proposals": [
+                "latest"
+            ],
+            "description": "Version of \"archon\" to install."
+        }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainer-community/devcontainer-features/ca-certificates:latest"
+    ]
+}
