@@ -73,14 +73,14 @@ curl_download_tarball() {
     rm "$temp_file"
 }
 debian_get_arch() {
+    local arch
     arch=$(uname -m)
     if [[ "$arch" == "aarch64" ]]; then
-    arch="arm64"
+        arch="arm64"
     elif [[ "$arch" == "x86_64" ]]; then
-    arch="x64"
+        arch="x64"
     fi
     echo "$arch"
-#    echo "$(dpkg --print-architecture)" --- IGNORE ---
 }
 echo_banner() {
     local text="$1"
@@ -140,6 +140,7 @@ install() {
     readonly binaryTargetPath="${binaryTargetFolder}/${binaryName}"
     curl_download_tarball "$downloadUrl" "$binaryTargetFolder"
     chmod 755 "$binaryTargetPath"
+    apt_get_cleanup
 }
 echo_banner "devcontainer.community"
 echo "Installing $name..."
