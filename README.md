@@ -72,7 +72,7 @@
 | [nixos.org](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/nixos.org) | `nix` — the Nix package manager | curl | 1.0.2 |
 | [nvidia.com/cuda](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/nvidia.com-cuda) | NVIDIA CUDA Toolkit for GPU computing | curl | 1.0.2 |
 | [onecli.sh/cli](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/onecli.sh-cli) | `onecli` — manage agents, secrets, rules, and configuration from the terminal | gh release | 1.0.3 |
-| [opencode.ai](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/opencode.ai) | `opencode` — AI coding agent in the terminal | gh release | 1.0.6 |
+| [opencode.ai](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/opencode.ai) | `opencode` — AI coding agent in the terminal | gh release | 1.0.7 |
 | [pi.dev](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/pi.dev) | `pi` — minimal terminal coding harness | gh release | 1.0.3 |
 | [pkgx.sh](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/pkgx.sh) | `pkgx` — run any package without installing | curl | 1.0.2 |
 | [pulumi.com](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/pulumi.com) | `pulumi` — infrastructure as code in any language | gh release | 1.0.3 |
