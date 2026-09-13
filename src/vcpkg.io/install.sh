@@ -32,6 +32,13 @@ install() {
     git clone https://github.com/microsoft/vcpkg "$vcpkgRoot"
     "$vcpkgRoot/bootstrap-vcpkg.sh" -disableMetrics
     ln -s "$vcpkgRoot/vcpkg" /usr/local/bin/vcpkg
+
+    if [ ${_REMOTE_USER} != "root" ]; then
+        groupadd vcpkg
+        chown -R root:vcpkg $vcpkgRoot
+        chmod g+w $vcpkgRoot
+        usermod -aG vcpkg ${_REMOTE_USER}
+    fi
 }
 echo_banner "devcontainer.community"
 echo "Installing $name..."

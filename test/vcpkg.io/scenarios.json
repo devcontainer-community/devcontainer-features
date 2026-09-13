@@ -1,0 +1,9 @@
+{
+    "install_with_remote_user": {
+        "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+        "remoteUser": "vscode",
+        "features": {
+            "vcpkg.io": {}
+        }
+    }
+}
