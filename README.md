@@ -101,4 +101,5 @@
 | [yoctoproject.org/bitbake](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/yoctoproject.org-bitbake) | `bitbake` — build tool for the Yocto Project | curl | 1.0.2 |
 | [yq](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/yq) | `yq` — command-line YAML/JSON/XML processor | gh release | 1.0.3 |
 | [zellij.dev](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/zellij.dev) | `zellij` — terminal workspace with multiplexer and layouts | gh release | 1.0.4 |
+| [zmx.sh](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/zmx.sh) | `zmx` — persistent terminal sessions with native scrollback | gh release | 1.0.0 |
 | [zyedidia/eget](https://github.com/devcontainer-community/devcontainer-features/tree/main/src/zyedidia-eget) | `eget` — easily install prebuilt binaries from GitHub releases | gh release | 1.0.4 |
