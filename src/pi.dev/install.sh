@@ -4,7 +4,7 @@ set -o pipefail
 set -o noclobber
 set -o nounset
 set -o allexport
-readonly githubRepository='badlogic/pi-mono'
+readonly githubRepository='earendil-works/pi'
 readonly binaryName='pi'
 readonly binaryTargetFolder='/usr/local/bin'
 readonly name="${githubRepository##*/}"
