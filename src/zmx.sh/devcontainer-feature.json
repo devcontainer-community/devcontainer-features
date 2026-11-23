@@ -1,0 +1,20 @@
+{
+    "name": "zmx.sh",
+    "id": "zmx.sh",
+    "version": "1.0.0",
+    "description": "Install \"zmx\" binary",
+    "documentationURL": "https://github.com/devcontainer-community/devcontainer-features/tree/main/src/zmx.sh",
+    "options": {
+        "version": {
+            "type": "string",
+            "default": "latest",
+            "proposals": [
+                "latest"
+            ],
+            "description": "Version of \"zmx\" to install."
+        }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainer-community/devcontainer-features/ca-certificates:latest"
+    ]
+}

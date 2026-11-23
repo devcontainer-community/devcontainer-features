@@ -1,0 +1,10 @@
+{
+    "test-version": {
+        "image": "debian:latest",
+        "features": {
+            "zmx.sh": {
+                "version": "0.6.0"
+            }
+        }
+    }
+}
